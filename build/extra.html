@@ -1,134 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ Section</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .faq-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-  </style>
-</head>
-<body class="bg-black text-white font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth FAQ Accordion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+      }
+      .faq-content.open {
+        max-height: 500px; /* Answer ki max height set karo */
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
 
-  <section class="max-w-4xl mx-auto py-16 px-4">
-    <!-- Heading -->
-    <div class="text-center mb-10">
-      <h2 class="text-4xl font-bold">FAQ Super Hero</h2>
-      <p class="text-gray-400 mt-4">
-        Entering The Super Hero Society Means Joining An Family Full Of People Who Believe <br>
-        In The Future Of Cryptocurrencies And The Blockchain Technology.
-      </p>
+    <div class="w-full max-w-md space-y-4">
+      <!-- FAQ Item -->
+      <div class="faq-item border border-gray-700 rounded-xl">
+        <button class="faq-btn w-full flex justify-between items-center p-4 text-left">
+          <span class="faq-title text-white text-lg font-medium">FAQ Heading</span>
+          <span class="icon text-2xl">+</span>
+        </button>
+        <div class="faq-content px-4 text-gray-300">
+          Yeh FAQ ka answer hai jo smoothly open hoga.
+        </div>
+      </div>
+
+      <div class="faq-item border border-gray-700 rounded-xl">
+        <button class="faq-btn w-full flex justify-between items-center p-4 text-left">
+          <span class="faq-title text-white text-lg font-medium">Dusra Question</span>
+          <span class="icon text-2xl">+</span>
+        </button>
+        <div class="faq-content px-4 text-gray-300">
+          Yeh doosra answer hai jo bhi smoothly open hoga.
+        </div>
+      </div>
     </div>
 
-    <!-- FAQ List -->
-    <div class="space-y-4">
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
 
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>01 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
+      faqItems.forEach(item => {
+        const btn = item.querySelector(".faq-btn");
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".icon");
+        const title = item.querySelector(".faq-title");
 
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>02 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum nisl felis, vehicula cursus ex interdum sit amet. Etiam sit amet tempus dolor.
-          </p>
-        </div>
-      </div>
+        btn.addEventListener("click", () => {
+          const isOpen = content.classList.contains("open");
 
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>03 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>04 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>05 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-
-      <!-- Item -->
-      <div class="border-b border-gray-700 pb-3">
-        <button class="faq-btn flex justify-between items-center w-full text-left text-lg font-medium">
-          <span>06 Lorem Ipsum Dolor Sit Amet?</span>
-          <span class="symbol">+</span>
-        </button>
-        <div class="faq-content text-gray-400">
-          <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script>
-    const faqButtons = document.querySelectorAll(".faq-btn");
-
-    faqButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        const symbol = btn.querySelector(".symbol");
-
-        // agar open hai → band karo
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          btn.classList.remove("text-yellow-400");
-          symbol.textContent = "+";
-        } else {
-          // sab band karo
-          document.querySelectorAll(".faq-content").forEach((el) => {
-            el.style.maxHeight = null;
-          });
-          document.querySelectorAll(".faq-btn").forEach((el) => {
-            el.classList.remove("text-yellow-400");
-            el.querySelector(".symbol").textContent = "+";
+          // Sab band karo
+          faqItems.forEach(i => {
+            i.querySelector(".faq-content").classList.remove("open");
+            i.querySelector(".icon").textContent = "+";
+            i.querySelector(".faq-title").classList.remove("text-yellow-400");
+            i.querySelector(".faq-title").classList.add("text-white");
           });
 
-          // current open karo
-          content.style.maxHeight = content.scrollHeight + "px";
-          btn.classList.add("text-yellow-400");
-          symbol.textContent = "−";
-        }
+          // Agar pehle se open nahi hai to open karo
+          if (!isOpen) {
+            content.classList.add("open");
+            icon.textContent = "–";
+            title.classList.remove("text-white");
+            title.classList.add("text-yellow-400");
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
