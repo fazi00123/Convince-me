@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#0F0F0F]">
+
+ <nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
+  <!-- TOP BAR -->
+  <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/logo.png" alt="Logo" class="w-32">
+    </div>
+
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center text-white">
+         <li><a href="" class="hover:font-semibold">Home</a></li>
+        <li><a href="" class="hover:font-semibold">Services</a></li>
+        <li><a href="" class="hover:font-semibold">Works</a></li>
+        <li><a href="" class="hover:font-semibold">Network</a></li>
+        <li><a href="" class="hover:font-semibold">Jobs</a></li>
+        <li><a href="" class="hover:font-semibold">Contact Us</a></li>
+      </ul>
+      </ul>
+    </div>
+
+    <div class="space-x-2 lg:block hidden">
+      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-md hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+  Login
+</button>
+      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-md border border-[#4B4B4B] bg-[#D2B94E] transition">
+  Sign Up
+</button>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden z-50">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white py-10">
+      <li><a href="" class="block">Home</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Works</a></li>
+      <li><a href="">Network</a></li>
+      <li><a href="">Jobs</a></li>
+      
+    </ul>
+    <div class="space-x-6 lg:hidden block flex justify-center items-center">
+      <a href="" class="text-lg text-white">Let’s Talk?</a>
+      <button class="font-xl font-medium px-8 py-4 text-[#0F0F0F] rounded-md border bg-[#D2B94E] transition">
+  Contact Us
+</button>
+    </div>
+  </div>
+
+  <div class="">
+    <hr class="border-[#414141]">
+  </div>
+</nav>
+
+    <!-- hero section  -->
+<section class="2xl:px-24 lg:px-10 px-5 bg-center bg-no-repeat bg-cover 2xl:h-[1265px] xl:h-[1024px] h-[700px]" style="background-image: url(./assets/img/Herobg.png);">
+    <div class="flex flex-col justify-center items-center xl:pt-60 md:pt-48 pt-40">
+        <h2 class="text-[#F5F5F5] xl:text-xl text-lg font-normal uppercase tracking-widest">Track & Manage</h2>
+        <h1 class="text-[#F5F5F5] 2xl:text-[200px] xl:text-9xl md:text-7xl text-6xl font-bold text-center">
+  <span class="bg-[#D2B94E] bg-clip-text text-transparent">
+    Marketing <br>
+  </span> Richtig <br> Gemacht
+</h1>
+
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 text-center ">Our comprehensive SaaS solutions are tailored to streamline your <br class="md:block hidden"> operations and drive maximum revenue for your business.</p>
+
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-md border border-[#D2B94E] bg-[#D2B94E] transition">
+  Let’s Talk &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+    </div>
+</section>
+
+
+
+<!-- Slider section  -->
+<section class="xl:pt-20 pt-10">
+  <div>
+  <h2 class="text-white text-xl tracking-widest uppercase text-center">Industry partners</h2>
+  </div>
+
+
+ <div class="relative overflow-hidden w-full xl:pt-10 pt-6">
+  <!-- Marquee Wrapper -->
+  <div class="flex animate-marquee">
+    <!-- Content Wrap (1st copy) -->
+    <div class="flex">
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+    </div>
+
+    <!-- Duplicate Content (2nd copy for seamless effect) -->
+    <div class="flex">
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<!-- our expertiese  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+
+  <div class="text-center">
+    <h2 class="xl:text-7xl lg:text-[64px] md:text-[40px] text-4xl font-semibold text-white flex flex-wrap justify-center items-center gap-2">
+  Your Success,
+  <span class="flex items-center justify-center w-[1em] h-[1em] mx-2">
+    <img src="./assets/img/Ellipse 3367.png" alt="" class="w-full h-full object-contain">
+  </span>ur Expertise:
+</h2>
+
+  <h2 class="xl:text-7xl lg:text-[64px] md:text-[40px] text-4xl font-semibold text-white pt-6 "><span class="bg-[#D2B94E] bg-clip-text text-transparent">Digital Brilliance Redefined</span></h2>
+
+  <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 text-center ">We’re a Hamburg-based digital marketing agency, mastering data-driven strategies for global success. With cutting-edge <br class="xl:block hidden"> tech and a holistic approach, we tailor solutions for your brand’s triumph in performance marketing, branding, and <br class="xl:block hidden"> consulting. Your success, redefined.</p>
+
+
+  <button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-md border border-[#D2B94E] bg-[#D2B94E] transition">
+  Request Free Advice &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+  </div>
+
+  <!-- ist block  -->
+<div class="flex md:flex-row flex-col 2xl:mt-28 xl:mt-20 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/digital.png" class="md:w-full" alt="">
+  </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Digital Brilliance Redefined</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">Embark on a journey where strategy meets concept. Our expert team
+collaborates with you to formulate a strategic plan that aligns seamlessly with your objectives. From this, we derive implementable concepts designed for success.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-md border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
+
+
+<!-- 2nd block  -->
+<div class="flex md:flex-row flex-col md:mt-0 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/social.png" class="md:w-full" alt="">
+  </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Social Media Marketing</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">In today’s landscape, it’s not about whether social media marketing is worthwhile, but how to harness its power effectively. We design and execute successful social media concepts tailored to your unique objectives.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-md border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
+
+<!-- 3rd block  -->
+ <div class="flex md:flex-row flex-col md:mt-0 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/future.png" class="md:w-full" alt="">
+  </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Future Vision</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">We integrate essential measures and processes into your marketing strategy, optimizing your brand’s presence to leave a lasting imprint in the minds of visitors. Let’s shape the future together.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-md border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
+
+
+</section>
+
+
+<!-- brading section  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+  <div class="flex justify-between items-center lg:flex-row flex-col xl:gap-16 2xl:gap-8 gap-10">
+    <div class="lg:w-1/2 w-full">
+      <img src="./assets/img/brandimg.png" class="w-full" alt="">
+    </div>
+    <div class="lg:w-1/2 w-full">
+      <h2 class="md:text-start text-center 2xl:text-[70px] xl:text-6xl lg:text-5xl md:text-[40px] text-4xl text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[60px] md:leading-[45px] leading-[45px]">Even a small bird can look good with <span class="font-bold">good branding.</span></h2>
+
+      <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 md:text-start text-center">Many small businesses mistakenly believe that professional branding is only reserved for large companies or corporations and requires a lot of money. But in the era of digitalization, there are numerous cost-effective ways to effectively differentiate yourself from the competition through branding. This is recommended for every company, regardless of its size. Every company can develop high value and a strong image, regardless of its size. Our job is to discover the unique features and make them tangible, visible and tangible.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- sucess section  -->
+ <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+      <div class="text-center">
+    <h2 class="xl:text-7xl lg:text-[64px] md:text-[40px] text-4xl font-semibold text-white flex flex-wrap justify-center items-center gap-2">
+  Your Success, Our Expertise:
+</h2>
+
+  <h2 class="xl:text-7xl lg:text-[64px] md:text-[40px] text-4xl font-semibold text-white pt-6 ">Digital Brilliance Redefined</h2>
+
+  <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 text-center ">We’re a Hamburg-based digital marketing agency, mastering data-driven strategies for global success. With cutting-edge <br class="xl:block hidden"> tech and a holistic approach, we tailor solutions for your brand’s triumph in performance marketing, branding, and <br class="xl:block hidden"> consulting. Your success, redefined.</p>
+  </div>
+
+<!-- grid section  -->
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-8 gap-6 pt-32 lg:pt-20 pt-10">
+
+    <div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
+
+  <!-- Normal Content -->
+  <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
+    <div class="flex justify-between">
+      <div>
+        <img src="./assets/img/convince.png" alt="" class="">
+      </div>
+      <div>
+        <img src="./assets/img/errow.png" alt="" class="">
+      </div>
+    </div>
+    <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">
+      Production
+    </h3>
+  </div>
+
+  <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#09E156] to-[#01BCDD] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+    <div class="flex justify-between">
+      <div>
+        <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
+      </div>
+      <div>
+        <img src="./assets/img/errow.png" alt="" class="transition-transform duration-300 group-hover:translate-x-1">
+      </div>
+    </div>
+    <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white">
+      Convince Me.
+    </h3>
+    <p class="text-white mt-4">
+      At convince me. we specialize in uncovering your brand’s unique identity. 
+      Through strategic consulting and tailored solutions, we elevate your market position, 
+      setting you apart from the competition.
+    </p>
+  </div>
+
+</div>
+
+
+    <div class="border border-[#414141] 2xl:p-10 p-6 rounded-2xl">
+      <div class="flex justify-between">
+        <div>
+        <img src="./assets/img/requirting.png" alt="">
+        </div>
+        <div>
+        <img src="./assets/img/errow.png" alt="">
+        </div>
+      </div>
+
+      <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">Employer Branding</h3>
+    </div>
+
+    <div class="border border-[#414141] 2xl:p-10 p-6 rounded-2xl">
+      <div class="flex justify-between">
+        <div>
+        <img src="./assets/img/shopping.png" alt="">
+        </div>
+        <div>
+        <img src="./assets/img/errow.png" alt="">
+        </div>
+      </div>
+
+      <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">Convince Me.</h3>
+    </div>
+
+    <div class="border border-[#414141] 2xl:p-10 p-6 rounded-2xl">
+      <div class="flex justify-between">
+        <div>
+        <img src="./assets/img/socialmedia.png" alt="">
+        </div>
+        <div>
+        <img src="./assets/img/errow.png" alt="">
+        </div>
+      </div>
+
+      <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">Convince Me.</h3>
+    </div>
+
+    <div class="border border-[#414141] 2xl:p-10 p-6 rounded-2xl">
+      <div class="flex justify-between">
+        <div>
+        <img src="./assets/img/strategy.png" alt="">
+        </div>
+        <div>
+        <img src="./assets/img/errow.png" alt="">
+        </div>
+      </div>
+
+      <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">Convince Me.</h3>
+    </div>
+
+    <div class="border border-[#414141] 2xl:p-10 p-6 rounded-2xl">
+      <div class="flex justify-between">
+        <div>
+        <img src="./assets/img/website.png" alt="">
+        </div>
+        <div>
+        <img src="./assets/img/errow.png" alt="">
+        </div>
+      </div>
+
+      <h3 class="xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-20">Convince Me.</h3>
+    </div>
+  </div>
+ </section>
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
+  let isOpen = false;
+
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate hamburger lines
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+
+      // Add black background only on mobile view
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.add('bg-[#171717]');
+      }
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+
+      // Remove black background when closing menu
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.remove('bg-[#171717]');
+      }
+    }
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+  
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
+</body>
+</html>
