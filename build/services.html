@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="" style="background-image: url(./assets/img/servicespagebg.png);">
+    
+    <!-- navbar  -->
+ <nav id="navbar" class="transition-colors duration-300">
+  <!-- TOP BAR -->
+  <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/logo.png" alt="Logo" class="w-32">
+    </div>
+
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center text-white">
+  <li><a href="./index.html" class="hover-underline">Home</a></li>
+  <li><a href="./services.html" class="hover-underline active">Services</a></li>
+  <li><a href="./our work.html" class="hover-underline">Works</a></li>
+  <li><a href="" class="hover-underline">Network</a></li>
+  <li><a href="" class="hover-underline">Jobs</a></li>
+</ul>
+
+     
+    </div>
+
+    <div class="space-x-2 lg:block hidden">
+      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+  Contact Us
+</button>
+      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
+  Dashboard Login
+</button>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden z-50">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white pt-10">
+    <li><a href="./index.html" class="">Home</a></li>
+      <li><a href="./services.html" class="hover-underline active"> Services</a></li>
+      <li><a href="./our work.html" class="">Works</a></li>
+      <li><a href="">Network</a></li>
+      <li><a href="">Jobs</a></li>
+      
+    </ul>
+    <div class="space-x-6 lg:hidden block flex flex-col justify-center gap-4 items-center pt-6">
+      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+  Contact Us
+</button>
+      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
+  Dashboard Login
+</button>
+    </div>
+  </div>
+
+  <div class="">
+    <hr class="border-[#414141]">
+  </div>
+</nav>
+
+    <!-- hero section  -->
+<section class="2xl:px-24 lg:px-10 px-5">
+    <div class="flex lg:flex-row flex-col text-center lg:text-start items-center xl:gap-56 md:gap-24 gap-10 xl:pt-24 pt-16">
+    <div class="lg:w-1/2 w-full">
+        <h1 class="text-[#F5F5F5] 2xl:text-8xl xl:text-7xl md:text-6xl text-5xl 2xl:leading-[120px] xl:leading-[90px] md:leading-[75px] leading-[65px] font-semibold">
+   Web Design &
+<span class="text-[#D2B94E]">Development</span>
+</h1>
+
+<div class="xl:py-14 md:py-10 py-6 flex justify-center lg:justify-start">
+    <img src="./assets/img/star.png" alt="">
+</div>
+
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 ">In addition to business applications, blockchain marketplaces, IOT, <br class="md:block hidden lg:hidden">
+healthcare and e-commerce, we also offer frontend, backend, <br class="md:block hidden lg:hidden">
+database and cloud management services.</p>
+
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  Let’s Talk &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+    </div>
+
+    <div class="lg:w-1/2 w-full">
+        <img src="./assets/img/servicesheroimg.png" class="" alt="">
+    </div>
+    </div>
+</section>
+
+<!-- It solution  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-28 lg:pt-20 pt-10" >
+
+    <div class="flex justify-between items-center">
+        <img src="./assets/img/navi.png" class="w-10 xl:w-16" alt="">
+        <img src="./assets/img/navi2.png" class="w-28 xl:w-56" alt="">
+        <img src="./assets/img/navi.png" class="w-10 xl:w-16" alt="">
+    </div>
+
+    <div class="text-white text-center lg:pt-12 pt-6">
+        <h2 class="xl:text-6xl md:text-4xl text-3xl font-bold xl:leading-[78px] md:leading-[54px] leading-[45px]">Ensuring your Success Through <br class="md:block hidden"> Reliable IT Solution</h2>
+        <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 pt-5 ">Convince me is hub of web designing and development services for <br class="md:block hidden">
+businesses across the globe.</p>
+    </div>
+
+    <div class="flex lg:flex-row flex-col  justify-between border border-[#D2B94E] 2xl:mt-20 mt-10">
+        <div class="lg:w-1/2 w-full 2xl:py-16 2xl:px-12 xl:py-10 xl:px-8 py-6 px-4">
+            <img src="./assets/img/itimg.png" class="w-full h-full" alt="">
+        </div>
+
+        <div class="lg:w-1/2 w-full lg:border-l border-t lg:border-t-0 border-[#D2B94E]">
+
+            <!-- 1st row  -->
+            <div class="flex md:flex-row flex-col justify-between">
+                <div class="2xl:py-16 2xl:px-12 xl:py-10 xl:px-8 py-6 px-4 md:border-r border-[#D2B94E]">
+                    <img src="./assets/img/frontend.png" class="2xl:w-24 w-16" alt="">
+                    <h3 class="2xl:text-2xl md:text-xl text-lg 2xl:pt-10 xl:pt-6 pt-2 text-white font-bold">Frontend Development</h3>
+                    <p class="text-white 2xl:text-lg md:text-base text-sm 2xl:leading-7 md:leading-6 leading-5 2xl:pt-4 pt-2">Benefit from our full-stack front-end expertise to create innovative, human-centric, and goal-oriented
+web & mobile solutions.</p>
+                </div>
+
+                <div class="2xl:py-16 2xl:px-12 xl:py-10 xl:px-8 py-6 px-4 border-t md:border-t-0 border-[#D2B94E]">
+                    <img src="./assets/img/frontend.png" class="2xl:w-24 w-16" alt="">
+                    <h3 class="2xl:text-2xl md:text-xl text-lg 2xl:pt-10 xl:pt-6 pt-2 text-white font-bold">Frontend Development</h3>
+                    <p class="text-white 2xl:text-lg md:text-base text-sm 2xl:leading-7 md:leading-6 leading-5 2xl:pt-4 pt-2">Benefit from our full-stack front-end expertise to create innovative, human-centric, and goal-oriented
+web & mobile solutions.</p>
+                </div>
+
+            </div>
+
+            <!-- 2md row  -->
+            <div class="flex md:flex-row flex-col justify-between border-t border-[#D2B94E]">
+                <div class="2xl:py-16 2xl:px-12 xl:py-10 xl:px-8 py-6 px-4  border-r border-[#D2B94E]">
+                    <img src="./assets/img/frontend.png" class="2xl:w-24 w-16" alt="">
+                    <h3 class="2xl:text-2xl md:text-xl text-lg 2xl:pt-10 xl:pt-6 pt-2 text-white font-bold">Frontend Development</h3>
+                    <p class="text-white 2xl:text-lg md:text-base text-sm 2xl:leading-7 md:leading-6 leading-5 2xl:pt-4 pt-2">Benefit from our full-stack front-end expertise to create innovative, human-centric, and goal-oriented
+web & mobile solutions.</p>
+                </div>
+
+                <div class="2xl:py-16 2xl:px-12 xl:py-10 xl:px-8 py-6 px-4 border-t md:border-t-0 border-[#D2B94E]">
+                    <img src="./assets/img/frontend.png" class="2xl:w-24 w-16" alt="">
+                    <h3 class="2xl:text-2xl md:text-xl text-lg 2xl:pt-10 xl:pt-6 pt-2 text-white font-bold">Frontend Development</h3>
+                    <p class="text-white 2xl:text-lg md:text-base text-sm 2xl:leading-7 md:leading-6 leading-5 2xl:pt-4 pt-2">Benefit from our full-stack front-end expertise to create innovative, human-centric, and goal-oriented
+web & mobile solutions.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Full-cycle web development -->
+
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-28 lg:pt-20 pt-10">
+    <div class="text-white">
+        <h2 class="xl:text-6xl md:text-4xl text-3xl font-bold xl:leading-[78px] md:leading-[54px] leading-[45px]">Full-cycle web development <br class="md:block hidden" >
+services by Convince me</h2>
+        <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 pt-5 text-[#979797]">At Convince me, we are focused on a stage-by-stage approach that guarantees <br>
+seamless collaboration, a sturdy software foundation, and high-quality end <br>
+product results. We tackle all stages of the website development process.</p>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4 xl:mt-20 mt-12">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">01</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 pt-6 lg:pt-0">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Requirements analysis</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">Our discovery phase specialists, including business analysts and designers, kick-off project collaboration by gathering and analyzing requirements, composing a detailed project roadmap, and planning every following step of the workflow.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">02</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Software architecture</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">Based on the requirements and roadmap milestones, our web architects create a basic software architecture outline to be further developed and expanded.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">03</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Design</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">The team of web designers takes up the architecture and starts filling it with visual interface assets, front-end components, and user experience elements for a high level of usability and convenient user interaction.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">04</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Development</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">Full-stack web developers then set things in motion by implementing features and injecting the required back-end
+functionality into the solution’s foundation.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">05</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Testing</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">A team of dedicated web testers sets off a series of combined manual and automated testing iterations to polish out the solution and achieve the highest end-product quality.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">06</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Deployment</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">We help properly deploy the finished web software in the required operational environment, introducing it
+to the public.</p>
+        </div>
+    </div>
+
+    <div class="border-b border-[#D2B94E] pb-4">
+        <div>
+            <p class="text-[#D2B94E] font-bold xl:text-lg text-base">07</p>
+        </div>
+
+        <div class="flex lg:flex-row flex-col justify-between lg:items-center 2xl:gap-56 xl:gap-40 lg:gap-10 gap-2 xl:py-8 py-6">
+            <h3 class="2xl:text-3xl xl:text-xl text-lg text-white font-semibold lg:w-1/5 w-full">Maintenance</h3>
+            <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-[#979797] w-full lg:w-4/5">Our DevOps engineers, support specialists, and managers also help maintain the smooth performance of the product in any type of operating conditions, under any constraints.</p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- faqs  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+  <div class="text-center">
+    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white">FAQ Super Hero</h2>
+    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6 text-[#DFDFDF]">Entering The Super Hero Society means joining an family full of people who believe <br>
+in the future of Cryptocurrencies and the Blockchain technology.</p>
+  </div>
+
+<div class="bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/lines.png);">
+     <!-- faqs  -->
+    <div class="w-full 2xl:px-72 lg:px-56 2xl:mt-24 lg:mt-16 mt-10">
+       
+        <div class="space-y-4">
+          <div>
+                <hr class=" border-[#333333]">
+             </div>
+            <!-- FAQ 1 -->
+            <div class="" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                   
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+            <!-- FAQ 2 -->
+            <div class="" data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+            <!-- FAQ 3 -->
+            <div class="" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+    <!-- FAQ 4 -->
+           <div class="" data-aos="fade-down"
+           data-aos-anchor-placement="top-bottom"
+           data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+    <!-- FAQ 5 -->
+
+          <div class="" data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+    <!-- FAQ 6 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>01
+Lorem ipsum dolor sit amet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- client feedback  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+    <div class="text-center">
+        <h2 class="xl:text-6xl md:text-4xl text-3xl font-bold xl:leading-[78px] md:leading-[54px] leading-[45px] text-white">Client Feedback</h2>
+
+        <div class="flex justify-center xl:py-8 py-4 xl:space-x-20 space-x-10">
+            <img src="./assets/img/navi.png" class="w-10 xl:w-16" alt="">
+            <img src="./assets/img/linesimg.png" class="" alt="">
+            <img src="./assets/img/navi.png" class="w-10 xl:w-16" alt="">
+        </div>
+        <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 pt-5 text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh <br> euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam <br>, quis nostrud exerci tation ullamcorper suscip</p>
+    </div>
+</section>
+
+
+<!-- digital marketing  -->
+<section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat bg-[#0F0F0F]" style="background-image: url(./assets/img/marketingbg.png);">
+  <div class="2xl:py-36 lg:py-20 py-10 2xl:px-32 lg:px-16 px-6 text-center">
+    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">Digital marketing <br>
+from Hamburg.</h2>
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">We are not a classic advertising agency, but rather a digital marketing agency that knows how to use the advantages of digitalization. We win customers, position brands and sell products. Previously via newspapers, radio or television – today mostly through online marketing. We reach your target group where they spend most of their time: on the Internet. The digital world allows us to effectively address your target group in the right place at the right time and thus achieve your strategic goals efficiently. Our goal is to work with you to implement a unique, profitable solution.</p>
+
+ <div class="text-center">
+  <button class="font-xl font-medium px-8 py-4 xl:mt-16 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</section>
+
+    <!-- Footer -->
+  <footer class="text-white px-6 lg:px-12 xl:px-20 2xl:px-28 py-12 xl:py-20 bg-[#0F0F0F]">
+
+    <div class="md:hidden block flex justify-center pb-10">
+      <img src="./assets/img/footer.png" alt="">
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-8 text-center md:text-start">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-2">
+        <div class=""
+        >
+        <img src="./assets/img/footer.png" class="md:block hidden" alt="">
+        </div>
+        <p class="text-white/70 md:mt-4 text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Plans & Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="font-semibold mb-4">Support</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Online Chat</a></li>
+          <li><a href="#">Whatsapp</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Page</a></li>
+          <li><a href="#">Enterprise</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Career Tips</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+    </div>
+
+       <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start space-x-4 mt-10">
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#414141] mt-10">
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Legal Notice</a>
+          <a href="#">Cookie Setting</a>
+        </div>
+
+        <!-- Copyright -->
+        <div>© 2025, Convince me.</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- contact popup form  -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/70 z-50 hidden overflow-y-auto">
+  
+  <!-- Center Content with Spacing -->
+  <div class="min-h-screen flex items-center justify-center py-6 px-4">
+    
+    <!-- Modal Card -->
+    <div class="bg-[#1a1a1a] rounded-2xl shadow-xl w-full max-w-5xl 2xl:max-w-7xl
+                flex flex-col md:flex-row relative animate-fadeIn">
+      
+      <!-- Close Button -->
+      <button id="closeModal" 
+              class="absolute top-2 right-4 text-[#A4A7AE] text-xl">
+        ✕
+      </button>
+
+      <!-- Left: Form -->
+      <div class="w-full md:w-1/2 px-6 md:px-0 md:pl-8 sm:py-8 py-6 flex flex-col justify-center text-white">
+        <h2 class="2xl:text-3xl text-2xl font-semibold mb-3">Let's connect constellations</h2>
+        <p class="2xl:text-lg text-sm text-white mb-6">
+          Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+        </p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Last Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+            <input type="text" placeholder="First Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          </div>
+          <input type="email" placeholder="Email" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <input type="tel" placeholder="Phone Number" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <textarea placeholder="Message" rows="4" 
+                    class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"></textarea>
+
+          <button type="submit" 
+                  class="w-full bg-[#D2B94E] text-[#040404] font-medium py-3 rounded-md flex items-center justify-center gap-2 transition">
+            Send it 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Astronaut Image -->
+      <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-10">
+        <img src="./assets/img/contactimg.png" 
+             alt="Astronaut" 
+             class="w-full max-h-[600px] object-contain rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--contact Script -->
+<script>
+  const openModalButtons = document.querySelectorAll("#openModal"); // Saare "Contact Us" buttons select karo
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("contactModal");
+
+  // Har ek Contact Us button pe listener lagao
+  openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  // Close button
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Background click par close
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+
+    <!-- faqs js -->
+ <script>
+    document.querySelectorAll('.faq-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.icon');
+            const heading = button.querySelector('span:first-child');
+
+            if (content.classList.contains('open')) {
+                // Close current
+                content.style.maxHeight = null;
+                content.classList.remove('open');
+                icon.textContent = '+';
+                icon.classList.remove('faq-active');
+                heading.classList.remove('faq-active');
+            } else {
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.style.maxHeight = null;
+                    item.classList.remove('open');
+                });
+                document.querySelectorAll('.icon').forEach(i => {
+                    i.textContent = '+';
+                    i.classList.remove('faq-active');
+                });
+                document.querySelectorAll('.faq-btn span:first-child').forEach(h => {
+                    h.classList.remove('faq-active');
+                });
+
+                // Open clicked one
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('open');
+                icon.textContent = '-';
+                icon.classList.add('faq-active');  // Yellow + bigger size
+                heading.classList.add('faq-active'); // Yellow + bigger size
+            }
+        });
+    });
+</script>
+
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
+  let isOpen = false;
+
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate hamburger lines
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+
+      // Add black background only on mobile view
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.add('bg-[#171717]');
+      }
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+
+      // Remove black background when closing menu
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.remove('bg-[#171717]');
+      }
+    }
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -81,3 +81,50 @@
     background-image: none;
   }
 } */
+
+/* popup contact */
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+  }
+
+
+/* faqs  */
+   .faq-active {
+        color: #E5A301 !important;
+        
+    }
+
+.hover-underline {
+  position: relative;
+  color: white;
+  padding-bottom: 4px; /* Space between text and underline */
+  transition: all 0.3s ease;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #D2B94E;
+  transition: all 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.hover-underline.active {
+  font-weight: 600;
+}
+
+.hover-underline.active::after {
+  width: 100%; /* Active link pe hamesha underline dikhe */
+}

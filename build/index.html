@@ -6,9 +6,15 @@
   <title>Document</title>
 
   <link rel="stylesheet" href="./assets/css/style.css">
+
+
+   <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body class="bg-[#0F0F0F]">
 
+<!-- navbar  -->
  <nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
   <!-- TOP BAR -->
   <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
@@ -20,18 +26,17 @@
     <!-- Menu (Desktop) -->
     <div class="hidden lg:flex">
       <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center text-white">
-         <li><a href="" class="hover:font-semibold">Home</a></li>
-        <li><a href="" class="hover:font-semibold">Services</a></li>
-        <li><a href="" class="hover:font-semibold">Works</a></li>
-        <li><a href="" class="hover:font-semibold">Network</a></li>
-        <li><a href="" class="hover:font-semibold">Jobs</a></li>
-        <!-- <li><a href="" class="hover:font-semibold">Contact Us</a></li> -->
-      </ul>
-      </ul>
+  <li><a href="./index.html" class="hover-underline active">Home</a></li>
+  <li><a href="./services.html" class="hover-underline ">Services</a></li>
+  <li><a href="./our work.html" class="hover-underline">Works</a></li>
+  <li><a href="" class="hover-underline">Network</a></li>
+  <li><a href="" class="hover-underline">Jobs</a></li>
+</ul>
+      
     </div>
 
     <div class="space-x-2 lg:block hidden">
-      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
   Contact Us
 </button>
       <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
@@ -55,15 +60,15 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
     <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white pt-10">
-      <li><a href="" class="block">Home</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Works</a></li>
+      <li><a href="./index.html" class="hover-underline active">Home</a></li>
+      <li><a href="./services.html" class=""> Services</a></li>
+      <li><a href="./our work.html" class="">Works</a></li>
       <li><a href="">Network</a></li>
       <li><a href="">Jobs</a></li>
       
     </ul>
     <div class="space-x-6 lg:hidden block flex flex-col justify-center gap-4 items-center pt-6">
-      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
   Contact Us
 </button>
       <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
@@ -510,8 +515,147 @@ collaborates with you to formulate a strategic plan that aligns seamlessly with 
 <!-- about us  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
   <div>
-    <h2 class="xl:text-7xl lg:text-5xl md:text-[40px] text-4xl xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px] font-semibold text-white text-center">What they said <br><span>about us</span></h2>
+    <h2 class="xl:text-7xl lg:text-5xl md:text-[40px] text-4xl xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px] font-semibold text-white text-center">What they said <br><span class="text-[#F5F5F5]/80">about us</span></h2>
   </div>
+
+  <div class="swiper mySwiper 2xl:mt-20 xl:mt-14 mt-10">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 5 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 6 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
 </section>
 
 
@@ -778,15 +922,16 @@ and Strategies in <span class="text-[#D2B94E]">Modern Marketing</span>
 
 <!-- faqs  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
-  <div class="text-center text-white">
-    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold">FAQ Super Hero</h2>
-    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6">Entering The Super Hero Society means joining an family full of people who believe <br>
+  <div class="text-center ">
+    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white" >FAQ Super Hero</h2>
+    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6 text-[#DFDFDF]">Entering The Super Hero Society means joining an family full of people who believe <br>
 in the future of Cryptocurrencies and the Blockchain technology.</p>
   </div>
 
 
+   <div class="bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/lines.png);">
      <!-- faqs  -->
-    <div class="w-full 2xl:px-72 lg:px-56 2xl:pt-24 lg:pt-16 pt-10">
+    <div class="w-full 2xl:px-72 lg:px-56 2xl:mt-24 lg:mt-16 mt-10">
        
         <div class="space-y-4">
           <div>
@@ -802,7 +947,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                    
                 </div>
             </div>
@@ -820,7 +965,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                 </div>
             </div>
             <div>
@@ -837,7 +982,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                 </div>
             </div>
             <div>
@@ -854,7 +999,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                 </div>
             </div>
             <div>
@@ -872,7 +1017,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                 </div>
             </div>
             <div>
@@ -889,7 +1034,7 @@ Lorem ipsum dolor sit amet?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-white ">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
                 </div>
             </div>
             <div>
@@ -898,6 +1043,7 @@ Lorem ipsum dolor sit amet?</span>
 
         </div>
     </div>
+</div>
 </section>
 
 <!-- digital marketing  -->
@@ -929,7 +1075,7 @@ from Hamburg.</h2>
         >
         <img src="./assets/img/footer.png" class="md:block hidden" alt="">
         </div>
-        <p class="text-white md:mt-4 text-sm leading-relaxed">
+        <p class="text-white/70 md:mt-4 text-sm leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
       </div>
@@ -937,7 +1083,7 @@ from Hamburg.</h2>
       <!-- Quick Links -->
       <div>
         <h3 class="font-semibold mb-4">Quick Links</h3>
-        <ul class="space-y-2 text-white text-sm">
+        <ul class="space-y-2 text-white/70 text-sm">
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">About Us</a></li>
@@ -948,7 +1094,7 @@ from Hamburg.</h2>
       <!-- Support -->
       <div>
         <h3 class="font-semibold mb-4">Support</h3>
-        <ul class="space-y-2 text-white text-sm">
+        <ul class="space-y-2 text-white/70 text-sm">
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Online Chat</a></li>
@@ -961,7 +1107,7 @@ from Hamburg.</h2>
       <!-- Resources -->
       <div>
         <h3 class="font-semibold mb-4">Resources</h3>
-        <ul class="space-y-2 text-white text-sm">
+        <ul class="space-y-2 text-white/70 text-sm">
           <li><a href="#">Help Center</a></li>
           <li><a href="#">How It Works</a></li>
           <li><a href="#">Business</a></li>
@@ -973,7 +1119,7 @@ from Hamburg.</h2>
       <!-- Company -->
       <div>
         <h3 class="font-semibold mb-4">Company</h3>
-        <ul class="space-y-2 text-white text-sm">
+        <ul class="space-y-2 text-white/70 text-sm">
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Career Tips</a></li>
@@ -994,10 +1140,9 @@ from Hamburg.</h2>
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
-
     <!-- Bottom Bar -->
     <div class="border-t border-[#414141] mt-10">
-      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white space-y-3 md:space-y-0">
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
         <!-- Links -->
         <div class="flex flex-wrap justify-center gap-6">
           <a href="#">Terms of Service</a>
@@ -1013,8 +1158,90 @@ from Hamburg.</h2>
   </footer>
 
 
+<!-- contact popup form  -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/70 z-50 hidden overflow-y-auto">
+  
+  <!-- Center Content with Spacing -->
+  <div class="min-h-screen flex items-center justify-center py-6 px-4">
+    
+    <!-- Modal Card -->
+    <div class="bg-[#1a1a1a] rounded-2xl shadow-xl w-full max-w-5xl 2xl:max-w-7xl
+                flex flex-col md:flex-row relative animate-fadeIn">
+      
+      <!-- Close Button -->
+      <button id="closeModal" 
+              class="absolute top-2 right-4 text-[#A4A7AE] text-xl">
+        ✕
+      </button>
+
+      <!-- Left: Form -->
+      <div class="w-full md:w-1/2 px-6 md:px-0 md:pl-8 sm:py-8 py-6 flex flex-col justify-center text-white">
+        <h2 class="2xl:text-3xl text-2xl font-semibold mb-3">Let's connect constellations</h2>
+        <p class="2xl:text-lg text-sm text-white mb-6">
+          Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+        </p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Last Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+            <input type="text" placeholder="First Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          </div>
+          <input type="email" placeholder="Email" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <input type="tel" placeholder="Phone Number" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <textarea placeholder="Message" rows="4" 
+                    class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"></textarea>
+
+          <button type="submit" 
+                  class="w-full bg-[#D2B94E] text-[#040404] font-medium py-3 rounded-md flex items-center justify-center gap-2 transition">
+            Send it 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Astronaut Image -->
+      <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-10">
+        <img src="./assets/img/contactimg.png" 
+             alt="Astronaut" 
+             class="w-full max-h-[600px] object-contain rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--contact Script -->
+<script>
+  const openModalButtons = document.querySelectorAll("#openModal"); // Saare "Contact Us" buttons select karo
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("contactModal");
+
+  // Har ek Contact Us button pe listener lagao
+  openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  // Close button
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Background click par close
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+
     <!-- faqs js -->
-    <script>
+ <script>
     document.querySelectorAll('.faq-btn').forEach(button => {
         button.addEventListener('click', () => {
             const content = button.nextElementSibling;
@@ -1026,8 +1253,8 @@ from Hamburg.</h2>
                 content.style.maxHeight = null;
                 content.classList.remove('open');
                 icon.textContent = '+';
-                icon.classList.remove('text-[#E5A301]', 'text-2xl');
-                heading.classList.remove('text-[#E5A301]');
+                icon.classList.remove('faq-active');
+                heading.classList.remove('faq-active');
             } else {
                 // Close all others
                 document.querySelectorAll('.faq-content').forEach(item => {
@@ -1036,18 +1263,18 @@ from Hamburg.</h2>
                 });
                 document.querySelectorAll('.icon').forEach(i => {
                     i.textContent = '+';
-                    i.classList.remove('text-[#E5A301]', 'text-2xl');
+                    i.classList.remove('faq-active');
                 });
                 document.querySelectorAll('.faq-btn span:first-child').forEach(h => {
-                    h.classList.remove('text-[#E5A301]');
+                    h.classList.remove('faq-active');
                 });
 
                 // Open clicked one
                 content.style.maxHeight = content.scrollHeight + "px";
                 content.classList.add('open');
                 icon.textContent = '-';
-                icon.classList.add('text-[#E5A301]', 'text-2xl');
-                heading.classList.add('text-[#E5A301]');
+                icon.classList.add('faq-active');  // Yellow + bigger size
+                heading.classList.add('faq-active'); // Yellow + bigger size
             }
         });
     });
@@ -1123,6 +1350,27 @@ from Hamburg.</h2>
   }
 </script>
   
+
+<!-- swiper js  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000, // 3 second delay between slides
+      disableOnInteraction: false, // keep autoplay after user interaction
+    },
+    speed: 800, // smooth transition speed
+    allowTouchMove: false, // optional: disable manual swipe
+    breakpoints: {
+      1024: { slidesPerView: 2 },
+      1280: { slidesPerView: 3 }
+    }
+  });
+</script>
+
 
 <script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
 </body>
