@@ -7,76 +7,74 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-[#0F0F0F]">
-       <!-- navbar  -->
- <nav id="navbar" class="transition-colors duration-300">
-  <!-- TOP BAR -->
-  <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
-    <!-- Logo -->
-    <div>
+
+<!-- NAVBAR -->
+  <nav id="navbar" class="w-full z-50 bg-transparent transition-all duration-500">
+    <div class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 2xl:py-10 py-6">
+      <!-- Logo -->
       <a href="./index.html">
-      <img src="./assets/img/logo.png" alt="Logo" class="">
+        <img src="./assets/img/logo.png" alt="Logo" class="">
       </a>
-    </div>
 
-    <!-- Menu (Desktop) -->
-    <div class="hidden lg:flex">
-      <ul class="flex 2xl:space-x-16 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center text-white">
-  <li><a href="./index.html" class="hover-underline">Home</a></li>
-  <li><a href="./services.html" class="hover-underline ">Services</a></li>
-  <li><a href="./our work.html" class="hover-underline active">Works</a></li>
-  <li><a href="" class="hover-underline">Network</a></li>
-  <li><a href="" class="hover-underline">Jobs</a></li>
-</ul>
-
-     
-    </div>
-
-    <div class="space-x-2 lg:block hidden">
-      <button id="openModal" class="2xl:text-xl text-lg font-normal 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
-  Contact Us
-</button>
-      <button class="2xl:text-xl text-lg font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
-  Dashboard Login
-</button>
-    </div>
-
-    <!-- Hamburger Menu (Mobile) -->
-    <div class="lg:hidden z-50">
-      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
-        <span class="sr-only">Toggle Menu</span>
-        <div class="hamburger-lines">
-          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
-          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
-          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
-        </div>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="relative w-10 h-5 flex flex-col justify-between focus:outline-none z-[60]">
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
       </button>
     </div>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
-    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white pt-10">
-      <li><a href="./index.html" class="">Home</a></li>
-      <li><a href="./services.html" class=""> Services</a></li>
-      <li><a href="./our work.html" class="hover-underline active">Works</a></li>
-      <li><a href="">Network</a></li>
-      <li><a href="">Jobs</a></li>
-      
-    </ul>
-    <div class="space-x-6 lg:hidden block flex flex-col justify-center gap-4 items-center pt-6">
-      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
-  Contact Us
-</button>
-      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
-  Dashboard Login
-</button>
+    <!-- FULLSCREEN MENU -->
+    <div
+      id="fullscreen-menu"
+      class="fixed inset-0 backdrop-blur-md scale-95 opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-white"
+    >
+      <ul class="space-y-8 2xl:text-4xl lg:text-3xl text-xl font-light text-center transform transition-all duration-700 pt-24">
+        <li><a href="./index.html" class="hover:text-[#D2B94E] transition">Home</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="relative group w-full flex flex-col items-center">
+          <button id="services-btn" class="flex items-center justify-center space-x-2 hover:text-[#D2B94E]">
+            <span>Services</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <ul
+            id="services-dropdown"
+            class="absolute bg-[#0F0F0F] top-full w-56 left-1/2 -translate-x-1/2 flex-col space-y-3 text-lg transition-all duration-300 ease-in-out transform origin-top opacity-0 scale-y-0 py-3 px-3 rounded-lg"
+          >
+            <li><a href="services.html" class="hover:text-[#D2B94E] ">Web Design & Development</a></li>
+            <li><a href="./SEO.html" class="hover:text-[#D2B94E] ">SEO Optimization</a></li>
+            <li><a href="./E-Commerce.html" class="hover:text-[#D2B94E] ">E-Commerce Development</a></li>
+            <li><a href="./Brand.html" class="hover:text-[#D2B94E] ">Brand Identity Creation</a></li>
+            <li><a href="./business.html" class="hover:text-[#D2B94E] ">Strategy for Business Development</a></li>
+            <li><a href="./socielmedia.html" class="hover:text-[#D2B94E] ">Social Media Management & Post Creation</a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="./our work.html" class="hover:text-[#D2B94E] transition">Works</a></li>
+        <li><a href="#" class="hover:text-[#D2B94E] transition">Network</a></li>
+        <li><a href="#" class="hover:text-[#D2B94E] transition">Jobs</a></li>
+      </ul>
+
+      <div class="mt-12 flex flex-col space-y-4">
+        <button class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg bg-[#D2B94E] text-[#0F0F0F] rounded-sm font-medium hover:bg-[#c0a840] transition">
+          Dashboard Login
+        </button>
+        <button id="openModal"
+          class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
+        >
+          Contact Us
+        </button>
+      </div>
     </div>
-  </div>
 
-  <div class="">
-    <hr class="border-[#414141]">
-  </div>
-</nav>
+    <!-- <hr class="border border-[#41414166]"> -->
+  </nav>
 
 <!-- work hero section  -->
  <section class="2xl:py-40 lg:py-28 py-20 md:px-20 px-5 bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/workherobg.png);">
@@ -566,49 +564,103 @@ from Hamburg.</h2>
   });
 </script>
   
-<!--navbar JS -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const lines = menuBtn.querySelectorAll('span');
-  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
-  let isOpen = false;
+ <!--navbar JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const fullscreenMenu = document.getElementById('fullscreen-menu');
+    const servicesBtn = document.getElementById('services-btn');
+    const servicesDropdown = document.getElementById('services-dropdown');
+    const svgArrow = servicesBtn.querySelector('svg');
+    let isOpen = false;
 
-  // Mobile menu toggle
-  menuBtn.addEventListener('click', () => {
-    isOpen = !isOpen;
-    mobileMenu.classList.toggle('hidden');
+    // Fullscreen menu toggle
+    menuBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      const [line1, line2, line3] = menuBtn.children;
 
-    // Animate hamburger lines
-    if (isOpen) {
-      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      lines[1].style.opacity = '0';
-      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      if (isOpen) {
+        // Animate hamburger -> X
+        line1.style.transform = 'rotate(45deg) translateY(10px)';
+        line2.style.opacity = '0';
+        line3.style.transform = 'rotate(-45deg) translateY(-10px)';
 
-      // Add black background only on mobile view
-      if (window.innerWidth < 1024) {
-        navbarTop.classList.add('bg-[#171717]');
+        fullscreenMenu.classList.remove('pointer-events-none');
+        fullscreenMenu.classList.add('opacity-100', 'scale-100');
+        fullscreenMenu.classList.remove('opacity-0', 'scale-95');
+      } else {
+        // Animate X -> hamburger
+        line1.style.transform = 'rotate(0) translateY(0)';
+        line2.style.opacity = '1';
+        line3.style.transform = 'rotate(0) translateY(0)';
+
+        fullscreenMenu.classList.add('opacity-0', 'scale-95');
+        fullscreenMenu.classList.remove('opacity-100', 'scale-100');
+        setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
       }
-    } else {
-      lines[0].style.transform = 'rotate(0) translate(0, 0)';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+    });
 
-      // Remove black background when closing menu
-      if (window.innerWidth < 1024) {
-        navbarTop.classList.remove('bg-[#171717]');
+    // Detect mobile
+    const isMobile = () => window.innerWidth < 1024;
+
+    // Toggle dropdown on click (mobile)
+    servicesBtn.addEventListener('click', (e) => {
+      if (isMobile()) {
+        e.stopPropagation();
+        toggleDropdown();
       }
+    });
+
+    // Hover dropdown (desktop)
+    servicesBtn.addEventListener('mouseenter', () => {
+      if (!isMobile()) openDropdown();
+    });
+    servicesBtn.addEventListener('mouseleave', () => {
+      if (!isMobile()) closeDropdown();
+    });
+    servicesDropdown.addEventListener('mouseenter', () => {
+      if (!isMobile()) openDropdown();
+    });
+    servicesDropdown.addEventListener('mouseleave', () => {
+      if (!isMobile()) closeDropdown();
+    });
+
+    // Dropdown logic
+    function toggleDropdown() {
+      const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
+      if (isDropdownOpen) closeDropdown();
+      else openDropdown();
     }
-  });
 
-  // Mobile dropdown toggle
-  function toggleDropdown(id, btn) {
-    const dropdown = document.getElementById(id);
-    const arrow = btn.querySelector('span');
-    dropdown.classList.toggle('hidden');
-    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-  }
-</script>
+    function openDropdown() {
+      servicesDropdown.classList.remove('hidden');
+      setTimeout(() => {
+        servicesDropdown.classList.add('opacity-100', 'scale-y-100');
+        servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
+      }, 10);
+      svgArrow.style.transform = 'rotate(180deg)';
+    }
+
+    function closeDropdown() {
+      servicesDropdown.classList.add('opacity-0', 'scale-y-0');
+      servicesDropdown.classList.remove('scale-y-100');
+      setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
+      svgArrow.style.transform = 'rotate(0deg)';
+    }
+
+    // Close dropdown when clicking outside (mobile)
+    document.addEventListener('click', (e) => {
+      if (isMobile()) {
+        if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
+          closeDropdown();
+        }
+      }
+    });
+
+    // Update behavior on resize
+    window.addEventListener('resize', () => {
+      closeDropdown();
+    });
+  </script>
 
 <script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
 </body>

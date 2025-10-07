@@ -186,98 +186,329 @@
 
 
 
+ <style>
+      body {
+        background-color: #0b0b0b;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* custom gold color */
+      .border-gold {
+        border-color: #D2B94E;
+      }
+
+      /* futuristic border pattern */
+      .feedback-box {
+        position: relative;
+        border: 1px solid #D2B94E;
+        padding: 2rem;
+        margin: 1rem;
+      }
+
+      .feedback-box::before,
+      .feedback-box::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        background: #D2B94E;
+      }
+
+      .feedback-box::before {
+        top: -1px;
+        left: 40px;
+      }
+
+      .feedback-box::after {
+        bottom: -1px;
+        right: 40px;
+      }
+
+      .feedback-decoration {
+        position: absolute;
+        bottom: 15px;
+        left: 40px;
+        display: flex;
+        gap: 6px;
+      }
+
+      .feedback-decoration div {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #D2B94E;
+      }
+
+      .feedback-decoration div:nth-child(1) {
+        background: #D2B94E;
+      }
+
+      /* Slider Styles */
+      .slider {
+        display: flex;
+        transition: transform 0.6s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+      }
+
+      .active {
+        transform: translateX(0);
+      }
+
+      .hidden-slide {
+        opacity: 0;
+      }
+
+      /* dots */
+      .dot {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #D2B94E;
+        margin: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .dot.active {
+        background: #D2B94E;
+      }
+    </style>
 
 
+ <section class="py-20 text-center">
+      <h2 class="text-3xl font-bold mb-4">Client Feedback</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-  <h2 class="text-4xl font-bold text-center mb-2">What They Said</h2>
-  <h2 class="text-4xl font-bold text-center mb-8 text-yellow-400">About Us</h2>
-
-  <!-- Slider Container -->
-  <div class="swiper w-full max-w-5xl">
-    <div class="swiper-wrapper">
-
-      <!-- Slide 1 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-neutral-900 rounded-xl p-8 flex gap-6 items-center w-[90%] md:w-[80%]">
-          <img src="https://via.placeholder.com/150" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Hannah Schmitt</h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-xs text-gray-500 mt-4">May 8, 2020</p>
-          </div>
-        </div>
+      <div
+        class="flex justify-center mb-6 items-center text-[#D2B94E] space-x-3"
+      >
+        <div class="w-4 h-4 border border-[#D2B94E] rounded-full"></div>
+        <div class="w-40 h-[1px] bg-[#D2B94E]"></div>
+        <div class="w-4 h-4 border border-[#D2B94E] rounded-full"></div>
       </div>
 
-      <!-- Duplicate slide for demo -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-neutral-900 rounded-xl p-8 flex gap-6 items-center w-[90%] md:w-[80%]">
-          <img src="https://via.placeholder.com/150/FF0000/FFFFFF" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="text-xl font-semibold mb-2">John Doe</h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p class="text-xs text-gray-500 mt-4">June 12, 2021</p>
+      <p class="max-w-2xl mx-auto text-gray-300 mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <!-- Slider Container -->
+      <div class="overflow-hidden max-w-5xl mx-auto">
+        <div id="slider" class="slider">
+          <!-- Slide 1 -->
+          <div class="slide grid md:grid-cols-2 gap-6">
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide grid md:grid-cols-2 gap-6">
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide grid md:grid-cols-2 gap-6">
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="feedback-box text-left">
+              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="feedback-decoration">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Dots -->
+        <div id="dots" class="flex justify-center mt-8"></div>
       </div>
-
-    </div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination mt-6"></div>
-
-    <!-- Navigation -->
-    <div class="flex justify-center items-center gap-16 mt-6">
-      <div class="swiper-button-prev text-yellow-400 !static"></div>
-      <div class="swiper-button-next text-yellow-400 !static"></div>
-    </div>
-  </div>
-
-  <!-- Swiper Script -->
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
+    </section>
 
 
+     <script>
+      const slider = document.getElementById("slider");
+      const slides = document.querySelectorAll(".slide");
+      const dotsContainer = document.getElementById("dots");
+      let currentSlide = 0;
 
+      slides.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
 
+      const dots = document.querySelectorAll(".dot");
 
+      function goToSlide(index) {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+        currentSlide = index;
+      }
 
-
+      // Auto Slide
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+      }, 5000);
+    </script>
 
 
 
@@ -296,199 +527,26 @@
 
 
 
-<!-- network section  -->
- <section class="2xl:pt-52 lg:pt-36 pt-20">
 
-  <div class="px-5 text-center text-white">
-    <h2 class=" xl:text-7xl lg:text-5xl md:text-[40px] text-4xl font-semibold">Our Network</h2>
-    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-5">Over 450 companies already trust the experts at convince me.</p>
-  </div>
-  
-    <!-- grid  -->
-  <div class="xl:pt-10 pt-6">
-     <div class="grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
 
-      <div class="group flex items-center py-6 px-4 justify-center border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/KRIEGERgry.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/KRIEGERpink.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/marangonigrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/marangoniblue.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/biaxgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/biaxgree.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/ksbgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/ksbblue.png" class="hidden group-hover:block" alt="">
-</div>
 
-    <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/vermetergry.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/Kein.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/pflgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/pfl.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/greenhillgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/greenhill.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/cchgrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/ccn.png" class="hidden group-hover:block" alt="">
-</div>
 
- <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/dorfernergrey.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/dorfner.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/sfsgry.png" class="block group-hover:hidden" alt="">
 
-  <!-- Hover Image -->
-  <img src="./assets/img/sfs.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/gorillaweargrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/gorillawear.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boliergrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/bolier 1.png" class="hidden group-hover:block" alt="">
-</div>
-
- <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/deingrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/deincolor.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/fifthflourgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/fifthflour 2.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/mmaon-logo 2.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/mmaonyellow.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/vukoje.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/vukojered.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/Envy.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/Envygreen.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/madringrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/madrin.png" class="hidden group-hover:block" alt="">
-</div>  
-    </div>
-  </div>
-
-  <div class="text-center">
-  <button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
-  Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
-</button>
-</div>
-
- </section>
 
 
   </body>
