@@ -8,123 +8,98 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
 
-  <!-- SwiperJS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body class="bg-[#0F0F0F]">
 
-<!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
-    <div class="flex justify-between items-center px-6 py-5">
-      <!-- Logo -->
-      <a href="./index.html">
-        <img src="./assets/img/logo.png" alt="Logo" class="w-32">
+<!-- navbar  -->
+ <nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
+  <!-- TOP BAR -->
+  <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
+    <!-- Logo -->
+    <div>
+      <a href="">
+      <img src="./assets/img/logo.png" alt="Logo" class="">
       </a>
+    </div>
 
-      <!-- Hamburger -->
-      <button id="menu-btn" class="relative w-10 h-5 flex flex-col justify-between focus:outline-none z-[60]">
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center text-white">
+  <li><a href="" class="hover-underline active">Home</a></li>
+  <li><a href="./services.html" class="hover-underline ">Services</a></li>
+  <li><a href="./our work.html" class="hover-underline">Works</a></li>
+  <li><a href="" class="hover-underline">Network</a></li>
+  <li><a href="" class="hover-underline">Jobs</a></li>
+</ul>
+      
+    </div>
+
+    <div class="space-x-2 lg:block hidden">
+      <button id="openModal" class="2xl:text-xl text-lg font-normal 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+  Contact Us
+</button>
+      <button class="2xl:text-xl text-lg font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
+  Dashboard Login
+</button>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden z-50">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
+        </div>
       </button>
     </div>
+  </div>
 
-    <!-- FULLSCREEN MENU -->
-    <div
-      id="fullscreen-menu"
-      class="fixed inset-0 backdrop-blur-md scale-95 opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-white"
-    >
-      <ul class="space-y-8 lg:text-3xl text-xl font-light text-center transform transition-all duration-700 pt-24">
-        <li><a href="./index.html" class="hover:text-[#D2B94E] transition">Home</a></li>
-
-        <!-- Services Dropdown -->
-        <li class="relative group w-full flex flex-col items-center">
-          <button id="services-btn" class="flex items-center justify-center space-x-2 hover:text-[#D2B94E]">
-            <span>Services</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-
-          <!-- Dropdown -->
-          <ul
-            id="services-dropdown"
-            class="absolute bg-[#0F0F0F] top-full w-52 left-1/2 -translate-x-1/2 flex-col space-y-3 text-lg transition-all duration-300 ease-in-out transform origin-top opacity-0 scale-y-0 py-3 rounded-lg"
-          >
-            <li><a href="services.html" class="hover:text-[#D2B94E] ">Web Design</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Branding</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Marketing</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Web Design</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Branding</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Marketing</a></li>
-          </ul>
-        </li>
-
-        <li><a href="./our work.html" class="hover:text-[#D2B94E] transition">Works</a></li>
-        <li><a href="#" class="hover:text-[#D2B94E] transition">Network</a></li>
-        <li><a href="#" class="hover:text-[#D2B94E] transition">Jobs</a></li>
-      </ul>
-
-      <div class="mt-12 flex flex-col space-y-4">
-        <button class="px-8 py-3 bg-[#D2B94E] text-[#0F0F0F] rounded-sm font-medium hover:bg-[#c0a840] transition">
-          Dashboard Login
-        </button>
-        <button
-          class="px-8 py-3 border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
-        >
-          Contact Us
-        </button>
-      </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white pt-10">
+      <li><a href="" class="hover-underline active">Home</a></li>
+      <li><a href="./services.html" class=""> Services</a></li>
+      <li><a href="./our work.html" class="">Works</a></li>
+      <li><a href="">Network</a></li>
+      <li><a href="">Jobs</a></li>
+      
+    </ul>
+    <div class="space-x-6 lg:hidden block flex flex-col justify-center gap-4 items-center pt-6">
+      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+  Contact Us
+</button>
+      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
+  Dashboard Login
+</button>
     </div>
+  </div>
 
-    <hr class="border border-[#41414166]">
-  </nav>
-
+  <div class="">
+    <hr class="border-[#414141]">
+  </div>
+</nav>
 
     <!-- hero section  -->
-<section class="px-5 md:px-0 bg-center bg-no-repeat bg-cover 2xl:h-[1265px] md:h-[1100px] h-[1380px]" style="background-image: url(./assets/img/herobg1.png);">
-    <div class="flex md:flex-row flex-col justify-center gap-10 xl:pt-60 md:pt-48 pt-40">
-      <div class="md:w-2/5 w-full 2xl:pl-24 lg:pl-10 md:px-5">
+<section class="2xl:px-24 lg:px-10 px-5 bg-center bg-no-repeat bg-cover 2xl:h-[1265px] xl:h-[1024px] h-[700px]" style="background-image: url(./assets/img/Herobg.png);">
+    <div class="flex flex-col justify-center items-center xl:pt-60 md:pt-48 pt-40">
         <h2 class="text-[#F5F5F5] xl:text-xl text-lg font-normal uppercase tracking-widest">Track & Manage</h2>
-        <h1 class="text-[#F5F5F5] 2xl:text-[160px] xl:text-8xl md:text-7xl text-6xl font-semibold">
+        <h1 class="text-[#F5F5F5] 2xl:text-[200px] xl:text-9xl md:text-7xl text-6xl font-bold text-center">
   <span class="bg-[#D2B94E] bg-clip-text text-transparent">
     Marketing <br>
   </span> Richtig <br> Gemacht
 </h1>
 
-<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 ">Our comprehensive SaaS solutions are tailored to streamline your operations and drive maximum revenue for your business.</p>
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 text-center ">Our comprehensive SaaS solutions are tailored to streamline your <br class="md:block hidden"> operations and drive maximum revenue for your business.</p>
 
-<div>
-<button class="font-xl text-start font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
   Let’s Talk &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
 </button>
-</div>
-</div>
 
-<div class="md:w-3/5 w-full">
-  <img src="./assets/img/heroleft im.png" class="w-full" alt="">
-</div>
-
-    </div>
-
-    <div class="flex md:flex-row flex-col justify-between items-center 2xl:px-24 lg:px-10 md:px-5 pt-20">
-      <div class="xl:w-2/5 w-full flex gap-5">
-        <img src="./assets/img/company1.png" alt="">
-        <img src="./assets/img/company2.png" alt="">
-      </div>
-
-      <div class="xl:w-3/5 w-full flex flex-wrap items-center gap-6 2xl:gap-10 pt-10 md:pt-0">
-        <img src="./assets/img/google-reviews.png" class="" alt="">
-        <img src="./assets/img/Line 35.png" alt="">
-        <img src="./assets/img/meta.png" class="" alt="">
-        <img src="./assets/img/Line 35.png" alt="">
-        <img src="./assets/img/tiktok.png" class="" alt="">
-        <img src="./assets/img/Line 35.png" alt="">
-        <img src="./assets/img/google-partner.png" class="" alt="">
-        <img src="./assets/img/Line 35.png" alt="">
-        <img src="./assets/img/der.png" class="" alt="">
-      </div>
     </div>
 </section>
 
@@ -213,50 +188,58 @@
 
   </div>
 
-  <div class="flex md:flex-row flex-col 2xl:pt-28 lg:pt-20 pt-10 gap-5 md:gap-0">
-    <!-- ist card  -->
-    <div class="flex flex-col justify-between hover:bg-black/20 md:w-1/3 w-full border border-[#414141] rounded-sm 2x:py-10 2xl:px-8 py-6 px-5">
-      <div>
-      <img src="./assets/img/digitalbrilliance.png" alt="">
-      <h3 class="2xl:text-5xl lg:text-4xl text-3xl font-semibold text-white pt-4">Digital Brilliance – Ihr strahlendes Markenimage</h3>
-    <p class="2xl:text-[22px] lg:text-lg text-base 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5">Mit Digital Brilliance rücken wir Ihr Unternehmen ins perfekte Licht – egal ob als attraktiver Arbeitgeber für neue Talente oder als starker Dienstleister in Ihrer Region. <br> Wir entwickeln eine digitale Markenpräsenz, die Vertrauen schafft, Ihre Sichtbarkeit erhöht und Ihre Zielgruppe begeistert. <br> So werden Sie nicht nur gesehen, sondern bleiben auch im Gedächtnis.</p>
-</div>
-<div>
-<button class="font-xl font-medium px-6 py-3 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
-  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
-</button>
-</div>
-    </div>
-
-     <!-- 2nd card  -->
-    <div class="flex flex-col justify-between hover:bg-black/20 md:w-1/3 w-full border border-[#414141] md:border-t-[#414141] md:border-b-[#414141] md:border-l-0 md:border-r-0 rounded-sm 2x:py-10 2xl:px-8 py-6 px-5">
-      <div>
-      <img src="./assets/img/sociall.png" alt="">
-      <h3 class="2xl:text-5xl lg:text-4xl text-3xl font-semibold text-white pt-4">Social Media – Sichtbarkeit, die wirkt</h3>
-    <p class="2xl:text-[22px] lg:text-lg text-base 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5">Social Media ist heute weit mehr als nur Likes und Follower – es ist einer der stärksten Kanäle, um Kunden zu gewinnen und Mitarbeiter zu erreichen. <br> Wir sorgen dafür, dass Ihre Marke auf den relevanten Plattformen sichtbar, nahbar und unverwechselbar wird. <br> Ob Content-Strategie, kreative Posts oder zielgerichtete Kampagnen – wir nutzen Social Media, um Ihre Reichweite zu steigern, Ihre Community aufzubauen und Ihre Botschaften genau dort zu platzieren, wo sie wirken.</p>
-</div>
-<div>
-<button class="font-xl font-medium px-6 py-3 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
-  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
-</button>
-</div>
-    </div>
-
-     <!-- 3rd card  -->
-    <div class="flex flex-col justify-between hover:bg-black/20 md:w-1/3 w-full border border-[#414141] rounded-sm 2x:py-10 2xl:px-8 py-6 px-5">
-      <div>
-      <img src="./assets/img/performance.png" alt="">
-      <h3 class="2xl:text-5xl lg:text-4xl text-3xl font-semibold text-white pt-4">Performance Marketing & Recruiting</h3>
-    <p class="2xl:text-[22px] lg:text-lg text-base 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5">Wir bringen dein Business nach vorn – egal ob mehr Umsatz oder neue Mitarbeiter gebraucht werden. <br> Mit Performance Marketing steigern wir deine Reichweite und Umsätze messbar durch zielgerichtete Ads. <br> Mit Performance Recruiting besetzen wir deine offenen Stellen in maximal 30 Tagen – schnell, effizient, passend und mit Einstellungsgarantie.</p>
-</div>
-<div>
-<button class="font-xl font-medium px-6 py-3 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
-  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
-</button>
-</div>
-    </div>
-
+  <!-- ist block  -->
+<div class="flex md:flex-row flex-col 2xl:mt-28 xl:mt-20 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/digital.png" class="md:w-full" alt="">
   </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Digital Brilliance Redefined</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">Embark on a journey where strategy meets concept. Our expert team
+collaborates with you to formulate a strategic plan that aligns seamlessly with your objectives. From this, we derive implementable concepts designed for success.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
+
+
+<!-- 2nd block  -->
+<div class="flex md:flex-row flex-col md:mt-0 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/social.png" class="md:w-full" alt="">
+  </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Social Media Marketing</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">In today’s landscape, it’s not about whether social media marketing is worthwhile, but how to harness its power effectively. We design and execute successful social media concepts tailored to your unique objectives.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
+
+<!-- 3rd block  -->
+ <div class="flex md:flex-row flex-col md:mt-0 mt-10 border border-[#414141] ">
+  <div class="md:w-3/12 w-full flex justify-center items-center md:py-20 py-10 2xl:px-16 xl:px-10 px-5">
+    <img src="./assets/img/future.png" class="md:w-full" alt="">
+  </div>
+  <div class="md:w-3/4 w-full flex flex-col justify-center 2xl:px-32 xl:px-20 px-6 md:border-l border-t border-[#414141] 2xl:py-20 lg:py-10 py-6">
+    <h3 class="2xl:text-7xl lg:text-5xl md:text-[40px] md:text-4xl text-3xl font-semibold text-white">Future Vision</h3>
+    <p class="2xl:text-3xl lg:text-xl text-lg 2xl:leading-[65px] lg:leading-9 leading-7 text-white pt-5">We integrate essential measures and processes into your marketing strategy, optimizing your brand’s presence to leave a lasting imprint in the minds of visitors. Let’s shape the future together.</p>
+
+<div>
+<button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E]">
+  Read More &nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</div>
 
 
 </section>
@@ -288,15 +271,15 @@
   </div>
 
 <!-- grid section  -->
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-8 gap-6 2xl:pt-32 lg:pt-20 pt-10">
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-8 gap-6 pt-32 lg:pt-20 pt-10">
 
-    <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+    <div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block1.png" alt="" class="">
+        <img src="./assets/img/convince.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -308,7 +291,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#09E156] to-[#01BCDD] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#09E156] to-[#01BCDD] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -329,13 +312,13 @@
 
 </div>
 
-  <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+  <div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block2.png" alt="" class="">
+        <img src="./assets/img/requirting.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -347,7 +330,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#FF66E1] to-[#FFE438] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#FF66E1] to-[#FFE438] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -368,13 +351,13 @@
 
 </div>
 
- <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+ <div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block3.png" alt="" class="">
+        <img src="./assets/img/shopping.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -386,7 +369,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#33CAD7] to-[#FFD675] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#33CAD7] to-[#FFD675] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -407,13 +390,13 @@
 
 </div>
 
-<div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+<div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block4.png" alt="" class="">
+        <img src="./assets/img/socialmedia.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -425,7 +408,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#76FEBA] to-[#F84CB5] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#76FEBA] to-[#F84CB5] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -446,13 +429,13 @@
 
 </div>
 
-<div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+<div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block5.png" alt="" class="">
+        <img src="./assets/img/strategy.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -464,7 +447,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#07FFE1] to-[#FFC555] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#07FFE1] to-[#FFC555] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -485,13 +468,13 @@
 
 </div>
 
-<div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+<div class="relative group border border-[#414141] 2xl:p-10 p-6 rounded-2xl overflow-hidden cursor-pointer">
 
   <!-- Normal Content -->
   <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
     <div class="flex justify-between">
       <div>
-        <img src="./assets/img/block6.png" alt="" class="">
+        <img src="./assets/img/website.png" alt="" class="">
       </div>
       <div>
         <img src="./assets/img/errow.png" alt="" class="">
@@ -503,7 +486,7 @@
   </div>
 
   <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#DFE81D] to-[#0CFEDD] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#DFE81D] to-[#0CFEDD] p-6 2xl:p-10 rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
     <div class="flex justify-between">
       <div>
         <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
@@ -533,112 +516,144 @@
     <h2 class="xl:text-7xl lg:text-5xl md:text-[40px] text-4xl xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px] font-semibold text-white text-center">What they said <br><span class="text-[#F5F5F5]/80">about us</span></h2>
   </div>
 
-    <!-- Slider Container -->
-  <div class="swiper w-full max-w-4xl xl:mt-16 mt-10">
-    
-    <div class="swiper-wrapper">
+  <div class="swiper mySwiper 2xl:mt-20 xl:mt-14 mt-10">
+  <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
-          </div>
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
         </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
           <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Slide 3 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Slide 4 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Slide 5 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Slide 6 -->
-      <div class="swiper-slide flex justify-center">
-        <div class="bg-[#1C1C1C] rounded-xl p-8 flex gap-6 items-center">
-          <img src="./assets/img/sliderimg.png" alt="Profile" class="w-40 h-40 rounded-full object-cover">
-          <div>
-            <h3 class="2xl:text-2xl lg:text-xl text-lg font-bold mb-2 text-white">Hannah Schmitt</h3>
-            <p class="text-white/70 xl:text-lg md:text-base text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus
-              maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-            </p>
-            <p class="text-sm text-white mt-4">May 8, 2020</p>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
           </div>
         </div>
       </div>
     </div>
 
-<!-- Wrapper for pagination + arrows -->
-<div class="slider-controls flex justify-center items-center mt-10">
-  <div class="controls-inner flex justify-center items-center gap-3">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 5 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Slide 6 -->
+    <div class="swiper-slide">
+      <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white" style="background-image: url(./assets/img/slidecardbg.png);">
+        <div>
+          <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
+            “This platform has completely changed how I handle my business finances...
+          </h3>
+          <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
+            ...The real-time insights and budgeting tools helped me cut unnecessary expenses and grow my profits by 20% in just six months!”
+          </p>
+        </div>
+        <hr class="border-2 border-[#000000] mt-16 mb-6">
+        <div class="flex gap-5">
+          <div><img src="" alt=""></div>
+          <div>
+            <h4 class="2xl:text-lg text-base">Jane D</h4>
+            <p class="2xl:text-sm text-xs">Owner of GreenPath Café</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </div>
+</div>
 </section>
 
 <!-- stand conviction  -->
@@ -737,178 +752,105 @@
     <!-- grid  -->
   <div class="xl:pt-10 pt-6">
      <div class="grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
 
-      <div class="group flex items-center py-6 px-4 justify-center border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/KRIEGERgry.png" class="block group-hover:hidden" alt="">
+       <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
 
-  <!-- Hover Image -->
-  <img src="./assets/img/KRIEGERpink.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
+       <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
 
-  <!-- Hover Image -->
-  <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/marangonigrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/marangoniblue.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/biaxgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/biaxgree.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/ksbgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/ksbblue.png" class="hidden group-hover:block" alt="">
-</div>
-
-    <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/vermetergry.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/Kein.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/pflgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/pfl.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/greenhillgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/greenhill.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/cchgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/ccn.png" class="hidden group-hover:block" alt="">
-</div>
-
- <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/dorfernergrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/dorfner.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/sfsgry.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/sfs.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/gorillaweargrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/gorillawear.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-3 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/boliergrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/bolier 1.png" class="hidden group-hover:block" alt="">
-</div>
-
- <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/deingrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/deincolor.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/hellofreshgrey.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/mmaon-logo 2.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/mmaonyellow.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/vukoje.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/vukojered.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/Envy.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/Envygreen.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-1 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/usfgrey.png" class="block group-hover:hidden" alt="">
-
-  <!-- Hover Image -->
-  <img src="./assets/img/usfgrey.png" class="hidden group-hover:block" alt="">
-</div>  
+       <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/bestbank.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/teamtalk.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/slab.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/getdol.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      </div>
+      <div class="flex items-center gap-2 py-12 justify-center border border-[#4141414D] rounded-sm hover:[background:linear-gradient(135deg,#FFFFFF_0%,#EF4444_25%,#6E35EF_75%,#746ED5_100%)] transition-all duration-500">
+        <img src="./assets/img/arktik.png" alt="">
+        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+      </div>
     </div>
   </div>
 
@@ -922,139 +864,55 @@
 
 <!-- marketing section  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
-  <div>
-    <div class="text-center">
-      <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">
+  <div class="flex lg:flex-row flex-col xl:gap-20 gap-10">
+    <div class="lg:w-2/5 w-full">
+      <h2 class="md:text-start text-center 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">
         Unveiling Trends
-and Strategies in <br> <span class="text-[#D2B94E] font-semibold">Modern Marketing</span>
+and Strategies in <span class="text-[#D2B94E]">Modern Marketing</span>
       </h2>
-      <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">Explore our enriching blog filled with expert perspectives, timely industry updates, and actionable tips. Immerse yourself in a wealth of knowledge to <br class="xl:block hidden"> navigate the dynamic landscape of modern marketing and empower your brand’s journey towards sustained success.</p>
+      <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 md:text-start text-center">Explore our enriching blog filled with expert perspectives, timely industry updates, and actionable tips. Immerse yourself in a wealth of knowledge to navigate the dynamic landscape of modern marketing and empower your brand’s journey towards sustained success.</p>
 
-       <div class="">
+       <div class="md:text-start text-center">
   <button class="font-xl font-medium px-8 py-4 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
   Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
 </button>
 </div>
     </div>
 
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-8 gap-6 2xl:pt-32 lg:pt-20 pt-10">
-    <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
+    <div class="lg:w-3/5 w-full pt-10 lg:pt-0">
 
-  <!-- Normal Content -->
-  <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
-    <div class="flex justify-between">
-      <div>
-        <img src="./assets/img/branddd.png" alt="" class="">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Branding</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
       </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="">
-      </div>
-    </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-24">
-      Production
-    </h3>
-    <!-- <p class="text-white mt-4">At convince me. we specialize in uncovering
-your brand’s unique identity. </p> -->
-  </div>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
 
-  <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#09E156] to-[#01BCDD] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
-    <div class="flex justify-between">
-      <div>
-        <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/concept.png" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Strategy & Concept</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
       </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="transition-transform duration-300 group-hover:translate-x-1">
-      </div>
-    </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-4">
-      Branding
-    </h3>
-    <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering
-your brand’s unique identity. 
-    </p>
-  </div>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
 
-</div>
-
-  <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
-
-  <!-- Normal Content -->
-  <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
-    <div class="flex justify-between">
-      <div>
-        <img src="./assets/img/strategy.png" alt="" class="">
-      </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/websiteuiux.png" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Website & Web design</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
       </div>
     </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-24">
-      Strategy & Concept
-    </h3>
-  </div>
-
-  <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#FF66E1] to-[#FFE438] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
-    <div class="flex justify-between">
-      <div>
-        <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
-      </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="transition-transform duration-300 group-hover:translate-x-1">
-      </div>
-    </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Strategy & Concept
-    </h3>
-    <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering
-your brand’s unique identity. 
-    </p>
-  </div>
-
-</div>
-
- <div class="relative group border border-[#414141] 2xl:p-10 p-6  overflow-hidden cursor-pointer">
-
-  <!-- Normal Content -->
-  <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:translate-y-[-20px]">
-    <div class="flex justify-between">
-      <div>
-        <img src="./assets/img/websitee.png" alt="" class="">
-      </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="">
-      </div>
-    </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-white pt-24">
-      Website & Web design
-    </h3>
-  </div>
-
-  <!-- Hover Content (Gradient Overlay Slide/Fade In) -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#33CAD7] to-[#FFD675] p-6 2xl:p-10  opacity-0 translate-y-10 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
-    <div class="flex justify-between">
-      <div>
-        <!-- <img src="./assets/img/convince.png" alt="" class="w-10 h-10"> -->
-      </div>
-      <div>
-        <img src="./assets/img/errow.png" alt="" class="transition-transform duration-300 group-hover:translate-x-1">
-      </div>
-    </div>
-    <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Website & Web design
-    </h3>
-    <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering
-your brand’s unique identity. 
-    </p>
-  </div>
-
-</div>
-</div>
-
   </div>
 </section>
 
@@ -1216,11 +1074,6 @@ from Hamburg.</h2>
         <p class="text-white/70 md:mt-4 text-sm leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
-
-        <div class="flex gap-2 pt-6">
-          <img src="./assets/img/company1.png" alt="">
-          <img src="./assets/img/company2.png" alt="">
-        </div>
       </div>
 
       <!-- Quick Links -->
@@ -1271,15 +1124,8 @@ from Hamburg.</h2>
       </div>
     </div>
 
-       
-    <!-- Bottom Bar -->
-    <div class="border-t border-[#414141] mt-10 flex justify-between items-center">
-       <!-- Copyright -->
-        <div>© 2025, Convince me.</div>
-
-      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
-        <!-- Social Icons -->
-        <div class="flex justify-center md:justify-start space-x-4">
+       <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start space-x-4 mt-10">
           <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
             <i class="fab fa-instagram"></i>
           </a>
@@ -1290,6 +1136,19 @@ from Hamburg.</h2>
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#414141] mt-10">
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="./termandcondition.html">Terms of Service</a>
+          <a href="./privacypoliciy.html">Privacy Policy</a>
+          <a href="#">Legal Notice</a>
+          <a href="#">Cookie Setting</a>
+        </div>
+
+        <!-- Copyright -->
+        <div>© 2025, Convince me.</div>
       </div>
     </div>
   </footer>
@@ -1442,124 +1301,53 @@ from Hamburg.</h2>
   });
 </script>
 
- <!--navbar JS -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const servicesBtn = document.getElementById('services-btn');
-    const servicesDropdown = document.getElementById('services-dropdown');
-    const svgArrow = servicesBtn.querySelector('svg');
-    let isOpen = false;
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
+  let isOpen = false;
 
-    // Fullscreen menu toggle
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      const [line1, line2, line3] = menuBtn.children;
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
 
-      if (isOpen) {
-        // Animate hamburger -> X
-        line1.style.transform = 'rotate(45deg) translateY(10px)';
-        line2.style.opacity = '0';
-        line3.style.transform = 'rotate(-45deg) translateY(-10px)';
+    // Animate hamburger lines
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
 
-        fullscreenMenu.classList.remove('pointer-events-none');
-        fullscreenMenu.classList.add('opacity-100', 'scale-100');
-        fullscreenMenu.classList.remove('opacity-0', 'scale-95');
-      } else {
-        // Animate X -> hamburger
-        line1.style.transform = 'rotate(0) translateY(0)';
-        line2.style.opacity = '1';
-        line3.style.transform = 'rotate(0) translateY(0)';
-
-        fullscreenMenu.classList.add('opacity-0', 'scale-95');
-        fullscreenMenu.classList.remove('opacity-100', 'scale-100');
-        setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
+      // Add black background only on mobile view
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.add('bg-[#171717]');
       }
-    });
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
 
-    // Detect mobile
-    const isMobile = () => window.innerWidth < 1024;
-
-    // Toggle dropdown on click (mobile)
-    servicesBtn.addEventListener('click', (e) => {
-      if (isMobile()) {
-        e.stopPropagation();
-        toggleDropdown();
+      // Remove black background when closing menu
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.remove('bg-[#171717]');
       }
-    });
-
-    // Hover dropdown (desktop)
-    servicesBtn.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesBtn.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-    servicesDropdown.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesDropdown.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-
-    // Dropdown logic
-    function toggleDropdown() {
-      const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
-      if (isDropdownOpen) closeDropdown();
-      else openDropdown();
     }
+  });
 
-    function openDropdown() {
-      servicesDropdown.classList.remove('hidden');
-      setTimeout(() => {
-        servicesDropdown.classList.add('opacity-100', 'scale-y-100');
-        servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
-      }, 10);
-      svgArrow.style.transform = 'rotate(180deg)';
-    }
-
-    function closeDropdown() {
-      servicesDropdown.classList.add('opacity-0', 'scale-y-0');
-      servicesDropdown.classList.remove('scale-y-100');
-      setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
-      svgArrow.style.transform = 'rotate(0deg)';
-    }
-
-    // Close dropdown when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-      if (isMobile()) {
-        if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
-          closeDropdown();
-        }
-      }
-    });
-
-    // Update behavior on resize
-    window.addEventListener('resize', () => {
-      closeDropdown();
-    });
-  </script>
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
   
 
-
-
-  <!-- Swiper Script -->
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-
 <!-- swiper js  -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -1576,7 +1364,7 @@ from Hamburg.</h2>
       1280: { slidesPerView: 3 }
     }
   });
-</script> -->
+</script>
 
 
 <script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>

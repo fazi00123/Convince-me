@@ -14,7 +14,9 @@
   <div id="navbar-top" class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 py-5">
     <!-- Logo -->
     <div>
-      <img src="./assets/img/logo.png" alt="Logo" class="w-32">
+      <a href="./index.html">
+      <img src="./assets/img/logo.png" alt="Logo" class="">
+      </a>
     </div>
 
     <!-- Menu (Desktop) -->
@@ -31,10 +33,10 @@
     </div>
 
     <div class="space-x-2 lg:block hidden">
-      <button id="openModal" class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
+      <button id="openModal" class="2xl:text-xl text-lg font-normal 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-white hover:text-[#0F0F0F] rounded-sm hover:border hover:border-[#4B4B4B] hover:bg-[#D2B94E] transition">
   Contact Us
 </button>
-      <button class="font-xl font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
+      <button class="2xl:text-xl text-lg font-medium 2xl:px-8 2xl:py-4 xl:py-3 py-2 px-6 text-[#0F0F0F] rounded-sm border border-[#4B4B4B] bg-[#D2B94E] transition">
   Dashboard Login
 </button>
     </div>
@@ -400,9 +402,8 @@ Lorem ipsum dolor sit amet?</span>
     </div>
 </section>
 
-
 <!-- digital marketing  -->
-<section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat bg-[#0F0F0F]" style="background-image: url(./assets/img/marketingbg.png);">
+<section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat bg-[#0F0F0F] border-t border-[#262626]" style="background-image: url(./assets/img/marketingbg.png);">
   <div class="2xl:py-36 lg:py-20 py-10 2xl:px-32 lg:px-16 px-6 text-center">
     <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">Digital marketing <br>
 from Hamburg.</h2>
@@ -416,8 +417,8 @@ from Hamburg.</h2>
   </div>
 </section>
 
-    <!-- Footer -->
-  <footer class="text-white px-6 lg:px-12 xl:px-20 2xl:px-28 py-12 xl:py-20 bg-[#0F0F0F]">
+  <!-- Footer -->
+  <footer class="text-white px-6 lg:px-12 xl:px-20 2xl:px-28 py-12 xl:py-20 ">
 
     <div class="md:hidden block flex justify-center pb-10">
       <img src="./assets/img/footer.png" alt="">
@@ -433,6 +434,11 @@ from Hamburg.</h2>
         <p class="text-white/70 md:mt-4 text-sm leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
+
+        <div class="flex gap-2 pt-6">
+          <img src="./assets/img/company1.png" alt="">
+          <img src="./assets/img/company2.png" alt="">
+        </div>
       </div>
 
       <!-- Quick Links -->
@@ -483,8 +489,15 @@ from Hamburg.</h2>
       </div>
     </div>
 
-       <!-- Social Icons -->
-        <div class="flex justify-center md:justify-start space-x-4 mt-10">
+       
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#414141] mt-10 flex justify-between items-center">
+       <!-- Copyright -->
+        <div>© 2025, Convince me.</div>
+
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start space-x-4">
           <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
             <i class="fab fa-instagram"></i>
           </a>
@@ -495,23 +508,9 @@ from Hamburg.</h2>
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>
-    <!-- Bottom Bar -->
-    <div class="border-t border-[#414141] mt-10">
-      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
-        <!-- Links -->
-        <div class="flex flex-wrap justify-center gap-6">
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Legal Notice</a>
-          <a href="#">Cookie Setting</a>
-        </div>
-
-        <!-- Copyright -->
-        <div>© 2025, Convince me.</div>
       </div>
     </div>
   </footer>
-
 
   <!-- contact popup form  -->
 <div id="contactModal" 
@@ -568,7 +567,6 @@ from Hamburg.</h2>
   </div>
 </div>
 
-
 <!--contact Script -->
 <script>
   const openModalButtons = document.querySelectorAll("#openModal"); // Saare "Contact Us" buttons select karo
@@ -594,7 +592,6 @@ from Hamburg.</h2>
     }
   });
 </script>
-
 
     <!-- faqs js -->
  <script>

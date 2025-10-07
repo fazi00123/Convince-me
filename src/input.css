@@ -1,9 +1,23 @@
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: Degular;
+    src: url(../font/fonnts.com-DegularDemo-Regular.otf);
+}
+
+/* @font-face {
+    font-family: CabinetGrotesk;
+    src: url(../font/CabinetGrotesk-Regular.otf);
+} */
+
+
+body{
+    font-family: Degular;
+}
 
 
 /* marquee  */
@@ -128,3 +142,97 @@
 .hover-underline.active::after {
   width: 100%; /* Active link pe hamesha underline dikhe */
 }
+
+
+
+
+  /* Optional smooth fade for desktop dropdown */
+  .group:hover ul {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* slider css  */
+
+/* ====== Center controls together ====== */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.controls-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* adjust space between items */
+}
+
+/* ====== Navigation arrows ====== */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  color: #D2B94E !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/* Smaller arrows */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 700;
+}
+
+/* ====== Pagination dots ====== */
+.swiper-pagination {
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #D2B94E !important;
+}
+
+
+
