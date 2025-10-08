@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#0F0F0F]">
+    
+<!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
+    <div class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 2xl:py-10 py-6">
+      <!-- Logo -->
+      <a href="./index.html">
+        <img src="./assets/img/logo.png" alt="Logo" class="">
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="relative w-10 h-5 flex flex-col justify-between focus:outline-none z-[60]">
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+      </button>
+    </div>
+
+    <!-- FULLSCREEN MENU -->
+    <div
+      id="fullscreen-menu"
+      class="fixed inset-0 backdrop-blur-md scale-95 opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-white"
+    >
+      <ul class="space-y-8 2xl:text-4xl lg:text-3xl text-xl font-light text-center transform transition-all duration-700 pt-24">
+        <li><a href="./index.html" class="hover:text-[#D2B94E] transition">Home</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="relative group w-full flex flex-col items-center">
+          <button id="services-btn" class="flex items-center justify-center space-x-2 hover:text-[#D2B94E]">
+            <span>Services</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <ul
+            id="services-dropdown"
+            class="absolute bg-[#0F0F0F] top-full w-56 left-1/2 -translate-x-1/2 flex-col space-y-3 text-lg transition-all duration-300 ease-in-out transform origin-top opacity-0 scale-y-0 py-3 px-3 rounded-lg"
+          >
+            <li><a href="services.html" class="hover:text-[#D2B94E] ">Web Design & Development</a></li>
+            <li><a href="./SEO.html" class="hover:text-[#D2B94E] ">SEO Optimization</a></li>
+            <li><a href="./E-Commerce.html" class="hover:text-[#D2B94E] ">E-Commerce Development</a></li>
+            <li><a href="./Brand.html" class="hover:text-[#D2B94E] ">Brand Identity Creation</a></li>
+            <li><a href="./business.html" class="hover:text-[#D2B94E] ">Strategy for Business Development</a></li>
+            <li><a href="./socielmedia.html" class="hover:text-[#D2B94E] ">Social Media Management & Post Creation</a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="./our work.html" class="hover:text-[#D2B94E] transition">Works</a></li>
+        <li><a href="#" class="hover:text-[#D2B94E] transition">Network</a></li>
+        <li><a href="./job.html" class="hover:text-[#D2B94E] transition">Jobs</a></li>
+        
+      </ul>
+
+      <div class="mt-12 flex flex-col space-y-4">
+        <button class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg bg-[#D2B94E] text-[#0F0F0F] rounded-sm font-medium hover:bg-[#c0a840] transition">
+          Dashboard Login
+        </button>
+        <button id="openModal"
+          class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
+        >
+          Contact Us
+        </button>
+      </div>
+    </div>
+
+    <hr class="border border-[#41414166]">
+  </nav>
+
+  <section class="2xl:pt-36 pt-28">
+
+  </section>
+
+  <!-- digital marketing  -->
+<section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat border-t border-[#262626]" style="background-image: url(./assets/img/marketingbg.png);">
+  <div class="2xl:py-36 lg:py-20 py-10 2xl:px-32 lg:px-16 px-6 text-center">
+    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">Digital marketing <br>
+from Hamburg.</h2>
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">We are not a classic advertising agency, but rather a digital marketing agency that knows how to use the advantages of digitalization. We win customers, position brands and sell products. Previously via newspapers, radio or television – today mostly through online marketing. We reach your target group where they spend most of their time: on the Internet. The digital world allows us to effectively address your target group in the right place at the right time and thus achieve your strategic goals efficiently. Our goal is to work with you to implement a unique, profitable solution.</p>
+
+ <div class="text-center">
+  <button class="font-xl font-medium px-8 py-4 xl:mt-16 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-white px-6 lg:px-12 xl:px-20 2xl:px-28 py-12 xl:py-20 ">
+
+    <div class="md:hidden block flex justify-center pb-10">
+      <img src="./assets/img/footer.png" alt="">
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 gap-8 text-center md:text-start">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-2">
+        <div class=""
+        >
+        <img src="./assets/img/footer.png" class="md:block hidden" alt="">
+        </div>
+        <p class="text-white/70 md:mt-4 text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Plans & Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="font-semibold mb-4">Support</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Online Chat</a></li>
+          <li><a href="#">Whatsapp</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Page</a></li>
+          <li><a href="#">Enterprise</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Career Tips</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="flex md:justify-start justify-center gap-2 pt-6">
+          <img src="./assets/img/company1.png" alt="">
+          <img src="./assets/img/company2.png" alt="">
+        </div>
+       
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#414141] mt-10 flex justify-between items-center">
+       <!-- Copyright -->
+        <div>© 2025, Convince me.</div>
+
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- contact popup form  -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/70 z-50 hidden overflow-y-auto">
+  
+  <!-- Center Content with Spacing -->
+  <div class="min-h-screen flex items-center justify-center py-6 px-4">
+    
+    <!-- Modal Card -->
+    <div class="bg-[#1a1a1a] rounded-2xl shadow-xl w-full max-w-5xl 2xl:max-w-7xl
+                flex flex-col md:flex-row relative animate-fadeIn">
+      
+      <!-- Close Button -->
+      <button id="closeModal" 
+              class="absolute top-2 right-4 text-[#A4A7AE] text-xl">
+        ✕
+      </button>
+
+      <!-- Left: Form -->
+      <div class="w-full md:w-1/2 px-6 md:px-0 md:pl-8 sm:py-8 py-6 flex flex-col justify-center text-white">
+        <h2 class="2xl:text-3xl text-2xl font-semibold mb-3">Let's connect constellations</h2>
+        <p class="2xl:text-lg text-sm text-white mb-6">
+          Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+        </p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Last Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+            <input type="text" placeholder="First Name" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          </div>
+          <input type="email" placeholder="Email" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <input type="tel" placeholder="Phone Number" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <textarea placeholder="Message" rows="4" 
+                    class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"></textarea>
+
+          <button type="submit" 
+                  class="w-full bg-[#D2B94E] text-[#040404] font-medium py-3 rounded-md flex items-center justify-center gap-2 transition">
+            Send it 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Astronaut Image -->
+      <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-10">
+        <img src="./assets/img/contactimg.png" 
+             alt="Astronaut" 
+             class="w-full max-h-[600px] object-contain rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--contact Script -->
+<script>
+  const openModalButtons = document.querySelectorAll("#openModal"); // Saare "Contact Us" buttons select karo
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("contactModal");
+
+  // Har ek Contact Us button pe listener lagao
+  openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  // Close button
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Background click par close
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+
+  
+<!-- Navbar js  -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const fullscreenMenu = document.getElementById('fullscreen-menu');
+  const servicesBtn = document.getElementById('services-btn');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const svgArrow = servicesBtn.querySelector('svg');
+  let isOpen = false;
+  let scrollPosition = 0; // store current scroll position
+
+  // Fullscreen menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    const [line1, line2, line3] = menuBtn.children;
+
+    if (isOpen) {
+      // Store current scroll position and lock scroll visually
+      scrollPosition = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflow = 'hidden';
+      fullscreenMenu.style.overflowY = 'auto';
+
+      // Animate hamburger -> X
+      line1.style.transform = 'rotate(45deg) translateY(10px)';
+      line2.style.opacity = '0';
+      line3.style.transform = 'rotate(-45deg) translateY(-10px)';
+
+      fullscreenMenu.classList.remove('pointer-events-none');
+      fullscreenMenu.classList.add('opacity-100', 'scale-100');
+      fullscreenMenu.classList.remove('opacity-0', 'scale-95');
+      
+      // Force scroll to top (menu starts from top)
+      window.scrollTo(0, 0);
+    } else {
+      // Animate X -> hamburger
+      line1.style.transform = 'rotate(0) translateY(0)';
+      line2.style.opacity = '1';
+      line3.style.transform = 'rotate(0) translateY(0)';
+
+      fullscreenMenu.classList.add('opacity-0', 'scale-95');
+      fullscreenMenu.classList.remove('opacity-100', 'scale-100');
+      setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
+
+      // Restore scroll position
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.overflow = '';
+      fullscreenMenu.style.overflowY = 'hidden';
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+
+  // Detect mobile
+  const isMobile = () => window.innerWidth < 1024;
+
+  // Toggle dropdown on click (mobile)
+  servicesBtn.addEventListener('click', (e) => {
+    if (isMobile()) {
+      e.stopPropagation();
+      toggleDropdown();
+    }
+  });
+
+  // Hover dropdown (desktop)
+  servicesBtn.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesBtn.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+  servicesDropdown.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesDropdown.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+
+  // Dropdown logic
+  function toggleDropdown() {
+    const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
+    if (isDropdownOpen) closeDropdown();
+    else openDropdown();
+  }
+
+  function openDropdown() {
+    servicesDropdown.classList.remove('hidden');
+    setTimeout(() => {
+      servicesDropdown.classList.add('opacity-100', 'scale-y-100');
+      servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
+    }, 10);
+    svgArrow.style.transform = 'rotate(180deg)';
+  }
+
+  function closeDropdown() {
+    servicesDropdown.classList.add('opacity-0', 'scale-y-0');
+    servicesDropdown.classList.remove('scale-y-100');
+    setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
+    svgArrow.style.transform = 'rotate(0deg)';
+  }
+
+  // Close dropdown when clicking outside (mobile)
+  document.addEventListener('click', (e) => {
+    if (isMobile()) {
+      if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    }
+  });
+
+  // Update behavior on resize
+  window.addEventListener('resize', () => {
+    closeDropdown();
+  });
+</script>
+
+
+<!-- navbar bg js  -->
+  <script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) { 
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

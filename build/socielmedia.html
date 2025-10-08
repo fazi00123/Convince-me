@@ -9,7 +9,7 @@
 <body class="" style="background-image: url(./assets/img/servicespagebg.png);">
     
 <!-- NAVBAR -->
-  <nav id="navbar" class="w-full z-50 bg-transparent transition-all duration-500">
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
     <div class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 2xl:py-10 py-6">
       <!-- Logo -->
       <a href="./index.html">
@@ -58,7 +58,7 @@
 
         <li><a href="./our work.html" class="hover:text-[#D2B94E] transition">Works</a></li>
         <li><a href="#" class="hover:text-[#D2B94E] transition">Network</a></li>
-        <li><a href="#" class="hover:text-[#D2B94E] transition">Jobs</a></li>
+        <li><a href="./job.html" class="hover:text-[#D2B94E] transition">Jobs</a></li>
       </ul>
 
       <div class="mt-12 flex flex-col space-y-4">
@@ -77,7 +77,7 @@
   </nav>
 
     <!-- hero section  -->
-<section class="2xl:px-24 lg:px-10 px-5">
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-36 pt-28">
     <div class="flex lg:flex-row flex-col text-center lg:text-start items-center xl:gap-56 md:gap-24 gap-10 xl:pt-24 pt-16">
     <div class="lg:w-1/2 w-full">
         <h1 class="text-[#F5F5F5] 2xl:text-8xl xl:text-7xl md:text-6xl text-5xl 2xl:leading-[120px] xl:leading-[90px] md:leading-[75px] leading-[65px] font-semibold">
@@ -832,103 +832,138 @@ from Hamburg.</h2>
     });
 </script>
 
+
 <!-- Navbar js  -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const fullscreenMenu = document.getElementById('fullscreen-menu');
+  const servicesBtn = document.getElementById('services-btn');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const svgArrow = servicesBtn.querySelector('svg');
+  let isOpen = false;
+  let scrollPosition = 0; // store current scroll position
+
+  // Fullscreen menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    const [line1, line2, line3] = menuBtn.children;
+
+    if (isOpen) {
+      // Store current scroll position and lock scroll visually
+      scrollPosition = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflow = 'hidden';
+      fullscreenMenu.style.overflowY = 'auto';
+
+      // Animate hamburger -> X
+      line1.style.transform = 'rotate(45deg) translateY(10px)';
+      line2.style.opacity = '0';
+      line3.style.transform = 'rotate(-45deg) translateY(-10px)';
+
+      fullscreenMenu.classList.remove('pointer-events-none');
+      fullscreenMenu.classList.add('opacity-100', 'scale-100');
+      fullscreenMenu.classList.remove('opacity-0', 'scale-95');
+      
+      // Force scroll to top (menu starts from top)
+      window.scrollTo(0, 0);
+    } else {
+      // Animate X -> hamburger
+      line1.style.transform = 'rotate(0) translateY(0)';
+      line2.style.opacity = '1';
+      line3.style.transform = 'rotate(0) translateY(0)';
+
+      fullscreenMenu.classList.add('opacity-0', 'scale-95');
+      fullscreenMenu.classList.remove('opacity-100', 'scale-100');
+      setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
+
+      // Restore scroll position
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.overflow = '';
+      fullscreenMenu.style.overflowY = 'hidden';
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+
+  // Detect mobile
+  const isMobile = () => window.innerWidth < 1024;
+
+  // Toggle dropdown on click (mobile)
+  servicesBtn.addEventListener('click', (e) => {
+    if (isMobile()) {
+      e.stopPropagation();
+      toggleDropdown();
+    }
+  });
+
+  // Hover dropdown (desktop)
+  servicesBtn.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesBtn.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+  servicesDropdown.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesDropdown.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+
+  // Dropdown logic
+  function toggleDropdown() {
+    const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
+    if (isDropdownOpen) closeDropdown();
+    else openDropdown();
+  }
+
+  function openDropdown() {
+    servicesDropdown.classList.remove('hidden');
+    setTimeout(() => {
+      servicesDropdown.classList.add('opacity-100', 'scale-y-100');
+      servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
+    }, 10);
+    svgArrow.style.transform = 'rotate(180deg)';
+  }
+
+  function closeDropdown() {
+    servicesDropdown.classList.add('opacity-0', 'scale-y-0');
+    servicesDropdown.classList.remove('scale-y-100');
+    setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
+    svgArrow.style.transform = 'rotate(0deg)';
+  }
+
+  // Close dropdown when clicking outside (mobile)
+  document.addEventListener('click', (e) => {
+    if (isMobile()) {
+      if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    }
+  });
+
+  // Update behavior on resize
+  window.addEventListener('resize', () => {
+    closeDropdown();
+  });
+</script>
+
+  <!-- navbar bg js  -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const servicesBtn = document.getElementById('services-btn');
-    const servicesDropdown = document.getElementById('services-dropdown');
-    const svgArrow = servicesBtn.querySelector('svg');
-    let isOpen = false;
-
-    // Fullscreen menu toggle
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      const [line1, line2, line3] = menuBtn.children;
-
-      if (isOpen) {
-        // Animate hamburger -> X
-        line1.style.transform = 'rotate(45deg) translateY(10px)';
-        line2.style.opacity = '0';
-        line3.style.transform = 'rotate(-45deg) translateY(-10px)';
-
-        fullscreenMenu.classList.remove('pointer-events-none');
-        fullscreenMenu.classList.add('opacity-100', 'scale-100');
-        fullscreenMenu.classList.remove('opacity-0', 'scale-95');
-      } else {
-        // Animate X -> hamburger
-        line1.style.transform = 'rotate(0) translateY(0)';
-        line2.style.opacity = '1';
-        line3.style.transform = 'rotate(0) translateY(0)';
-
-        fullscreenMenu.classList.add('opacity-0', 'scale-95');
-        fullscreenMenu.classList.remove('opacity-100', 'scale-100');
-        setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
-      }
-    });
-
-    // Detect mobile
-    const isMobile = () => window.innerWidth < 1024;
-
-    // Toggle dropdown on click (mobile)
-    servicesBtn.addEventListener('click', (e) => {
-      if (isMobile()) {
-        e.stopPropagation();
-        toggleDropdown();
-      }
-    });
-
-    // Hover dropdown (desktop)
-    servicesBtn.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesBtn.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-    servicesDropdown.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesDropdown.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-
-    // Dropdown logic
-    function toggleDropdown() {
-      const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
-      if (isDropdownOpen) closeDropdown();
-      else openDropdown();
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) { 
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
     }
-
-    function openDropdown() {
-      servicesDropdown.classList.remove('hidden');
-      setTimeout(() => {
-        servicesDropdown.classList.add('opacity-100', 'scale-y-100');
-        servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
-      }, 10);
-      svgArrow.style.transform = 'rotate(180deg)';
-    }
-
-    function closeDropdown() {
-      servicesDropdown.classList.add('opacity-0', 'scale-y-0');
-      servicesDropdown.classList.remove('scale-y-100');
-      setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
-      svgArrow.style.transform = 'rotate(0deg)';
-    }
-
-    // Close dropdown when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-      if (isMobile()) {
-        if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
-          closeDropdown();
-        }
-      }
-    });
-
-    // Update behavior on resize
-    window.addEventListener('resize', () => {
-      closeDropdown();
-    });
-  </script>
+  });
+</script>
 
 <script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
 </body>
