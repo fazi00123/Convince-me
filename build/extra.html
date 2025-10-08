@@ -6,542 +6,62 @@
     <title>Smooth FAQ Accordion</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 
-
-  <!-- SwiperJS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
- <style>
-    /* Make arrows yellow and adjust size */
-   
-  </style>
-
   </head>
   <body class="bg-black">
 
 
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
-    <div class="flex justify-between items-center px-6 py-5">
-      <!-- Logo -->
-      <a href="./index.html">
-        <img src="./assets/img/logo.png" alt="Logo" class="w-32">
-      </a>
 
-      <!-- Hamburger -->
-      <button id="menu-btn" class="relative w-10 h-5 flex flex-col justify-between focus:outline-none z-[60]">
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
-        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
-      </button>
-    </div>
+<!-- Branding Section -->
+  <section class="branding 2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+    <div class="flex justify-between items-center lg:flex-row flex-col xl:gap-16 2xl:gap-8 gap-10">
 
-    <!-- FULLSCREEN MENU -->
-    <div
-      id="fullscreen-menu"
-      class="fixed inset-0 backdrop-blur-md scale-95 opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-white"
-    >
-      <ul class="space-y-8 lg:text-3xl text-xl font-light text-center transform transition-all duration-700 pt-24">
-        <li><a href="./index.html" class="hover:text-[#D2B94E] transition">Home</a></li>
+      <!-- Before / After Effect -->
+      <div class="lg:w-1/2 w-full relative">
+        <div id="container" aria-label="Before and after image slider">
+          
+          <!-- Before Image -->
+          <div class="img-wrapper">
+            <img src="./assets/img/1.png" alt="Before">
+          </div>
 
-        <!-- Services Dropdown -->
-        <li class="relative group w-full flex flex-col items-center">
-          <button id="services-btn" class="flex items-center justify-center space-x-2 hover:text-[#D2B94E]">
-            <span>Services</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+          <!-- After Image -->
+          <div class="img-wrapper">
+            <img src="./assets/img/2.png" alt="After">
+          </div>
 
-          <!-- Dropdown -->
-          <ul
-            id="services-dropdown"
-            class="absolute bg-[#0F0F0F] top-full w-52 left-1/2 -translate-x-1/2 flex-col space-y-3 text-lg transition-all duration-300 ease-in-out transform origin-top opacity-0 scale-y-0 py-3 rounded-lg"
-          >
-            <li><a href="#" class="hover:text-[#D2B94E] ">Web Design</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Branding</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Marketing</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Web Design</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Branding</a></li>
-            <li><a href="#" class="hover:text-[#D2B94E] ">Marketing</a></li>
-          </ul>
-        </li>
+          <!-- Line -->
+          <div id="line"></div>
 
-        <li><a href="./our work.html" class="hover:text-[#D2B94E] transition">Works</a></li>
-        <li><a href="#" class="hover:text-[#D2B94E] transition">Network</a></li>
-        <li><a href="#" class="hover:text-[#D2B94E] transition">Jobs</a></li>
-      </ul>
+          <!-- Slider -->
+          <input id="slider" type="range" min="0" max="100" value="50">
 
-      <div class="mt-12 flex flex-col space-y-4">
-        <button class="px-8 py-3 bg-[#D2B94E] text-[#0F0F0F] rounded-sm font-medium hover:bg-[#c0a840] transition">
-          Dashboard Login
-        </button>
-        <button
-          class="px-8 py-3 border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
-        >
-          Contact Us
-        </button>
+          <!-- Labels -->
+          <span class="absolute top-5 left-5 bg-gray-300/80 text-gray-800 px-3 py-1 rounded-md text-sm font-semibold z-30">Before</span>
+          <span class="absolute top-5 right-5 bg-gray-300/80 text-gray-800 px-3 py-1 rounded-md text-sm font-semibold z-30">After</span>
+
+        </div>
       </div>
+
     </div>
-  </nav>
+  </section>
 
-  <!--navbar JS -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const servicesBtn = document.getElementById('services-btn');
-    const servicesDropdown = document.getElementById('services-dropdown');
-    const svgArrow = servicesBtn.querySelector('svg');
-    let isOpen = false;
+<script>
+    const imgAfter = document.querySelector('.img-wrapper:nth-of-type(2)');
+    const line = document.getElementById('line');
+    const slider = document.getElementById('slider');
 
-    // Fullscreen menu toggle
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      const [line1, line2, line3] = menuBtn.children;
-
-      if (isOpen) {
-        // Animate hamburger -> X
-        line1.style.transform = 'rotate(45deg) translateY(10px)';
-        line2.style.opacity = '0';
-        line3.style.transform = 'rotate(-45deg) translateY(-10px)';
-
-        fullscreenMenu.classList.remove('pointer-events-none');
-        fullscreenMenu.classList.add('opacity-100', 'scale-100');
-        fullscreenMenu.classList.remove('opacity-0', 'scale-95');
-      } else {
-        // Animate X -> hamburger
-        line1.style.transform = 'rotate(0) translateY(0)';
-        line2.style.opacity = '1';
-        line3.style.transform = 'rotate(0) translateY(0)';
-
-        fullscreenMenu.classList.add('opacity-0', 'scale-95');
-        fullscreenMenu.classList.remove('opacity-100', 'scale-100');
-        setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
-      }
+    slider.addEventListener('input', () => {
+      line.style.left = `${slider.value}%`;
+      imgAfter.style.clipPath = `inset(0 0 0 ${slider.value}%)`;
     });
 
-    // Detect mobile
-    const isMobile = () => window.innerWidth < 1024;
-
-    // Toggle dropdown on click (mobile)
-    servicesBtn.addEventListener('click', (e) => {
-      if (isMobile()) {
-        e.stopPropagation();
-        toggleDropdown();
-      }
-    });
-
-    // Hover dropdown (desktop)
-    servicesBtn.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesBtn.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-    servicesDropdown.addEventListener('mouseenter', () => {
-      if (!isMobile()) openDropdown();
-    });
-    servicesDropdown.addEventListener('mouseleave', () => {
-      if (!isMobile()) closeDropdown();
-    });
-
-    // Dropdown logic
-    function toggleDropdown() {
-      const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
-      if (isDropdownOpen) closeDropdown();
-      else openDropdown();
-    }
-
-    function openDropdown() {
-      servicesDropdown.classList.remove('hidden');
-      setTimeout(() => {
-        servicesDropdown.classList.add('opacity-100', 'scale-y-100');
-        servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
-      }, 10);
-      svgArrow.style.transform = 'rotate(180deg)';
-    }
-
-    function closeDropdown() {
-      servicesDropdown.classList.add('opacity-0', 'scale-y-0');
-      servicesDropdown.classList.remove('scale-y-100');
-      setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
-      svgArrow.style.transform = 'rotate(0deg)';
-    }
-
-    // Close dropdown when clicking outside (mobile)
-    document.addEventListener('click', (e) => {
-      if (isMobile()) {
-        if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
-          closeDropdown();
-        }
-      }
-    });
-
-    // Update behavior on resize
-    window.addEventListener('resize', () => {
-      closeDropdown();
+    slider.addEventListener('dblclick', () => {
+      slider.value = 50;
+      line.style.left = '50%';
+      imgAfter.style.clipPath = 'inset(0 0 0 50%)';
     });
   </script>
-
-
-
- <style>
-      body {
-        background-color: #0b0b0b;
-        color: white;
-        font-family: "Poppins", sans-serif;
-      }
-
-      /* custom gold color */
-      .border-gold {
-        border-color: #D2B94E;
-      }
-
-      /* futuristic border pattern */
-      .feedback-box {
-        position: relative;
-        border: 1px solid #D2B94E;
-        padding: 2rem;
-        margin: 1rem;
-      }
-
-      .feedback-box::before,
-      .feedback-box::after {
-        content: "";
-        position: absolute;
-        width: 60px;
-        height: 1px;
-        background: #D2B94E;
-      }
-
-      .feedback-box::before {
-        top: -1px;
-        left: 40px;
-      }
-
-      .feedback-box::after {
-        bottom: -1px;
-        right: 40px;
-      }
-
-      .feedback-decoration {
-        position: absolute;
-        bottom: 15px;
-        left: 40px;
-        display: flex;
-        gap: 6px;
-      }
-
-      .feedback-decoration div {
-        width: 10px;
-        height: 10px;
-        border: 1px solid #D2B94E;
-      }
-
-      .feedback-decoration div:nth-child(1) {
-        background: #D2B94E;
-      }
-
-      /* Slider Styles */
-      .slider {
-        display: flex;
-        transition: transform 0.6s ease-in-out;
-      }
-
-      .slide {
-        min-width: 100%;
-      }
-
-      .active {
-        transform: translateX(0);
-      }
-
-      .hidden-slide {
-        opacity: 0;
-      }
-
-      /* dots */
-      .dot {
-        width: 12px;
-        height: 12px;
-        border: 1px solid #D2B94E;
-        margin: 6px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .dot.active {
-        background: #D2B94E;
-      }
-    </style>
-
-
- <section class="py-20 text-center">
-      <h2 class="text-3xl font-bold mb-4">Client Feedback</h2>
-
-      <div
-        class="flex justify-center mb-6 items-center text-[#D2B94E] space-x-3"
-      >
-        <div class="w-4 h-4 border border-[#D2B94E] rounded-full"></div>
-        <div class="w-40 h-[1px] bg-[#D2B94E]"></div>
-        <div class="w-4 h-4 border border-[#D2B94E] rounded-full"></div>
-      </div>
-
-      <p class="max-w-2xl mx-auto text-gray-300 mb-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <!-- Slider Container -->
-      <div class="overflow-hidden max-w-5xl mx-auto">
-        <div id="slider" class="slider">
-          <!-- Slide 1 -->
-          <div class="slide grid md:grid-cols-2 gap-6">
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="slide grid md:grid-cols-2 gap-6">
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="slide grid md:grid-cols-2 gap-6">
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-
-            <div class="feedback-box text-left">
-              <h3 class="text-[#D2B94E] font-semibold mb-2">LOREM IPSUM</h3>
-              <p class="text-gray-300 text-sm leading-relaxed">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="feedback-decoration">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dots -->
-        <div id="dots" class="flex justify-center mt-8"></div>
-      </div>
-    </section>
-
-
-     <script>
-      const slider = document.getElementById("slider");
-      const slides = document.querySelectorAll(".slide");
-      const dotsContainer = document.getElementById("dots");
-      let currentSlide = 0;
-
-      slides.forEach((_, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        if (index === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll(".dot");
-
-      function goToSlide(index) {
-        slider.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((dot) => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-        currentSlide = index;
-      }
-
-      // Auto Slide
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        goToSlide(currentSlide);
-      }, 5000);
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
