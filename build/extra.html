@@ -9,398 +9,211 @@
   </head>
   <body class="bg-black">
 
-<!-- ✅ CONTACT US BUTTON -->
-<button
-  class="openModalBtn px-8 py-3 2xl:text-2xl lg:text-xl text-lg border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
->
-  Contact Us
-</button>
 
-<!-- ✅ CONTACT POPUP MODAL -->
-<div
-  id="contactModal"
-  class="fixed inset-0 bg-black/70 z-50 hidden overflow-y-auto backdrop-blur-sm transition-all duration-300"
->
-  <div class="min-h-screen flex items-center justify-center py-6 px-4">
-    <div
-      class="bg-[#1a1a1a] rounded-2xl shadow-xl w-full max-w-5xl 2xl:max-w-7xl flex flex-col md:flex-row relative animate-fadeIn"
-    >
-      <!-- Close Button -->
-      <button
-        id="closeModal"
-        class="absolute top-2 right-4 text-[#A4A7AE] text-xl z-50 hover:text-white transition"
-      >
-        ✕
-      </button>
 
-      <!-- Left: Form -->
-      <div
-        class="w-full md:w-1/2 px-6 md:px-0 md:pl-8 sm:py-8 py-6 flex flex-col justify-center text-white"
-      >
-        <h2 class="2xl:text-3xl text-2xl font-semibold mb-3">
-          Let's connect constellations
-        </h2>
-        <p class="2xl:text-lg text-sm text-white mb-6">
-          Let's align our constellations! Reach out and let the magic of
-          collaboration illuminate our skies.
-        </p>
 
-        <form action="#" method="POST" class="space-y-4">
-          <div class="flex flex-col sm:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Last Name"
-              class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="First Name"
-              class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"
-            />
-          </div>
-          <input
-            type="email"
-            placeholder="Email"
-            class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"
-          />
-          <textarea
-            placeholder="Message"
-            rows="4"
-            class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"
-          ></textarea>
 
-          <button
-            type="submit"
-            class="w-full bg-[#D2B94E] text-[#040404] font-medium py-3 rounded-md flex items-center justify-center gap-2 transition hover:bg-[#c0a840]"
-          >
-            Send it 🚀
-          </button>
-        </form>
-      </div>
 
-      <!-- Right: Image -->
-      <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-10">
-        <img
-          src="./assets/img/contactimg.png"
-          alt="Astronaut"
-          class="w-full max-h-[600px] object-contain rounded-lg"
-        />
-      </div>
-    </div>
+<section class="px-5 lg:px-16 2xl:px-36 py-16 bg-black text-white">
+  <div class="relative overflow-hidden">
+    <!-- Slider container -->
+    <div id="caseSlider" class="flex transition-transform duration-700">
+
+      <!-- SLIDE 1 -->
+      <div class="slide w-full flex md:flex-row flex-col xl:gap-20 gap-10 bg-[#181818] xl:py-12 xl:px-16 py-6 px-6 rounded-3xl shrink-0">
+        <!-- Left (Video/Image) -->
+         <div class="md:w-1/2 w-full">
+         <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Aufträge ablehnen, weil Fachkräfte <br class="md:block hidden"> fehlen?
+          </h3>
+        <div class="pt-4">
+          <img src="./assets/img/img slider video.png" class="w-full" alt="">
+        </div>
+
+        <div class="pt-6">
+          <p class="text-white xl:text-2xl text-lg">Stefan Keren</p>
+          <p class="text-[#D0D0D0] xl:text-lg text-base py-2">Matthias Keren GmbH</p>
+
+          <div class="stars text-[#D2B94E] text-lg ">
+            ★ ★ ★ ★ ★
   </div>
-</div>
-
-<!-- ✅ STYLE -->
-<style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.3s ease-out;
-  }
-</style>
-
-<!-- ✅ SCRIPT -->
-<script>
-  const openModalButtons = document.querySelectorAll(".openModalBtn");
-  const closeModal = document.getElementById("closeModal");
-  const modal = document.getElementById("contactModal");
-
-  // Open modal
-  openModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-      document.body.style.overflow = "hidden"; // disable background scroll
-    });
-  });
-
-  // Close modal
-  closeModal.addEventListener("click", () => {
-    modal.classList.add("hidden");
-    document.body.style.overflow = ""; // enable scroll
-  });
-
-  // Close when clicking outside modal content
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-      document.body.style.overflow = "";
-    }
-  });
-</script>
-
-
-<section>
- <!-- SLIDER WRAPPER -->
-  <div class="relative w-[90%] max-w-6xl overflow-hidden">
-    <div id="slider" class="flex transition-transform duration-500">
-
-      <!-- CARD 1 -->
-      <div class="slide">
-        <div class="card">
-          <div>
-            <div class="stars mb-4"><span>★★★★★</span></div>
-            <p class="text-sm leading-relaxed mb-6">
-              5 neue Mitarbeiter konnten wir bereits seit Beginn unserer Zusammenarbeit einstellen – 
-              und wir wachsen weiter – während unser Tagesgeschäft spürbar erleichtert wird.
-            </p>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <p class="text-white font-semibold text-sm">Daniel Oppelt</p>
-              <p class="text-xs text-gray-400">Manfred Domm GmbH</p>
-            </div>
-          </div>
         </div>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="slide">
-        <div class="card">
-          <div>
-            <div class="stars mb-4"><span>★★★★★</span></div>
-            <p class="text-sm leading-relaxed mb-6">
-              Innerhalb eines Monats zwei Bauleiter und einen Anlagenmechaniker eingestellt.
-              Besonders gut gefallen hat uns der klar strukturierte Prozess und die Vorauswahl der Kandidaten.
-            </p>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/36.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <p class="text-white font-semibold text-sm">Peter Brehl</p>
-              <p class="text-xs text-gray-400">IKS GmbH</p>
-            </div>
-          </div>
+        <div class="md:w-1/2 w-full">
+        <div>
+        <div>
+          <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Ausgangssituation
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 pt-6 2xl:pt-8">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Aufträge mussten wegen Personalmangel abgesagt werden; akuter
+Fachkräftemangel im GaLa-Bau</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Arbeitsamt sowie Facebook / Instagram-Eigenversuche brachten
+kaum passende Bewerbungen</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Erfahrene Mitarbeiter gingen in Rente; Team geschrumpft und
+geplantes Wachstum blockiert</p>
+      </div>
+      </div>
+       <div class="xl:pt-10 pt-6">
+        <div>
+          <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Ergebnis
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 pt-6 2xl:pt-8">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">7 neue Fachkräfte eingestellt und 10 Vorstellungsgespräche in 53
+Tagen erfolgreich geführt</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Mehr Planbarkeit: flexiblere Termine, kaum noch Einspringen auf
+Baustellen, Aufträge ruhiger abwickeln</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Sehr gute Kandidatenqualität; Vorauswahl durch Convince me</p>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide w-full flex md:flex-row flex-col xl:gap-20 gap-10 bg-[#181818] xl:py-12 xl:px-16 py-6 px-6 rounded-3xl shrink-0">
+        <!-- Left (Video/Image) -->
+         <div class="md:w-1/2 w-full">
+         <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Aufträge ablehnen, weil Fachkräfte <br class="md:block hidden"> fehlen?
+          </h3>
+        <div class="pt-4">
+          <img src="./assets/img/img slider video.png" class="w-full" alt="">
+        </div>
+
+        <div class="pt-6">
+          <p class="text-white xl:text-2xl text-lg">Stefan Keren</p>
+          <p class="text-[#D0D0D0] xl:text-lg text-base py-2">Matthias Keren GmbH</p>
+
+          <div class="stars text-[#D2B94E] text-lg ">
+            ★ ★ ★ ★ ★
+  </div>
         </div>
       </div>
 
-      <!-- CARD 3 -->
-      <div class="slide">
-        <div class="card">
-          <div>
-            <div class="stars mb-4"><span>★★★★★</span></div>
-            <p class="text-sm leading-relaxed mb-6">
-              Durch die Zusammenarbeit konnten wir unsere Einstellungsgeschwindigkeit verdoppeln –
-              und gleichzeitig die Qualität der Bewerber verbessern.
-            </p>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/22.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <p class="text-white font-semibold text-sm">Jonas Weber</p>
-              <p class="text-xs text-gray-400">HR Solutions</p>
-            </div>
-          </div>
+        <div class="md:w-1/2 w-full">
+        <div>
+        <div>
+          <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Ausgangssituation
+          </h3>
         </div>
+        <div class="flex items-center gap-2 pt-6 2xl:pt-8">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Aufträge mussten wegen Personalmangel abgesagt werden; akuter
+Fachkräftemangel im GaLa-Bau</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Arbeitsamt sowie Facebook / Instagram-Eigenversuche brachten
+kaum passende Bewerbungen</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Erfahrene Mitarbeiter gingen in Rente; Team geschrumpft und
+geplantes Wachstum blockiert</p>
+      </div>
+      </div>
+       <div class="xl:pt-10 pt-6">
+        <div>
+          <h3 class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold">
+            Ergebnis
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 pt-6 2xl:pt-8">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">7 neue Fachkräfte eingestellt und 10 Vorstellungsgespräche in 53
+Tagen erfolgreich geführt</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Mehr Planbarkeit: flexiblere Termine, kaum noch Einspringen auf
+Baustellen, Aufträge ruhiger abwickeln</p>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <img src="./assets/img/thumb.png" alt="">
+          <p class="text-[#D0D0D0] 2xl:text-xl lg:text-base text-sm">Sehr gute Kandidatenqualität; Vorauswahl durch Convince me</p>
+      </div>
+      </div>
+      </div>
       </div>
 
-      <!-- CARD 4 -->
-      <div class="slide">
-        <div class="card">
-          <div>
-            <div class="stars mb-4"><span>★★★★★</span></div>
-            <p class="text-sm leading-relaxed mb-6">
-              Wir konnten innerhalb weniger Wochen unsere offenen Stellen besetzen – 
-              schnell, professionell und effizient.
-            </p>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/women/24.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <p class="text-white font-semibold text-sm">Laura König</p>
-              <p class="text-xs text-gray-400">RecruitPro</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Navigation Buttons -->
-    <div class="flex justify-center gap-6 mt-8">
-      <div id="prev" class="arrow-btn">❮</div>
-      <div id="next" class="arrow-btn">❯</div>
+    <div class="flex justify-center items-center gap-4 mt-8">
+      <button id="prevSlide" class="w-12 h-12 text-xl flex items-center justify-center rounded-full bg-[#1E1E1E] text-white hover:bg-[#D2B94E]">❮</button>
+      <div class="flex gap-2" id="pagination"></div>
+      <button id="nextSlide" class="w-12 h-12 text-xl flex items-center justify-center rounded-full bg-[#1E1E1E] text-white hover:bg-[#D2B94E]">❯</button>
     </div>
   </div>
 
   <!-- CTA Button -->
-  <div class="mt-12 text-center">
-    <button class="bg-[#E7C748] text-[#0F0F0F] font-semibold py-4 px-10 rounded-md text-lg flex items-center gap-3 mx-auto hover:opacity-90 transition">
+  <div class="text-center mt-12">
+    <button class="bg-[#D2B94E] text-[#0F0F0F] font-semibold px-8 py-4 rounded-sm border border-[#D2B94E]">
       Recruiting-Analyse starten →
     </button>
-    <p class="text-gray-400 text-sm mt-3">Kostenlos & unverbindlich · 60 Sek. ✅</p>
   </div>
-  </section>
-
-  <!-- JS -->
-  <script>
-    const slider = document.getElementById('slider');
-    const slides = document.querySelectorAll('.slide');
-    const visibleSlides = 2; // show 2 at once
-    const totalSlides = slides.length;
-    let index = 0;
-
-    const updateSlider = () => {
-      const moveX = (100 / visibleSlides) * index;
-      slider.style.transform = `translateX(-${moveX}%)`;
-    };
-
-    document.getElementById('next').onclick = () => {
-      if (index < totalSlides - visibleSlides) index++;
-      else index = 0;
-      updateSlider();
-    };
-
-    document.getElementById('prev').onclick = () => {
-      if (index > 0) index--;
-      else index = totalSlides - visibleSlides;
-      updateSlider();
-    };
-  </script>
-
-  <style>
-    body {
-      background-color: #181818;
-      font-family: 'Inter', sans-serif;
-    }
-    .card {
-      background: #0F0F0F;
-      border-radius: 20px;
-      padding: 2rem;
-      color: #ddd;
-      min-height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .stars span {
-      background-color: #00FF84;
-      font-size: 1.1rem;
-      color: white;
-    }
-    .arrow-btn {
-      background: #1C1C1C;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      color: white;
-      transition: background 0.2s;
-    }
-    .arrow-btn:hover {
-      background: #2a2a2a;
-    }
-    .slide {
-      min-width: 50%;
-      transition: transform 0.6s ease-in-out;
-      padding: 0 12px;
-    }
-  </style>
+</section>
 
 
-
-
-<div id="stats" class="bg-[#181818] py-6  ">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-gray-700 text-center">
-    
-    <!-- Box 1 -->
-    <div class="py-8">
-      <h2 class="text-4xl font-bold text-white">
-        <span class="counter" data-target="400">0</span><span class="text-[#D2B94E]">+</span>
-      </h2>
-      <p class="text-gray-300 text-sm mt-3">
-        Partnerbetriebe in Deutschland,<br>Österreich und der Schweiz
-      </p>
-    </div>
-
-    <!-- Box 2 -->
-    <div class="py-8">
-      <h2 class="text-4xl font-bold text-white">
-        <span class="counter" data-target="374">0</span><span class="text-[#D2B94E]">+</span>
-      </h2>
-      <p class="text-gray-300 text-sm mt-3">Einstellungen pro Monat</p>
-    </div>
-
-    <!-- Box 3 -->
-    <div class="py-8">
-      <h2 class="text-4xl font-bold text-white">
-        <span class="counter" data-target="200">0</span><span class="text-[#D2B94E]">+</span>
-      </h2>
-      <p class="text-gray-300 text-sm mt-3">
-        5-Sterne Bewertungen auf zahlreichen Plattformen
-      </p>
-    </div>
-
-    <!-- Box 4 -->
-    <div class="py-8">
-      <h2 class="text-4xl font-bold text-white">
-        <span class="counter" data-target="14">0</span>
-      </h2>
-      <p class="text-gray-300 text-sm mt-3">
-        motivierte Mitarbeiter in Festanstellung
-      </p>
-    </div>
-
-    <!-- Box 5 -->
-    <div class="py-8">
-      <h2 class="text-4xl font-bold text-white">
-        <span class="text-[#D2B94E]">Ø</span><span class="counter" data-target="23">0</span>
-      </h2>
-      <p class="text-gray-300 text-sm mt-3">
-        bis zur ersten qualifizierten Einstellung<br>für unsere Partner
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<!-- ✅ Counter Animation Script -->
 <script>
-  const counters = document.querySelectorAll('.counter');
-  let started = false;
+const slider = document.getElementById("caseSlider");
+const slides = document.querySelectorAll(".slide");
+const pagination = document.getElementById("pagination");
+let index = 0;
 
-  const startCounting = () => {
-    if (started) return;
-    started = true;
-    counters.forEach(counter => {
-      const update = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const speed = 50; // lower = faster
-        const increment = target / speed;
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(update, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      update();
-    });
-  };
+// Pagination dots
+slides.forEach((_, i) => {
+  const dot = document.createElement("div");
+  dot.className = "w-3 h-3 rounded-full bg-gray-600 cursor-pointer";
+  dot.onclick = () => goToSlide(i);
+  pagination.appendChild(dot);
+});
 
-  // ✅ Start when section visible
-  const section = document.getElementById('stats');
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) startCounting();
-  }, { threshold: 0.4 });
-  observer.observe(section);
+const updateSlider = () => {
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  [...pagination.children].forEach((dot, i) => {
+    dot.className = i === index
+      ? "w-12 h-3 rounded-full bg-[#D2B94E]"
+      : "w-6 h-3 rounded-full bg-[#585858] cursor-pointer";
+  });
+};
+
+const goToSlide = (i) => {
+  index = i;
+  updateSlider();
+};
+
+document.getElementById("nextSlide").onclick = () => {
+  index = (index + 1) % slides.length;
+  updateSlider();
+};
+
+document.getElementById("prevSlide").onclick = () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlider();
+};
+
+// Initialize
+updateSlider();
 </script>
 
 
