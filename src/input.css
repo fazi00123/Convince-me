@@ -33,15 +33,19 @@ body{
   }
 
 
+
+  
+
+
 /* marquee  */
 @keyframes marquee {
-  0% { transform: translateX(0); }
+  0% { transform: translateX(20%); }
   100% { transform: translateX(-50%); }
 }
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 
@@ -425,4 +429,54 @@ body{
 
 .before-after-slider:active::-moz-range-thumb {
   cursor: grabbing;
+}
+
+
+
+
+
+
+/* job slider css  */
+
+.card {
+  background: #181818;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #ddd;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.stars span {
+  color: #00FF84;
+  font-size: 1.1rem;
+}
+.arrow-btn {
+  background: #1C1C1C;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s;
+}
+.arrow-btn:hover {
+  background: #2a2a2a;
+}
+.slide {
+  min-width: 50%;
+  transition: transform 0.6s ease-in-out;
+  padding: 0 12px;
+}
+
+/* ✅ Responsive for mobile */
+@media (max-width: 620px) {
+  .slide {
+    min-width: 100%;
+    padding: 0 8px;
+  }
 }
