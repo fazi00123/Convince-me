@@ -9,11 +9,6 @@
     src: url(../font/fonnts.com-DegularDemo-Regular.otf);
 }
 
-/* @font-face {
-    font-family: CabinetGrotesk;
-    src: url(../font/CabinetGrotesk-Regular.otf);
-} */
-
 
 body{
     font-family: Degular;
@@ -177,6 +172,9 @@ body{
   }
 } */
 
+
+
+
 /* popup contact */
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-in-out;
@@ -303,94 +301,84 @@ body{
 
 
 
-/* client feedback css */
 
-   /* custom gold color */
-      .border-gold {
-        border-color: #D2B94E;
-      }
+/* client feedback slider of services  */
+  /* Custom gold color */
+  .border-gold {
+    border-color: #D2B94E;
+  }
 
-      /* futuristic border pattern */
-      .feedback-box {
-        position: relative;
-        border: 1px solid #D2B94E;
-        padding: 2rem;
-        /* margin: 1rem; */
-      }
+  /* Feedback box style */
+  .feedback-box {
+    position: relative;
+    border: 1px solid #D2B94E;
+    padding: 2rem;
+  }
 
-      .feedback-box::before,
-      .feedback-box::after {
-        content: "";
-        position: absolute;
-        width: 60px;
-        height: 1px;
-        background: #D2B94E;
-      }
+  .feedback-box::before,
+  .feedback-box::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background: #D2B94E;
+  }
 
-      .feedback-box::before {
-        top: -1px;
-        left: 40px;
-      }
+  .feedback-box::before {
+    top: -1px;
+    left: 40px;
+  }
 
-      .feedback-box::after {
-        bottom: -1px;
-        right: 40px;
-      }
+  .feedback-box::after {
+    bottom: -1px;
+    right: 40px;
+  }
 
-      .feedback-decoration {
-        position: absolute;
-        bottom: 15px;
-        left: 40px;
-        display: flex;
-        gap: 6px;
-      }
+  .feedback-decoration {
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+    display: flex;
+    gap: 6px;
+  }
 
-      .feedback-decoration div {
-        width: 10px;
-        height: 10px;
-        border: 1px solid #D2B94E;
-      }
+  .feedback-decoration div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #D2B94E;
+  }
 
-      .feedback-decoration div:nth-child(1) {
-        background: #D2B94E;
-      }
+  .feedback-decoration div:nth-child(1) {
+    background: #D2B94E;
+  }
 
-      /* Slider Styles */
-      .slider {
-        display: flex;
-        transition: transform 0.6s ease-in-out;
-      }
+  /* Slider core */
+  .feedback-slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
 
-      .slide {
-        min-width: 100%;
-      }
+  .feedback-slide {
+    min-width: 100%;
+  }
 
-      .active {
-        transform: translateX(0);
-      }
+  /* Dots */
+  .feedback-dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #D2B94E;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-      .hidden-slide {
-        opacity: 0;
-      }
-
-      /* dots */
-      .dot {
-        width: 12px;
-        height: 12px;
-        border: 1px solid #D2B94E;
-        margin: 6px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .dot.active {
-        background: #D2B94E;
-      }
+  .feedback-dot.active {
+    background: #D2B94E;
+  }
 
 
 
-
-      /* befor after effect css  */
+   /* befor after effect bird css  home page*/
 
  /* Container Styling */
     .container {
@@ -486,7 +474,7 @@ body{
 
 
 
-/* job slider css  */
+/* job slider1 css  */
 
 .card {
   background: #181818;
