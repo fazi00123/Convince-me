@@ -14,7 +14,7 @@ body{
     font-family: Degular;
 }
 
-
+/* navbar css  */
   /* Default navbar (transparent) */
   #navbar {
     background-color: transparent;
@@ -26,9 +26,10 @@ body{
     background-color: rgba(15, 15, 15, 0.95); /* dark bg with slight transparency */
     backdrop-filter: blur(10px); /* optional: adds glass effect */
   }
+/* navbar css  end*/
 
 
- /* job card page marque  */
+ /* job page yellow card marque  */
 .marquee-vertical {
   display: flex;
   flex-direction: column;
@@ -59,12 +60,11 @@ body{
   top: 100%;
   left: 0;
 }
-
+/* job card page marque end */
 
   
 
-
-/*slider marquee  */
+/* home page and job page slider marquee  */
 @keyframes marquee {
   0% { transform: translateX(10%); }
   100% { transform: translateX(-50%); }
@@ -75,8 +75,14 @@ body{
   animation: marquee 25s linear infinite;
 }
 
+/* 👇 Hover pe rukne ke liye */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+/* home page and job page slider marquee  end*/
 
-/* ===img Floating Glow Animation === */
+
+/* ===first page img Floating Glow Animation === */
 @keyframes floatPremium {
   0% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 10px rgba(210,185,78,0.3)); }
   50% { transform: translateY(-12px) scale(1.02); filter: drop-shadow(0 0 25px rgba(210,185,78,0.6)); }
@@ -106,11 +112,11 @@ body{
   transform: scale(1.02) rotateY(-5deg) rotateX(-2deg);
 }
 
+/* ===first page img Floating Glow Animation end === */
 
 
 
-/* faq  */
-
+/* faqs section css */
 .faq-content {
     max-height: 0;
     overflow: hidden;
@@ -141,51 +147,6 @@ body{
   border-radius: 30px;
   
 }
-
-
-@media (min-width: 1024px) {
-  .branding {
-    background-image: url("/build/assets/img/brandbg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-@media (max-width: 1023px) {
-  .branding {
-    background-image: none;
-  }
-}
-
-/* @media (max-width: 1023px) {
-  .brandsec {
-    background-image: url("/build/assets/img/brandbg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 1024px) {
-  .brandsec {
-    background-image: none;
-  }
-} */
-
-
-
-
-/* popup contact */
-  .animate-fadeIn {
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.95);}
-    to {opacity: 1; transform: scale(1);}
-  }
-
-
-/* faqs  */
    .faq-active {
         color: #E5A301 !important;
         
@@ -222,6 +183,27 @@ body{
   width: 100%; /* Active link pe hamesha underline dikhe */
 }
 
+/* faqs section css end  */
+
+
+
+/* branding section home page bg  */
+@media (min-width: 1024px) {
+  .branding {
+    background-image: url("/build/assets/img/brandbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 1023px) {
+  .branding {
+    background-image: none;
+  }
+}
+/* branding section home page bg  end*/
+
+
 
 
 
@@ -239,65 +221,17 @@ body{
 
 
 
-  /* slider css  */
+  
 
-/* ====== Center controls together ====== */
-.slider-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.controls-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px; /* adjust space between items */
-}
-
-/* ====== Navigation arrows ====== */
-.swiper-button-prev,
-.swiper-button-next {
-  position: static !important;
-  color: #D2B94E !important;
-  width: 28px !important;
-  height: 28px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transform: none !important;
-  margin: 0 !important;
-}
-
-/* Smaller arrows */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 18px !important;
-  line-height: 1 !important;
-  font-weight: 700;
-}
-
-/* ====== Pagination dots ====== */
-.swiper-pagination {
-  position: static !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 6px;
-}
-
-.swiper-pagination-bullet {
-  background-color: white !important;
-  opacity: 1;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #D2B94E !important;
-}
+/* popup contact form*/
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+  }
+/* popup contact form end*/
 
 
 
