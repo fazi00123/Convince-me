@@ -1328,7 +1328,7 @@ from Hamburg.</h2>
   </div>
 </div>
 
-  <!--Questioning popup Modal Overlay -->
+<!-- Questioning popup Modal Overlay -->
 <div id="projectModal"
   class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 overflow-y-auto p-4">
   
@@ -1342,8 +1342,7 @@ from Hamburg.</h2>
 
     <!-- Page Counter -->
     <div id="pageIndicator" class="text-[#D2B94E] text-lg font-semibold text-center mb-4">
-      <h2></h2>
-      Seite 1 von 4
+      Seite 1 von 5
     </div>
 
     <!-- Steps -->
@@ -1353,9 +1352,7 @@ from Hamburg.</h2>
       <div class="project-step">
         <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">Du bist...?</h2>
         <div class="grid md:grid-cols-4 gap-5 pt-6">
-          <div class="md:block hidden">
-
-          </div>
+          <div class="md:block hidden"></div>
           <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
             <img src="./assets/img/img1.avif" alt="">
             <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Geschäftsführer</p>
@@ -1435,9 +1432,98 @@ from Hamburg.</h2>
           </div>
         </div>
       </div>
+
+      <!-- Page 5 (Form Page) -->
+      <div class="project-step hidden">
+        <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">
+          Bitte fülle das Formular aus
+        </h2>
+        
+        <form id="projectForm" class="max-w-2xl mx-auto space-y-5 pt-6">
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-[#D2B94E] text-lg mb-2">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-3 rounded-lg bg-[#1A1A1A] border border-[#D2B94E] text-white focus:outline-none focus:ring-2 focus:ring-[#D2B94E]" />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-[#D2B94E] text-lg mb-2">E-Mail</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 rounded-lg bg-[#1A1A1A] border border-[#D2B94E] text-white focus:outline-none focus:ring-2 focus:ring-[#D2B94E]" />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label for="phone" class="block text-[#D2B94E] text-lg mb-2">Telefonnummer</label>
+            <input type="tel" id="phone" name="phone"
+              class="w-full px-4 py-3 rounded-lg bg-[#1A1A1A] border border-[#D2B94E] text-white focus:outline-none focus:ring-2 focus:ring-[#D2B94E]" />
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit"
+            class="w-full bg-[#D2B94E] text-[#0F0F0F] font-semibold text-xl py-3 rounded-lg hover:bg-[#C0A83E] transition duration-300">
+            Abschicken
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- questioning popup js -->
+<script>
+  const openProjectModal = document.getElementById('openProjectModal');
+  const closeProjectModal = document.getElementById('closeProjectModal');
+  const projectModal = document.getElementById('projectModal');
+  const projectSteps = document.querySelectorAll('.project-step');
+  const pageIndicator = document.getElementById('pageIndicator');
+  let projectCurrentStep = 0;
+
+  const showProjectStep = (index) => {
+    projectSteps.forEach((s, i) => s.classList.toggle('hidden', i !== index));
+    pageIndicator.textContent = `Seite ${index + 1} von ${projectSteps.length}`;
+  };
+
+  // Open modal
+  openProjectModal.addEventListener('click', () => {
+    projectModal.classList.remove('hidden');
+    projectModal.classList.add('flex');
+    document.body.classList.add('no-scroll');
+    projectCurrentStep = 0;
+    showProjectStep(projectCurrentStep);
+  });
+
+  // Close modal
+  closeProjectModal.addEventListener('click', () => {
+    projectModal.classList.add('hidden');
+    projectModal.classList.remove('flex');
+    document.body.classList.remove('no-scroll');
+    projectCurrentStep = 0;
+  });
+
+  // Handle image click to go to next step
+  document.querySelectorAll('.project-step img').forEach(img => {
+    img.addEventListener('click', () => {
+      if (projectCurrentStep < projectSteps.length - 1) {
+        projectCurrentStep++;
+        showProjectStep(projectCurrentStep);
+      }
+    });
+  });
+
+  // Handle form submit on last page
+  document.getElementById('projectForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('✅ Formular erfolgreich abgeschickt!');
+    projectModal.classList.add('hidden');
+    projectModal.classList.remove('flex');
+    document.body.classList.remove('no-scroll');
+    projectCurrentStep = 0;
+  });
+</script>
+
 
 <!--contact Script -->
 <script>
@@ -1774,53 +1860,6 @@ updateSlider2();
   });
 </script>
 
-  <!-- questioning popup js  -->
-<script>
-  const openProjectModal = document.getElementById('openProjectModal');
-  const closeProjectModal = document.getElementById('closeProjectModal');
-  const projectModal = document.getElementById('projectModal');
-  const projectSteps = document.querySelectorAll('.project-step');
-  const pageIndicator = document.getElementById('pageIndicator');
-  let projectCurrentStep = 0;
-
-  const showProjectStep = (index) => {
-    projectSteps.forEach((s, i) => s.classList.toggle('hidden', i !== index));
-    pageIndicator.textContent = `Seite ${index + 1} von ${projectSteps.length}`;
-  };
-
-  // Open modal
-  openProjectModal.addEventListener('click', () => {
-    projectModal.classList.remove('hidden');
-    projectModal.classList.add('flex');
-    document.body.classList.add('no-scroll');
-    projectCurrentStep = 0;
-    showProjectStep(projectCurrentStep);
-  });
-
-  // Close modal
-  closeProjectModal.addEventListener('click', () => {
-    projectModal.classList.add('hidden');
-    projectModal.classList.remove('flex');
-    document.body.classList.remove('no-scroll');
-    projectCurrentStep = 0;
-  });
-
-  // Handle image click to go to next step
-  document.querySelectorAll('.project-step img').forEach(img => {
-    img.addEventListener('click', () => {
-      if (projectCurrentStep < projectSteps.length - 1) {
-        projectCurrentStep++;
-        showProjectStep(projectCurrentStep);
-      } else {
-        alert('✅ Form Submitted!');
-        projectModal.classList.add('hidden');
-        projectModal.classList.remove('flex');
-        document.body.classList.remove('no-scroll');
-        projectCurrentStep = 0;
-      }
-    });
-  });
-</script>
 
 
 
