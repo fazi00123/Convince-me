@@ -86,7 +86,7 @@
   </nav>
 
   <!-- hero section (video background) -->
-<section class="2xl:px-24 lg:px-10 px-5 bg-center bg-no-repeat bg-cover 2xl:h-[1365px] md:h-[1100px] h-[1100px] relative overflow-hidden">
+<section class="2xl:px-24 lg:px-10 px-5 bg-center bg-no-repeat bg-cover 2xl:h-[1400px] xl:h-[1180px] md:h-[1000px] h-[1100px] relative overflow-hidden">
   <!-- video: covers entire section -->
   <video
     class="absolute inset-0 w-full h-full object-cover"
@@ -114,9 +114,9 @@
       </span> Richtig <br> Gemacht
     </h1>
     <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-5 text-center">
-      Our comprehensive SaaS solutions are tailored to streamline your <br class="md:block hidden"> operations and drive maximum revenue for your business.
+      Strategische Konzepte, kreative Ideen und messbare Ergebnisse – <br class="md:block hidden"> für Unternehmen, die mehr wollen als nur Werbung. Ihr Wachstum<br class="md:block hidden"> ist unser Ziel – mit intelligentem Marketing, das überzeugt. 
     </p>
-    <button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+    <button id="openModal" class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
       Let’s Talk &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
     </button>
   </div>
@@ -162,55 +162,161 @@
   <h2 class="text-white text-xl tracking-widest uppercase text-center">Industry partners</h2>
   </div>
 
-
  <div class="relative overflow-hidden w-full xl:pt-10 pt-6">
   <!-- Marquee Wrapper -->
   <div class="flex animate-marquee">
     <!-- Content Wrap (1st copy) -->
     <div class="flex">
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/bestbank.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+         <!-- Default Image -->
+  <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/hellofries.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/teamtalk.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/edekagry.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/edeka.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/slab.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/arktik.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/getdol.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
+      </div>
+        <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+         <!-- Default Image -->
+  <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/hellofries.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/edekagry.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/edeka.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
       </div>
     </div>
 
     <!-- Duplicate Content (2nd copy for seamless effect) -->
-    <div class="flex">
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/bestbank.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">BestBank</p>
+   <div class="flex">
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+         <!-- Default Image -->
+  <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/hellofries.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/teamtalk.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">TEAMTALK</p>
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/edekagry.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/edeka.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/slab.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">SlabSpace</p>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/arktik.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg font-bold text-white">arktico</p>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="flex items-center gap-2 py-12 px-16 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-        <img src="./assets/img/getdol.png" alt="">
-        <p class="2xl:text-[26px] md:text-xl text-lg text-white">getdonelist</p>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
       </div>
     </div>
   </div>
@@ -242,7 +348,7 @@ Durch datenbasierte Entscheidungsprozesse, kontinuierliche Optimierung und den E
 Ob durch gezielte Kampagnen, starke Markenstrategien oder intelligente Recruitinglösungen – wir entwickeln Konzepte, die überzeugen, und begleiten Unternehmen ganzheitlich auf ihrem Weg zum digitalen Erfolg.</p>
 </div>
 
-  <button class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  <button id="openModal" class="font-xl font-medium px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
   Request Free Advice &nbsp;<i class="fa-solid fa-chevron-right"></i>
 </button>
 
@@ -415,12 +521,11 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-4">
-      Convince Me.
+      Kreativ-Kampagnen & Videoproduktion
     </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+      Wir entwickeln aufmerksamkeitsstarke Kampagnen und emotionale Bewegtbilder, die Marken erlebbar machen und nachhaltig im Gedächtnis bleiben.
+Von der Idee bis zur Produktion – alles aus einer Hand.
     </p>
   </div>
 
@@ -456,12 +561,11 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Employer Branding
+      Performance Recruiting
     </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+      Mit der convince me. Methode gewinnen wir qualifizierte Mitarbeiter durch KI-gestützte Prozesse und präzise Zielgruppen-Targetierung.
+Unsere datenbasierten Strategien und intelligenten Ads sorgen dafür, dass Sie die richtigen Talente erreichen – effizient, planbar und mit Erfolgsgarantie.
     </p>
   </div>
 
@@ -497,12 +601,9 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Employer Branding
-    </h3>
+ Performance Marketing    </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+      Wir steigern Ihre Sichtbarkeit und Umsätze messbar durch präzise gesteuerte Kampagnen, die auf Zahlen, Daten und klarem ROI basieren.
     </p>
   </div>
 
@@ -541,9 +642,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       Social Media
     </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+     Wir steigern Ihre Sichtbarkeit und Umsätze messbar durch präzise gesteuerte Kampagnen, die auf Zahlen, Daten und klarem ROI basieren.
     </p>
   </div>
 
@@ -582,9 +681,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       Branding
     </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+      Wir formen Markenidentitäten, die Vertrauen schaffen und Wiedererkennung erzeugen – visuell, emotional und strategisch durchdacht.
     </p>
   </div>
 
@@ -623,9 +720,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       Website & Web Design
     </h3>
     <p class="text-[#0F0F0F] mt-4">
-      At convince me. we specialize in uncovering your brand’s unique identity. 
-      Through strategic consulting and tailored solutions, we elevate your market position, 
-      setting you apart from the competition.
+      Wir gestalten Websites, die überzeugen – ästhetisch, funktional und auf Conversion ausgerichtet. Ihre digitale Visitenkarte in Bestform.
     </p>
   </div>
 
@@ -661,7 +756,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-4">
-      Convince Me.
+      UI/UX Design
     </h3>
     <p class="text-[#0F0F0F] mt-4">
       At convince me. we specialize in uncovering your brand’s unique identity. 
@@ -702,7 +797,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Employer Branding
+      Mobile App
     </h3>
     <p class="text-[#0F0F0F] mt-4">
       At convince me. we specialize in uncovering your brand’s unique identity. 
@@ -743,7 +838,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       </div>
     </div>
     <h3 class="2xl:text-4xl md:text-3xl text-2xl font-bold text-[#0F0F0F] pt-6">
-      Employer Branding
+      CMS Design
     </h3>
     <p class="text-[#0F0F0F] mt-4">
       At convince me. we specialize in uncovering your brand’s unique identity. 
@@ -761,7 +856,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
 <!-- about us  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
   <div>
-    <h2 class="xl:text-7xl lg:text-5xl md:text-[40px] text-4xl xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px] font-semibold text-white text-center">What they said <br><span class="text-[#F5F5F5]/80">about us</span></h2>
+    <h2 class="xl:text-7xl lg:text-5xl md:text-[40px] text-4xl xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px] font-semibold text-white text-center">Stimmen unserer <br><span class="text-[#F5F5F5]/80"> Partner</span></h2>
   </div>
 
   <div class="swiper mySwiper 2xl:mt-20 xl:mt-14 mt-10">
@@ -772,10 +867,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “Convince Me, founded by Daniel Carter, is a global agency delivering creative and digital excellence....
+            “⭐ Kreativ-Kampagnen & Videoproduktion....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...We empower brands with innovative solutions across web development, marketing, and business growth.”
+            ...Das Team von convince me. hat unsere Marke mit einer außergewöhnlichen Kampagne zum Leben erweckt. Das Ergebnis war kreativ, emotional und perfekt auf unsere Zielgruppe abgestimmt – ein echter Wow-Effekt.”
           </p>
         </div>
         <div>
@@ -783,8 +878,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">Daniel Carter</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Laura Neumann</h4>
+            <p class="2xl:text-sm text-xs">Marketing Managerin </p>
           </div>
           </div>
         </div>
@@ -796,10 +891,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “We build unforgettable brands that reflect your story and resonate with your audience....
+            “⭐ Performance Recruiting....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...From logo design to complete identity systems, Convince Me, led by Daniel Carter, ensures your brand stands out in every detail.”
+            ...Wir konnten offene Stellen in Rekordzeit besetzen. Die KI-gestützte Targetierung war beeindruckend präzise – endlich Bewerbungen von Kandidaten, die wirklich zu uns passen.”
           </p>
         </div>
         <div>
@@ -807,8 +902,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">Brand Identity Experts</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Thomas Becker</h4>
+            <p class="2xl:text-sm text-xs">HR-Leiter</p>
           </div>
         </div>
         </div>
@@ -820,10 +915,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “Drive visibility, traffic, and conversions with data-driven SEO strategies....
+            “⭐ Performance Marketing....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...Convince Me, under the guidance of Daniel Carter, helps your business dominate search results and attract the right audience.”
+            ...convince me. liefert messbare Ergebnisse. Unsere Umsätze haben sich dank der datenbasierten Kampagnen deutlich gesteigert – absolute Empfehlung für Performance-getriebenes Marketing.”
           </p>
         </div>
         <div>
@@ -831,8 +926,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">SEO That Delivers Results</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Julia Wagner</h4>
+            <p class="2xl:text-sm text-xs">Geschäftsführerin</p>
           </div>
           </div>
         </div>
@@ -844,10 +939,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “We create websites that combine aesthetics with performance....
+            “⭐ Social Media....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...From UI/UX to backend development, Convince Me, founded by Daniel Carter, turns digital ideas into seamless online experiences.”
+            ...Endlich eine Agentur, die Social Media strategisch versteht. Unsere Reichweite, Interaktionsraten und Markenwahrnehmung sind spürbar gestiegen – und das mit authentischem Content.”
           </p>
         </div>
         <div>
@@ -855,8 +950,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">Building the Web of Tomorrow</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Sebastian Krüger</h4>
+            <p class="2xl:text-sm text-xs">Brand Director</p>
           </div>
           </div>
         </div>
@@ -868,10 +963,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “Strategize, innovate, and grow with expert business development insights....
+            “⭐ Branding....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...Convince Me helps you align digital strategy with your vision for measurable growth.”
+            ...Das neue Markenbild trifft genau den Kern unseres Unternehmens. Hochwertig, modern und wiedererkennbar – wir erhalten regelmäßig Komplimente für unser Rebranding.”
           </p>
         </div>
         <div>
@@ -879,8 +974,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">Empowering Businesses Globally</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Miriam Hoffmann</h4>
+            <p class="2xl:text-sm text-xs">Inhaberin</p>
           </div>
           </div>
         </div>
@@ -892,10 +987,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
       <div class="bg-cover bg-center bg-no-repeat 2xl:py-10 2xl:px-16 px-8 py-6 text-white flex flex-col gap-20 justify-between" style="background-image: url(./assets/img/slidecardbg.png);">
         <div>
           <h3 class="xl:text-3xl lg:text-xl text-lg font-semibold 2xl:leading-[64px] xl:leading-[54px] leading-10">
-            “Sell smarter with modern, high-converting e-commerce solutions....
+            “⭐ Website & Web Design....
           </h3>
           <p class="italic 2xl:text-lg xl:text-base text-sm 2xl:leading-10 xl:leading-7 leading-6 font-medium pt-4">
-            ...Convince Me, led by Daniel Carter, builds Shopify, WooCommerce, and Wix stores designed for success.”
+            ...Unsere neue Website ist nicht nur optisch ein Highlight, sondern auch technisch perfekt umgesetzt. Schnell, nutzerfreundlich und messbar erfolgreicher in der Leadgenerierung.”
           </p>
         </div>
         <div>
@@ -903,8 +998,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
         <div class="flex gap-5">
           <div><img src="" alt=""></div>
           <div>
-            <h4 class="2xl:text-lg text-base">Powering Digital Commerce</h4>
-            <p class="2xl:text-sm text-xs">Owner of Convince Me</p>
+            <h4 class="2xl:text-lg text-base">Andreas Scholz</h4>
+            <p class="2xl:text-sm text-xs">Geschäftsführer</p>
           </div>
           </div>
         </div>
@@ -921,7 +1016,8 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
   <div class="flex md:flex-row flex-col justify-between">
     <h2 class="md:w-1/2 w-full text-center md:text-start xl:text-7xl lg:text-5xl md:text-[40px] text-4xl font-semibold text-white xl:leading-[85px] lg:leading-[60px] md:leading-[45px] leading-[45px]">We Stand For <br class="md:block hidden"><span class="text-[#D2B94E]">Conviction.</span></h2>
 
-    <p class="md:w-1/2 w-full 2xl:text-lg lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-end text-white pt-8 md:pt-0">We help you communicate the uniqueness of your company. Forget conventional advertising  methods and extremely high advertising budgets. We show you new, innovative, creative and  fresh ways and ideas on how you can achieve your goals completely automatically.</p>
+    <p class="md:w-1/2 w-full 2xl:text-lg lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-end text-white pt-8 md:pt-0">Wir helfen Ihnen, die Einzigartigkeit Ihres Unternehmens sichtbar zu machen.
+Statt auf veraltete Werbemethoden und überdimensionierte Budgets zu setzen, entwickeln wir kreative, datenbasierte und automatisierte Strategien, die Wirkung zeigen – effizient, innovativ und messbar erfolgreich.</p>
   </div>
 
   <div class="2xl:pt-16 pt-12">
@@ -962,9 +1058,10 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
             <img src="./assets/img/misc_7.png" class="md:w-auto w-20"  alt="">
         </div>
         <div>
-            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">Your Dynamic <br class="md:block hidden"> Partner in <br class="md:block hidden"> Success</h3>
+            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">WERTE, DIE WIR <br class="md:block hidden">  LEBEN </h3>
             <p class="text-white 2xl:text-2xl lg:text-lg text-sm 2xl:leading-[45px] lg:leading-9 leading-6 pt-10">
-    Convince me GmbH is a young full-service marketing company that focuses on being an excellent partner on the path to success for companies, professionals and organizations.
+    convince me. ist eine inhabergeführte Full-Service-Agentur aus Hamburg.
+Wir verbinden Strategie, Design und Technologie zu einem ganzheitlichen Marketingansatz, der Marken stärkt, Prozesse vereinfacht und Ergebnisse messbar macht. Unser Ziel: Ein verlässlicher Partner an Ihrer Seite zu sein – für nachhaltigen Erfolg in einer digitalen Welt.
              </p>
      </div>
   </div>
@@ -973,12 +1070,14 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
 <div id="tab2" class="tab-content hidden bg-gradient-to-tr from-[#6E35EF]/10 via-[#EF4444]/10 to-[#ffffff]/10 2xl:p-28 xl:p-20 md:p-10 p-6">
     <div class="flex md:flex-row flex-col justify-center 2xl:gap-10 gap-8">
         <div class="xl:pt-6 md:pt-4">
-            <img src="./assets/img/misc_7.png" alt="">
+            <img src="./assets/img/misc_7.png" class="md:w-auto w-20" alt="">
         </div>
         <div>
-            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">Your Dynamic Partner in Success</h3>
+            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">PARTNERSCHAFT <br class="md:block hidden">STATT <br class="md:block hidden">  AGENTURDENKEN</h3>
             <p class="text-white 2xl:text-2xl lg:text-lg text-sm 2xl:leading-[45px] lg:leading-9 leading-6 pt-10">
-    Convince me GmbH is a young full-service marketing company that focuses on being an excellent partner on the path to success for companies, professionals and organizations.
+    Wir arbeiten nicht für Sie – wir arbeiten mit Ihnen.
+Gemeinsam analysieren wir Ihre Markenpräsenz, identifizieren ungenutztes Potenzial und entwickeln Lösungen, die exakt auf Ihre Ziele abgestimmt sind.
+Durch präzises Online-Marketing und intelligente Automatisierung machen wir Kundengewinnung planbar, effizient und nachhaltig.
              </p>
      </div>
   </div>
@@ -987,12 +1086,14 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
 <div id="tab3" class="tab-content hidden bg-gradient-to-tr from-[#6E35EF]/10 via-[#EF4444]/10 to-[#ffffff]/10 2xl:p-28 xl:p-20 md:p-10 p-6">
     <div class="flex md:flex-row flex-col justify-center 2xl:gap-10 gap-8">
         <div class="xl:pt-6 md:pt-4">
-            <img src="./assets/img/misc_7.png" alt="">
+            <img src="./assets/img/misc_7.png" class="md:w-auto w-20" alt="">
         </div>
         <div>
-            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">Your Dynamic Partner in Success</h3>
+            <h3 class="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl text-4xl font-bold text-white">DIGITALE STRATEGIE <br class="md:block hidden"> MIT  HERZ UND VERSTAND</h3>
             <p class="text-white 2xl:text-2xl lg:text-lg text-sm 2xl:leading-[45px] lg:leading-9 leading-6 pt-10">
-    Convince me GmbH is a young full-service marketing company that focuses on being an excellent partner on the path to success for companies, professionals and organizations.
+   Marketing verändert sich – die Grundidee bleibt: Menschen erreichen.
+Früher über Zeitung, Radio oder TV. Heute digital, personalisiert und in Echtzeit.
+Wir sorgen dafür, dass Ihre Botschaft genau dort ankommt, wo Ihre Zielgruppe ist – sichtbar, relevant und zur richtigen Zeit.
              </p>
      </div>
   </div>
@@ -1061,7 +1162,7 @@ Unsere Mission: Unternehmen dabei zu unterstützen, im digitalen Zeitalter sicht
   <img src="./assets/img/vermetergry.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
-  <img src="./assets/img/Kein.png" class="hidden group-hover:block" alt="">
+  <img src="./assets/img/vertmet.png" class="hidden group-hover:block" alt="">
 </div>
       <div class="group flex items-center justify-center border py-5 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
   <!-- Default Image -->
@@ -1252,9 +1353,10 @@ and Strategies in <span class="text-[#D2B94E]">Modern Marketing</span>
 <!-- faqs  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
   <div class="text-center ">
-    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white" >FAQ Super Hero</h2>
-    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6 text-[#DFDFDF]">Entering The Super Hero Society means joining an family full of people who believe <br>
-in the future of Cryptocurrencies and the Blockchain technology.</p>
+    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white" >FAQ – Ihre Fragen. <br>Unsere Antworten.</h2>
+    <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6 text-[#DFDFDF]">Sie möchten wissen, wie wir arbeiten, was unsere Leistungen beinhalten oder welchen Mehrwert <br class="md:block hidden"> Sie durch  convince me. erzielen?
+Hier finden Sie Antworten auf die häufigsten Fragen <br class="md:block hidden"> rund um Performance Marketing, Recruiting, Branding und mehr.
+</p>
   </div>
 
 
@@ -1272,11 +1374,12 @@ in the future of Cryptocurrencies and the Blockchain technology.</p>
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>01
-Lorem ipsum dolor sit amet?</span>
+Was versteht convince me. unter Performance Recruiting?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Performance Recruiting bedeutet, dass wir Ihre Stellenbesetzungen durch KI-gestützte Systeme und präzise Zielgruppen-Targetierung automatisieren.
+Mit der convince me. Methode finden wir die passenden Kandidaten dort, wo sie sich online bewegen, und führen sie gezielt zu Ihrer offenen Position – effizient, planbar und mit Erfolgsgarantie.</p>
                    
                 </div>
             </div>
@@ -1289,12 +1392,13 @@ Lorem ipsum dolor sit amet?</span>
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
-                    <span>01
-Lorem ipsum dolor sit amet?</span>
+                    <span>02
+LWie unterscheidet sich Performance Marketing von klassischer Werbung?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Im Gegensatz zu herkömmlicher Werbung basiert Performance Marketing auf datengetriebener Analyse und kontinuierlicher Optimierung.
+Jede Kampagne wird in Echtzeit ausgewertet, um Ihr Budget optimal einzusetzen und die höchste Conversion Rate zu erzielen – egal ob für Umsatzsteigerung, Markenbekanntheit oder Leadgenerierung.</p>
                 </div>
             </div>
             <div>
@@ -1306,12 +1410,14 @@ Lorem ipsum dolor sit amet?</span>
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
-                    <span>01
-Lorem ipsum dolor sit amet?</span>
+                    <span>03
+Welche Vorteile bietet professionelles Branding für mein Unternehmen?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Ein starkes Branding schafft Vertrauen, Wiedererkennung und emotionale Bindung. <br>
+Wir entwickeln Markenidentitäten, die Ihr Unternehmen visuell und strategisch perfekt repräsentieren – vom Logo bis zur Tonalität Ihrer Kommunikation.
+Das Ergebnis: eine Marke, die bleibt.</p>
                 </div>
             </div>
             <div>
@@ -1323,12 +1429,13 @@ Lorem ipsum dolor sit amet?</span>
            data-aos-anchor-placement="top-bottom"
            data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
-                    <span>01
-Lorem ipsum dolor sit amet?</span>
+                    <span>04
+Wie unterstützt convince me. beim Social Media Marketing?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Wir übernehmen die strategische Planung, Content-Erstellung und Kampagnensteuerung Ihrer Social-Media-Auftritte.
+Unsere Mission: Ihre Marke auf den relevanten Plattformen sichtbar, nahbar und erfolgreich zu positionieren – mit authentischem Content, aktivem Community-Aufbau und präzisem Targeting.</p>
                 </div>
             </div>
             <div>
@@ -1341,12 +1448,13 @@ Lorem ipsum dolor sit amet?</span>
           data-aos-anchor-placement="top-bottom"
           data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
-                    <span>01
-Lorem ipsum dolor sit amet?</span>
+                    <span>05
+Was beinhaltet das Website- & Webdesign-Angebot?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Unsere Webdesign-Leistungen umfassen Konzeption, Design, Entwicklung und Optimierung.
+Wir gestalten Websites, die optisch überzeugen, technisch performen und für Suchmaschinen optimiert sind – damit Ihr digitaler Auftritt nicht nur schön aussieht, sondern Ergebnisse liefert.</p>
                 </div>
             </div>
             <div>
@@ -1358,12 +1466,51 @@ Lorem ipsum dolor sit amet?</span>
           data-aos-anchor-placement="top-bottom"
           data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
-                    <span>01
-Lorem ipsum dolor sit amet?</span>
+                    <span>06
+Wie läuft eine Videoproduktion bei convince me. ab?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Fan Token is a decentralized platform that allows artists to tokenize their music as NFTs and sell them directly to fans, ensuring fair compensation and fostering a closer connection between artists and their audience.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Von der Idee bis zum fertigen Film – alles aus einer Hand.
+Wir konzipieren, produzieren und schneiden hochwertige Bewegtbilder, die Aufmerksamkeit erzeugen und Ihre Marke erlebbar machen.
+Ob Imagefilm, Social-Media-Clip oder Kampagnenvideo – wir erzählen Geschichten, die wirken.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+              <!-- FAQ 7 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>07
+Für wen sind die Leistungen von convince me. geeignet?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">VUnsere Leistungen richten sich an mittelständische Unternehmen, Konzerne und lokale Betriebe, die Wert auf Qualität, Effizienz und Markenaufbau legen.
+Wir passen jede Strategie individuell an Ihre Branche, Zielgruppe und Unternehmensgröße an – für nachhaltigen Erfolg auf allen Kanälen.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+
+              <!-- FAQ 8 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>08
+Wie kann ich mit convince me. zusammenarbeiten?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Ganz einfach: Vereinbaren Sie ein unverbindliches Erstgespräch.
+Gemeinsam analysieren wir Ihre aktuelle Situation, identifizieren Potenziale und zeigen Ihnen, wie wir mit gezieltem Marketing Ihre Ziele erreichen können.</p>
                 </div>
             </div>
             <div>
@@ -1378,9 +1525,10 @@ Lorem ipsum dolor sit amet?</span>
 <!-- digital marketing  -->
 <section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat border-t border-[#262626]" style="background-image: url(./assets/img/marketingbg.png);">
   <div class="2xl:py-36 lg:py-20 py-10 2xl:px-32 lg:px-16 px-6 text-center">
-    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">Digital marketing <br>
-from Hamburg.</h2>
-<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">We are not a classic advertising agency, but rather a digital marketing agency that knows how to use the advantages of digitalization. We win customers, position brands and sell products. Previously via newspapers, radio or television – today mostly through online marketing. We reach your target group where they spend most of their time: on the Internet. The digital world allows us to effectively address your target group in the right place at the right time and thus achieve your strategic goals efficiently. Our goal is to work with you to implement a unique, profitable solution.</p>
+    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">DIGITALES MARKETING <br> FÜR UNTERNEHMEN MIT ANSPRUCH.</h2>
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">Aus Hamburg. Für den Mittelstand, der mehr will. Wir sind keine klassische Werbeagentur – wir sind convince me.
+Ein Partner für Unternehmen, die die Chancen der Digitalisierung nutzen wollen, um sichtbarer zu werden, effizienter zu arbeiten und nachhaltig zu wachsen.
+Wir kombinieren Strategie, Technologie und kreative Kommunikation, um Ergebnisse zu erzielen, die zählen: mehr Reichweite, mehr Bewerbungen, mehr Umsatz. Statt auf kostspielige Massenwerbung zu setzen, schaffen wir digitale Lösungen, die präzise auf Ihre Zielgruppe und Ihre Unternehmensziele abgestimmt sind. Ob Marketingstrategie, Recruiting oder Markenaufbau – wir entwickeln individuelle Konzepte, die Wirkung zeigen und echten Mehrwert schaffen. Unser Ziel: Ihr Erfolg. Planbar, messbar und langfristig.</p>
 
  <div class="text-center">
   <button class="font-xl font-medium px-8 py-4 xl:mt-16 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
@@ -1405,7 +1553,7 @@ from Hamburg.</h2>
         <img src="./assets/img/footer.png" class="md:block hidden" alt="">
         </div>
         <p class="text-white/70 md:mt-4 2xl:text-lg text-sm leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br class="2xl:block hidden">sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.<br class="2xl:block hidden"> Ut enim ad minim veniam
+         A collective of driven minds empowering companies <br class="md:block hidden"> to grow digitally.
         </p>
 
         <div class="lg:block hidden">
@@ -1480,13 +1628,13 @@ from Hamburg.</h2>
       <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
         <!-- Social Icons -->
         <div class="flex justify-center md:justify-start space-x-4">
-          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+          <a href="@convincemegmbh" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
             <i class="fab fa-instagram "></i>
           </a>
-          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+          <a href="https://www.linkedin.com/company/convinceme" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+          <a href="@convincemegmbh" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>

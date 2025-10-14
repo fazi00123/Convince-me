@@ -321,8 +321,6 @@ body{
       height: 100%;
       aspect-ratio: 3 / 2;
       overflow: hidden;
-      /* border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
     }
 
     .img-wrapper {
@@ -408,7 +406,7 @@ body{
 
 
 
-/* job slider1 css  */
+/* job page first slider css  */
 
 .card {
   background: #181818;
