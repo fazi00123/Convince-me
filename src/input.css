@@ -28,21 +28,53 @@ body{
   }
 /* navbar css  end*/
 
-
- /* job page yellow card marque  */
-.marquee-vertical {
+/* 🌟 Perfect Seamless Vertical Marquee */
+.marquee-up,
+.marquee-down {
+  position: absolute;
+  width: calc(50% - 5px); /* 👈 Adjusted for 10px total gap */
+  height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  animation: scrollUp 15s linear infinite;
 }
 
-.marquee-vertical img {
+.marquee-up {
+  left: 0;
+  margin-right: 10px; /* 👈 Adds 10px space between the two marquees */
+}
+
+.marquee-down {
+  right: 0;
+}
+
+.marquee-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image styling */
+.marquee-up img,
+.marquee-down img {
   width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes scrollUp {
+/* Animations */
+.marquee-up .marquee-group {
+  animation: moveUp 100s linear infinite;
+}
+
+.marquee-down .marquee-group {
+  animation: moveDown 100s linear infinite;
+}
+
+/* Keyframes */
+@keyframes moveUp {
   0% {
     transform: translateY(0);
   }
@@ -51,19 +83,51 @@ body{
   }
 }
 
-/* To make it loop seamlessly */
-.marquee-vertical {
-  position: relative;
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.marquee-vertical img:last-child {
-  position: absolute;
-  top: 100%;
-  left: 0;
+
+/* ✅ Responsive Tweaks */
+@media (max-width: 1024px) {
+  .marquee-up,
+  .marquee-down {
+    width: calc(50% - 5px);
+  }
 }
-/* job card page marque end */
+
+@media (max-width: 768px) {
+  .marquee-up,
+  .marquee-down {
+    width: calc(50% - 5px);
+  }
+  .marquee-up .marquee-group,
+  .marquee-down .marquee-group {
+    animation-duration: 25s; /* slower for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-up,
+  .marquee-down {
+    width: calc(50% - 5px);
+  }
+  .marquee-up img,
+  .marquee-down img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
 
   
-
 /* home page and job page slider marquee  */
 @keyframes marquee {
   0% { transform: translateX(10%); }
@@ -72,7 +136,7 @@ body{
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 /* 👇 Hover pe rukne ke liye */

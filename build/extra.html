@@ -16,7 +16,7 @@
     }
   </style>
 </head>
-<body class="bg-[#0F0F0F] text-white min-h-screen flex justify-center items-center">
+<body class="">
 
 <!-- Trigger Button -->
 <button id="openProjectModal"
@@ -179,6 +179,123 @@
   });
 </script>
 
+
+
+<section class="2xl:mx-60 xl:mx-48 lg:mx-20 mx-5 mt-20 xl:mt-36 bg-gradient-to-l from-[#D2B94E] to-[#6C5F28] rounded-3xl overflow-hidden relative">
+  <div class="flex md:flex-row flex-col">
+    <!-- LEFT CONTENT -->
+    <div class="md:w-3/4 w-full xl:py-12 py-8 xl:pl-12 md:pl-8 relative z-10">
+      <div class="px-5 md:px-0 text-center md:text-start">
+        <h3 class="text-white xl:text-xl text-lg font-normal uppercase tracking-widest">
+          Worauf wartest Du noch?
+        </h3>
+        <h2 class="2xl:text-6xl lg:text-4xl text-3xl 2xl:leading-[75px] lg:leading-[50px] leading-10 font-semibold text-white pt-6">
+          Jetzt in 60 Sekunden erfahren, wie <br class="md:block hidden"> 
+          wir Fachkräfte in 30 Tagen für Dich <br class="md:block hidden">
+          einstellen mit 100% Erfolgsgarantie. <br class="md:block hidden">
+        </h2>
+      </div>
+
+      <div class="md:w-2/3 w-full">
+        <div class="text-center pt-10">
+          <button class="items-center xl:text-xl text-base text-start font-semibold px-8 py-4 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+            Recruiting-Analyse starten &nbsp; &nbsp; →
+          </button>
+        </div>
+        <p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5 text-center">
+          Kostenlos & unverbindlich · 60 Sek. &nbsp;  
+          <i class="fa-solid fa-check text-green-600"></i>
+        </p>
+
+        <div class="flex items-center justify-center pt-8 gap-2 flex-wrap">
+          <div class="stars text-white text-lg">
+            <span>★ </span>Trustpilot <span>★ ★ ★ ★ ★</span>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <img src="./assets/img/white line.png" alt="">
+            <p class="text-white text-lg font-bold">Hervorragend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (PERFECT MARQUEE) -->
+    <div class="md:w-3/12 w-full flex justify-center relative overflow-hidden h-[500px] bg-transparent">
+      <!-- Scroll Up -->
+      <div class="marquee-up">
+        <img src="./assets/img/industries1.png" alt="">
+        <img src="./assets/img/industries2.png" alt="">
+        <img src="./assets/img/industries3.png" alt="">
+        <img src="./assets/img/industries1.png" alt="">
+        <img src="./assets/img/industries2.png" alt="">
+        <img src="./assets/img/industries3.png" alt="">
+      </div>
+
+      <!-- Scroll Down -->
+      <div class="marquee-down">
+        <img src="./assets/img/industries1.png" alt="">
+        <img src="./assets/img/industries2.png" alt="">
+        <img src="./assets/img/industries3.png" alt="">
+        <img src="./assets/img/industries1.png" alt="">
+        <img src="./assets/img/industries2.png" alt="">
+        <img src="./assets/img/industries3.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🌟 Vertical marquee animation (clean and gapless) */
+
+.marquee-up, .marquee-down {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 48%;
+  height: 200%;
+  top: 0;
+  overflow: hidden;
+}
+
+.marquee-up {
+  left: 0;
+  animation: moveUp 15s linear infinite;
+}
+
+.marquee-down {
+  right: 0;
+  animation: moveDown 15s linear infinite;
+}
+
+/* ✅ Ensure smooth continuous movement */
+.marquee-up img,
+.marquee-down img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🔼 Scroll Up Animation */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* 🔽 Scroll Down Animation */
+@keyframes moveDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+</style>
 
 </body>
 </html>

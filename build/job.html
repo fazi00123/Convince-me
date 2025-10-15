@@ -85,36 +85,37 @@
     <div class="flex lg:flex-row flex-col justify-center gap-20 xl:gap-6 2xl:pt-48 pt-36">
       <div class="lg:w-2/5 w-full">
         <div>
-        <h1 class="text-[#F5F5F5] 2xl:text-[70px] xl:text-5xl md:text-[40px] text-3xl 2xl:leading-[90px] xl:leading-[64px] md:leading-[49px] font-semibold">
-          Fachkräfteim <br> Handwerkin30Tagen <br> <span class="bg-[#D2B94E] bg-clip-text text-transparent">mitEinstellungsgarantie 
+        <h1 class="text-[#F5F5F5] 2xl:text-[80px] xl:text-6xl lg:text-[40px] md:text-5xl text-4xl 2xl:leading-[90px] xl:leading-[64px] md:leading-[49px] font-semibold">
+          Fachkräfte in   <br> 30 Tagen mit <br> <span class="bg-[#D2B94E] bg-clip-text text-transparent">Einstellungsgarantie. 
   </span>
 </h1>
 
-<p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5 "><span class="font-bold">4.000+</span> Betriebe besetzten ohne Zeitaufwand ihre Stellen – &nbsp; &nbsp; &nbsp; &nbsp;<span class="font-bold">wir erledigen <br> alles</span>  
+<p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5 "><span class="font-bold"> 500+ </span>Partnerbetriebe besetzten ohne Zeitaufwand ihre Stellen  – &nbsp; &nbsp; &nbsp; &nbsp;<span class="font-bold">wir erledigen alles</span>  
 
- bis zum Vorstellungsgespräch. <span class="font-bold">170.000 Fachkräfte</span> warten bereits.
+ bis zum Vorstellungsgespräch.
 </p>
 </div>
 <div>
-<button id="openProjectModal" class="items-center xl:text-xl text-base text-start font-semibold px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+<button data-open="projectModal" class="items-center xl:text-xl text-base text-start font-semibold px-8 py-4 mt-12 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
   Recruiting-Analyse starten &nbsp; &nbsp; →
 </button>
 </div>
 <p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5">Kostenlos & unverbindlich · 60 Sek. &nbsp;  <i class="fa-solid fa-check text-green-600"></i></p>
 </div>
 
-<div class="relative lg:w-3/5 w-full group">
+<div class="lg:w-3/5 w-full">
   <!-- Video -->
-  <video id="customVideo"
-         class="border-[4px] border-[#41414166] rounded-xl xl:px-20 px-10 w-full"
-         loop
-         preload="metadata">
-    <source src="./assets/img/Pexels-Videos-2104648.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+ <video id="customVideo"
+       class="border-[4px] border-[#41414166] rounded-xl xl:px-20 px-10 w-full 2xl:h-[400px] xl:h-[370px] lg:h-[250px] object-cover"
+       loop
+       autoplay
+       preload="metadata">
+  <source src="./assets/img/jobpages video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
   <!-- Custom Play Button -->
-  <button id="playButton"
+  <!-- <button id="playButton"
           class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 xl:-mt-24 lg:-mt-48">
     <div class="bg-[#D2B94E] rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
       <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
@@ -124,7 +125,7 @@
         <path d="M6 19h4V5H6zm8-14v14h4V5h-4z"/>
       </svg>
     </div>
-  </button>
+  </button> -->
 </div>
 
     </div>
@@ -177,13 +178,64 @@
 Recruiting für über 400 Partner im DACH-Raum.</p>
 </div>
 
-          <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+   <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+         <!-- Default Image -->
+  <img src="./assets/img/lorchgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/lorch.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/werner.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/wernerred.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/mecdonalgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/mecdonal.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/wenchgrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/wenck.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/dussmangrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/dussman.png" class="hidden group-hover:block" alt="">
+      </div>
+       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+        <!-- Default Image -->
+  <img src="./assets/img/kalmargrey.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/kalmar.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/tchibe.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/techbirwhite.png" class="hidden group-hover:block" alt="">
+      </div>
+
+   <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
          <!-- Default Image -->
   <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/hellofries.png" class="hidden group-hover:block" alt="">
-      </div>
+    </div>
+
       <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
         <!-- Default Image -->
   <img src="./assets/img/edekagry.png" class="block group-hover:hidden" alt="">
@@ -191,20 +243,23 @@ Recruiting für über 400 Partner im DACH-Raum.</p>
   <!-- Hover Image -->
   <img src="./assets/img/edeka.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+
+  <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
        <!-- Default Image -->
-  <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
+   <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
-      </div>
-       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+    </div>
+
+     <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
           <!-- Default Image -->
   <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
       </div>
+
       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
           <!-- Default Image -->
   <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
@@ -212,6 +267,7 @@ Recruiting für über 400 Partner im DACH-Raum.</p>
   <!-- Hover Image -->
   <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
       </div>
+
        <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
         <!-- Default Image -->
   <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
@@ -219,6 +275,7 @@ Recruiting für über 400 Partner im DACH-Raum.</p>
   <!-- Hover Image -->
   <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
       </div>
+
       <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
        <!-- Default Image -->
   <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
@@ -226,6 +283,7 @@ Recruiting für über 400 Partner im DACH-Raum.</p>
   <!-- Hover Image -->
   <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
       </div>
+
     </div>
 
     <!-- Duplicate Content (2nd copy for seamless effect) -->
@@ -489,12 +547,19 @@ nutzen.</p>
             Aufträge ablehnen, weil Fachkräfte <br class="md:block hidden"> fehlen?
           </h3>
           <div class="pt-4">
-            <img src="./assets/img/img slider video.png" class="w-full" alt="">
+             <video id="customVideo"
+       class="rounded-xl object-cover h-full"
+       loop
+       autoplay
+       preload="metadata">
+  <source src="./assets/img/jobpages video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
           </div>
 
           <div class="pt-6">
-            <p class="text-white xl:text-2xl text-lg">Max Gockeln</p>
-            <p class="text-[#D0D0D0] xl:text-lg text-base py-2">Gockeln GaLaBau</p>
+            <p class="text-white xl:text-2xl text-lg">Wir liefern keine Bewerbungen – wir liefern Mitarbeiter.</p>
+            <p class="text-[#D0D0D0] xl:text-lg text-base py-2">Fachkräfte in 30 Tagen – mit <br> Einstellungsgarantie und System.</p>
             <div class="stars text-[#D2B94E] text-lg">★ ★ ★ ★ ★</div>
           </div>
         </div>
@@ -660,8 +725,7 @@ Baustellen, Aufträge ruhiger abwickeln</p>
      <div class="text-center">
         <h3 class="text-[#D2B94E] xl:text-xl text-lg font-normal uppercase tracking-widest">Über Convince me®</h3>
        <h2 class="xl:text-6xl lg:text-5xl md:text-[40px] text-3xl xl:leading-[75px] lg:leading-[54px] md:leading-[49px] leading-10 font-semibold text-white pt-6">
- Fakten über den <span class="text-[#D2B94E]">Recruiting <br class="md:block hidden">
-Marktführer im Handwerk</span>
+Fakten über <span class="text-[#D2B94E]">convince me.
 </h2>
     </div>
 
@@ -724,6 +788,7 @@ Marktführer im Handwerk</span>
 
   </section>
 
+  <!-- yellow card section  -->
 <section class="2xl:mx-60 xl:mx-48 lg:mx-20 mx-5 mt-20 xl:mt-36 bg-gradient-to-l from-[#D2B94E] to-[#6C5F28] rounded-3xl overflow-hidden relative">
   <div class="flex md:flex-row flex-col">
     <!-- LEFT CONTENT -->
@@ -757,20 +822,63 @@ Marktführer im Handwerk</span>
           <div class="flex items-center gap-2 flex-wrap">
             <img src="./assets/img/white line.png" alt="">
             <p class="text-white text-lg font-bold">Hervorragend</p>
-            <img src="./assets/img/white line.png" alt="">
-            <p class="text-white text-lg"><span class="font-bold">386</span> Bewertungen</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT IMAGE (CONTINUOUS VERTICAL MARQUEE) -->
-    <div class="md:w-3/12 w-full flex justify-center relative overflow-hidden">
-      <div class="marquee-vertical">
-        <img src="./assets/img/double img.png" alt="">
-        <img src="./assets/img/double img.png" alt="">
-      </div>
+<!-- 🌟 RIGHT SIDE (PERFECT RESPONSIVE MARQUEE) -->
+<div class="md:w-3/12 w-full flex justify-center relative overflow-hidden md:h-auto h-[400px] bg-transparent">
+
+  <!-- Scroll Up -->
+  <div class="marquee-up">
+    <div class="marquee-group">
+      <img src="./assets/img/industries1.png" alt="">
+      <img src="./assets/img/industries2.png" alt="">
+      <img src="./assets/img/industries3.png" alt="">
+      <img src="./assets/img/industries4.png" alt="">
+      <img src="./assets/img/industries1.png" alt="">
+      <img src="./assets/img/industries2.png" alt="">
+      <img src="./assets/img/industries3.png" alt="">
+      <img src="./assets/img/industries4.png" alt="">
     </div>
+    <div class="marquee-group">
+      <img src="./assets/img/industries1.png" alt="">
+      <img src="./assets/img/industries2.png" alt="">
+      <img src="./assets/img/industries3.png" alt="">
+      <img src="./assets/img/industries4.png" alt="">
+      <img src="./assets/img/industries1.png" alt="">
+      <img src="./assets/img/industries2.png" alt="">
+      <img src="./assets/img/industries3.png" alt="">
+      <img src="./assets/img/industries4.png" alt="">
+    </div>
+  </div>
+
+  <!-- Scroll Down -->
+  <div class="marquee-down">
+    <div class="marquee-group">
+      <img src="./assets/img/industries5.png" alt="">
+      <img src="./assets/img/industries6.png" alt="">
+      <img src="./assets/img/industries7.png" alt="">
+      <img src="./assets/img/industries8.png" alt="">
+      <img src="./assets/img/industries5.png" alt="">
+      <img src="./assets/img/industries6.png" alt="">
+      <img src="./assets/img/industries7.png" alt="">
+      <img src="./assets/img/industries8.png" alt="">
+    </div>
+    <div class="marquee-group">
+      <img src="./assets/img/industries5.png" alt="">
+      <img src="./assets/img/industries6.png" alt="">
+      <img src="./assets/img/industries7.png" alt="">
+      <img src="./assets/img/industries8.png" alt="">
+      <img src="./assets/img/industries5.png" alt="">
+      <img src="./assets/img/industries6.png" alt="">
+      <img src="./assets/img/industries7.png" alt="">
+      <img src="./assets/img/industries8.png" alt="">
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
@@ -831,8 +939,8 @@ in 30 Tagen mit Garantie</p>
   <div class="flex items-center gap-2 flex-wrap">
     <img src="./assets/img/white line.png" alt="">
     <p class="text-white text-lg font-bold">Hervorragend</p>
-     <img src="./assets/img/white line.png" alt="">
-     <p class="text-white text-lg"><span class="font-bold">386</span> Bewertungen</p>
+     <!-- <img src="./assets/img/white line.png" alt="">
+     <p class="text-white text-lg"><span class="font-bold">386</span> Bewertungen</p> -->
   </div>
 </div>
   </section>
@@ -846,63 +954,63 @@ in 30 Tagen mit Garantie</p>
     <div class="flex lg:flex-row flex-col xl:gap-10 gap-5 xl:pt-20 pt-10">
       <div class="lg:w-3/5 w-full grid md:grid-cols-3 grid-cols-2">
         
-   <div class="group flex flex-col justify-center px-20 py-1 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+   <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
          <!-- Default Image -->
   <img src="./assets/img/hellofreshgrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/hellofries.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex flex-col justify-center px-20 py-1 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
         <!-- Default Image -->
   <img src="./assets/img/edekagry.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/edeka.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex flex-col justify-center px-12 py-1 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
        <!-- Default Image -->
   <img src="./assets/img/subwaygrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/subway.png" class="hidden group-hover:block" alt="">
       </div>
-       <div class="group flex flex-col justify-center px-12 py-5 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <div class="group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
           <!-- Default Image -->
   <img src="./assets/img/boschgrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/boschred.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex flex-col justify-center px-12 py-5 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
           <!-- Default Image -->
   <img src="./assets/img/tipicogrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/tipicored.png" class="hidden group-hover:block" alt="">
       </div>
-       <div class="group flex flex-col justify-center px-12 py-5 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <div class="group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
         <!-- Default Image -->
   <img src="./assets/img/lottogrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/lotto.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex flex-col justify-center px-12 py-5 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex flex-col justify-center px-12 py-10 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
        <!-- Default Image -->
   <img src="./assets/img/sarpigrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/sarpi.png" class="hidden group-hover:block" alt="">
       </div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex items-center justify-center border py-10 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
   <!-- Default Image -->
   <img src="./assets/img/vermetergry.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
   <img src="./assets/img/vertmet.png" class="hidden group-hover:block" alt="">
 </div>
-      <div class="group flex items-center justify-center border py-6 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+      <div class="group flex items-center justify-center border py-10 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
   <!-- Default Image -->
   <img src="./assets/img/marangonigrey.png" class="block group-hover:hidden" alt="">
 
@@ -916,20 +1024,27 @@ in 30 Tagen mit Garantie</p>
   <!-- Hover Image -->
   <img src="./assets/img/dorfner.png" class="hidden group-hover:block" alt="">
 </div>
-      <div class="group flex items-center justify-center border py-2 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/greenhillgrey.png" class="block group-hover:hidden" alt="">
+     <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/mecdonalgrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
-  <img src="./assets/img/greenhill.png" class="hidden group-hover:block" alt="">
-</div>
-      <div class="group flex items-center justify-center border py-2 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
-  <!-- Default Image -->
-  <img src="./assets/img/cchgrey.png" class="block group-hover:hidden" alt="">
+  <img src="./assets/img/mecdonal.png" class="hidden group-hover:block" alt="">
+      </div>
+     <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+          <!-- Default Image -->
+  <img src="./assets/img/dussmangrey.png" class="block group-hover:hidden" alt="">
 
   <!-- Hover Image -->
-  <img src="./assets/img/ccn.png" class="hidden group-hover:block" alt="">
-</div>
+  <img src="./assets/img/dussman.png" class="hidden group-hover:block" alt="">
+      </div>
+      <div class="group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500">
+       <!-- Default Image -->
+  <img src="./assets/img/tchibe.png" class="block group-hover:hidden" alt="">
+
+  <!-- Hover Image -->
+  <img src="./assets/img/techbirwhite.png" class="hidden group-hover:block" alt="">
+      </div>
       </div>
 
       <div class="lg:w-2/5 w-full bg-[#181818] xl:py-12 xl:px-12 py-6 px-6 rounded-3xl">
@@ -1027,11 +1142,288 @@ neue Firma – Know-how geht verloren.</p>
 </div>
   </section>
 
+  <!-- marketing section  -->
+<section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
+  
+    <div class="w-full text-center">
+      <h2 class="2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">
+        Unveiling Trends
+and Strategies in <br> <span class="text-[#D2B94E]">Modern Marketing</span>
+      </h2>
+      <p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">Explore our enriching blog filled with expert perspectives, timely industry updates,  and actionable <br> tips. Immerse yourself in a wealth of knowledge to navigate the dynamic landscape <br> of modern marketing and empower your brand’s journey towards sustained success.</p>
+
+    </div>
+
+      <div class="flex md:flex-row flex-col xl:gap-20 gap-10 xl:pt-20 pt-10">
+    <div class="md:w-1/2 w-full pt-10 lg:pt-0">
+
+      <a href="https://candidate-flow.de/recruiting?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Mittelständische Unternehmen</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/industrie?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Industrieunternehmen</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/baugewerbe?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Baugewerbe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+            <a href="https://candidate-flow.de/bodenleger?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Bodenleger</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+          <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+       <a href="https://candidate-flow.de/kaelte-und-klima?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Kälte- und Klimatechnik</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/metallbau?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Metallbaubetriebe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/tischler-schreiner?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Tischlerei / Schreinerei</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+            <a href="https://candidate-flow.de/dachdecker?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Dachdecker</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+          <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+        <a href="https://candidate-flow.de/dentallabore?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Dentallabore
+</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+            <a href="https://www.thera-flow.de/?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Physiotherapiepraxen</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+  
+
+    </div>
+
+    <div class="md:w-1/2 w-full pt-10 lg:pt-0">
+      <a href="https://www.kfz-flow.de/?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">KFZ Betriebe / Autohäuser</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/elektro?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqQZJmZ4pny90sZe-SvYo5uhz0nlnh1HMD6hj3rmXrtMllr0Y4vThIaAh6TEALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Photovoltaikbetriebe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/elektro?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Elektrobetriebe
+</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+            <a href="https://candidate-flow.de/shk?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Sanitär- und Heizungsbetriebe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+          <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/garten-und-landschaftsbau?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Garten- und Landschaftsbaubetriebe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/maler-lackierer?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Maler- und Lackierbetriebe</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+      <a href="https://candidate-flow.de/agrar-landwirtschaft?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Agrar- und Landwirtschaftsbetriebe
+</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+      <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+            <a href="https://medic-flow.de/">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Ärzte - Krankenhäuser / Praxen</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+          <hr class="border border-[#414141] 2xl:my-20 md:my-10 my-6">
+
+             <a href="https://candidate-flow.de/backerei-konditorei?utm_medium=Google&utm_source=Ads&matchtype=e&device=c&utm_campaign=11331832445&utm_term=candidate+flow&utm_content=678719328627&h_ad_id=678719328627&gc_id=11331832445&h_keyword=candidate+flow&gclid=Cj0KCQjw9JLHBhC-ARIsAK4Phcrq10I04ewxgVW0nAW_I7zQvTpvh8wbzXqEhs4AeXXHTuWArcoPIHIaAji6EALw_wcB&gbraid=0AAAAACMmlY48yE-j80tWqG_7BKgrwgjgM&h_keyword_id=kwd-362077974214&h_ga_id=186160580347">
+      <div class="flex justify-between">
+        <div class="flex gap-6 items-center">
+          <img src="./assets/img/branding.svg" alt="">
+          <p class="2xl:text-[26px] xl:text-2xl md:text-lg text-base text-white">Bäckerei / Konditorei</p>
+        </div>
+        <div>
+          <img src="./assets/img/uperrow.png" alt="">
+        </div>
+      </div>
+      </a>
+  
+  
+    </div>
+    </div>
+
+      <div class="text-center ">
+  <button class="text-lg font-semibold px-8 py-4 mt-20 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+</section>
 
 <!-- faqs  -->
 <section class="2xl:px-24 lg:px-10 px-5 2xl:pt-52 lg:pt-36 pt-20">
   <div class="text-center ">
-    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white" >FAQ Super Hero</h2>
+    <h2 class="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-[40px] text-4xl font-bold text-white" >FAQ – Performance Recruiting</h2>
     <p class="2xl:text-xl xl:text-lg lg:text-base text-sm pt-6 text-[#DFDFDF]">Entering The Super Hero Society means joining an family full of people who believe <br>
 in the future of Cryptocurrencies and the Blockchain technology.</p>
   </div>
@@ -1051,11 +1443,12 @@ in the future of Cryptocurrencies and the Blockchain technology.</p>
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>01
-How can I apply for a position at Convince Me?</span>
+Seid ihr Personalvermittler, ein Stellenportal oder eine Social-Recruiting-Agentur?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">You can apply directly through our Careers page by submitting your resume and portfolio (if applicable) for the listed openings.</p>
+                    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Weder noch. convince me. ist eine ganzheitliche Recruiting-Lösung, die datenbasiertes Marketing mit moderner Technologie verbindet.
+Wir liefern qualifizierte Bewerbungen von Fachkräften, die exakt zu Ihrem Unternehmen passen – ohne Streuverluste, ohne Zeitverschwendung.</p>
                    
                 </div>
             </div>
@@ -1069,11 +1462,12 @@ How can I apply for a position at Convince Me?</span>
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>02
-What qualities do you look for in potential candidates?</span>
+Ist die Recruiting-Analyse wirklich kostenlos?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">We value creativity, teamwork, problem-solving skills, and a passion for innovation and technology.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Ja, unsere Recruiting-Analyse ist komplett kostenlos und unverbindlich.
+Dabei prüfen wir das Potenzial in Ihrer Region, analysieren Ihren Online-Auftritt und zeigen, wie Sie mit Performance Recruiting qualifizierte Mitarbeiter gewinnen können – effizient, planbar und mit Erfolgsgarantie.</p>
                 </div>
             </div>
             <div>
@@ -1086,11 +1480,12 @@ What qualities do you look for in potential candidates?</span>
             data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>03
-Do you offer remote or hybrid work options?</span>
+Ich habe wenig Zeit – wie viel Aufwand habe ich wirklich?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Yes, Convince Me supports flexible working models including remote and hybrid roles, depending on the position.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Minimal. Wir übernehmen den gesamten Prozess – von der Strategie über die Kampagnensteuerung bis zur Bewerberkommunikation.
+Sie führen nur noch die finalen Gespräche mit Kandidaten, die wirklich passen. So sparen unsere Partnerbetriebe im Schnitt über 80 % Zeit im Recruiting.</p>
                 </div>
             </div>
             <div>
@@ -1103,11 +1498,12 @@ Do you offer remote or hybrid work options?</span>
            data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>04
-How will I know if my application has been received?</span>
+Der Arbeitsmarkt ist leer – wie wollt ihr mir helfen?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">You’ll receive an email confirmation once your application is successfully submitted. Our HR team will contact shortlisted candidates for the next steps.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Mit gezieltem Online-Marketing erreichen wir Fachkräfte dort, wo sie täglich aktiv sind: in sozialen Netzwerken und auf digitalen Plattformen.
+Anstatt auf Bewerbungen zu warten, sprechen wir passende Kandidaten aktiv an – präzise, automatisiert und messbar erfolgreich.</p>
                 </div>
             </div>
             <div>
@@ -1121,11 +1517,12 @@ How will I know if my application has been received?</span>
           data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>05
-Are there internship opportunities available?</span>
+Was macht die convince me. Methode einzigartig?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Yes, we regularly offer internship programs for students and fresh graduates interested in web development, design, and marketing.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Unsere Methode vereint Strategie, Technologie und Expertenwissen zu einem klaren, effizienten Prozess.
+Mit KI-gestützter Zielgruppenanalyse, modernen Kampagnen und persönlicher Betreuung entlasten wir Sie vollständig – und liefern Ergebnisse, die überzeugen</p>
                 </div>
             </div>
             <div>
@@ -1138,11 +1535,138 @@ Are there internship opportunities available?</span>
           data-aos-duration="2000">
                 <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
                     <span>06
-What does the recruitment process look like?</span>
+Habe ich Bindungspflichten oder lange Vertragslaufzeiten?</span>
                     <span class="icon text-white">+</span>
                 </button>
                 <div class="faq-content text-[#C1C1C1]">
-                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">The process typically includes an initial screening, one or two interviews (technical or creative), and a final evaluation before an offer is made.</p>
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Nein. Bei convince me. gibt es keine langfristige Vertragsbindung.
+Unsere Zusammenarbeit startet flexibel – meist mit einem 30-Tage-Projekt. Sie entscheiden anschließend, ob und wie Sie die Kooperation fortsetzen möchten.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+              <!-- FAQ 7 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>07
+Warum arbeitet ihr so erfolgreich mit Handwerks- und Mittelstandsunternehmen zusammen?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Weil wir deren Herausforderungen verstehen.
+Wir unterstützen Sie nicht nur bei der Mitarbeitergewinnung, sondern auch beim Aufbau einer starken Arbeitgebermarke und langfristigen Mitarbeiterbindung – für nachhaltigen Erfolg über die Kampagne hinaus.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+              <!-- FAQ 8 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>08
+Wie unterscheidet sich Performance Recruiting von klassischem Recruiting?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Klassisches Recruiting basiert meist auf Stellenanzeigen und passiver Bewerbersuche.
+Performance Recruiting dagegen nutzt datengetriebene Werbekampagnen, um gezielt passende Kandidaten dort anzusprechen, wo sie sich täglich online bewegen – auf Social Media, Suchmaschinen und Jobnetzwerken. Das führt zu deutlich mehr Reichweite und qualifizierteren Bewerbungen.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+              <!-- FAQ 9 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>09
+Wie schnell sehe ich Ergebnisse mit Performance Recruiting bei convince me?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Ja – und das sogar besonders gut.
+Mit gezielter, regionaler Zielgruppenansprache erreichen wir Fachkräfte, die nicht aktiv auf Jobsuche sind, aber offen für attraktive Arbeitgeber in ihrer Nähe. So finden auch kleinere Betriebe qualifizierte Mitarbeiter, die langfristig bleiben.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+                  <!-- FAQ 10 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>10
+Kann Performance Recruiting auch im ländlichen Raum funktionieren?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Ja – und das sogar besonders gut.
+Mit gezielter, regionaler Zielgruppenansprache erreichen wir Fachkräfte, die nicht aktiv auf Jobsuche sind, aber offen für attraktive Arbeitgeber in ihrer Nähe. So finden auch kleinere Betriebe qualifizierte Mitarbeiter, die langfristig bleiben.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+                  <!-- FAQ 11 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>11
+Wie funktioniert die Zielgruppen-Analyse bei convince me.?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Unsere KI-gestützte Analyse ermittelt, wo sich potenzielle Bewerber online aufhalten, welche Interessen sie haben und über welche Kanäle sie am besten erreichbar sind.
+So werden Ihre Anzeigen nur den Personen ausgespielt, die wirklich relevant sind – effizient, messbar und ohne Streuverluste.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+                  <!-- FAQ 12 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>12
+Welche Unterlagen oder Informationen benötigt ihr von uns für den Start?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">Lediglich eine Stellenbeschreibung und einige Informationen zu Ihrem Unternehmen.
+Alles Weitere – von der Strategie bis zur Erstellung der Kampagnen – übernehmen wir. Auf Wunsch gestalten wir auch Texte, Bilder und Videos für Ihre Arbeitgeberkampagne.</p>
+                </div>
+            </div>
+            <div>
+                <hr class=" border-[#333333]">
+             </div>
+
+                  <!-- FAQ 13 -->
+          <div class="" data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="2000">
+                <button class="faq-btn flex justify-between w-full 2xl:py-5 py-2 text-left text-white font-semibold 2xl:text-2xl lg:text-lg text-base">
+                    <span>13
+Was passiert nach der Kampagne?</span>
+                    <span class="icon text-white">+</span>
+                </button>
+                <div class="faq-content text-[#C1C1C1]">
+                      <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[45px] lg:leading-7 leading-6 text-[#DFDFDF]">LeNach Abschluss der Kampagne wird diese Pausiert und kann von Ihnen, auf Knopfdruck wieder online gestellt werden. Es erfordert keiner Kündigung. 
+Auf Wunsch unterstützen wir Sie auch beim Aufbau langfristiger Recruiting-Strukturen, Employer Branding oder beim Retargeting künftiger Fachkräfte.</p>
                 </div>
             </div>
             <div>
@@ -1154,18 +1678,28 @@ What does the recruitment process look like?</span>
 </div>
 </section>
 
-  <!-- digital marketing  -->
+<!-- digital marketing  -->
 <section class="2xl:mt-52 lg:mt-36 mt-20 bg-center bg-cover bg-no-repeat border-t border-[#262626]" style="background-image: url(./assets/img/marketingbg.png);">
   <div class="2xl:py-36 lg:py-20 py-10 2xl:px-32 lg:px-16 px-6 text-center">
-    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">Digital marketing <br>
-from Hamburg.</h2>
-<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">We are not a classic advertising agency, but rather a digital marketing agency that knows how to use the advantages of digitalization. We win customers, position brands and sell products. Previously via newspapers, radio or television – today mostly through online marketing. We reach your target group where they spend most of their time: on the Internet. The digital world allows us to effectively address your target group in the right place at the right time and thus achieve your strategic goals efficiently. Our goal is to work with you to implement a unique, profitable solution.</p>
+    <h2 class=" 2xl:text-7xl xl:text-6xl lg:text-[43px] md:text-[40px] text-4xl font-semibold text-white 2xl:leading-[85px] xl:leading-[70px] lg:leading-[54px] md:leading-[48px] leading-[45px]">DIGITALES MARKETING <br> FÜR UNTERNEHMEN MIT ANSPRUCH.</h2>
+<p class="2xl:text-2xl lg:text-lg text-base 2xl:leading-[50px] lg:leading-8 leading-7 text-white pt-6 ">Aus Hamburg. Für den Mittelstand, der mehr will. Wir sind keine klassische Werbeagentur – wir sind convince me.
+Ein Partner für Unternehmen, die die Chancen der Digitalisierung nutzen wollen, um sichtbarer zu werden, effizienter zu arbeiten und nachhaltig zu wachsen.
+Wir kombinieren Strategie, Technologie und kreative Kommunikation, um Ergebnisse zu erzielen, die zählen: mehr Reichweite, mehr Bewerbungen, mehr Umsatz. Statt auf kostspielige Massenwerbung zu setzen, schaffen wir digitale Lösungen, die präzise auf Ihre Zielgruppe und Ihre Unternehmensziele abgestimmt sind. Ob Marketingstrategie, Recruiting oder Markenaufbau – wir entwickeln individuelle Konzepte, die Wirkung zeigen und echten Mehrwert schaffen. Unser Ziel: Ihr Erfolg. Planbar, messbar und langfristig.</p>
 
  <div class="text-center">
-  <button class="font-xl font-medium px-8 py-4 xl:mt-16 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
-  Explore All &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
+  <button data-open="projectModal" class="text-lg font-semibold px-8 py-4 xl:mt-16 mt-8 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
+  Jetzt Fachkräfte einstellen &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>
 </button>
 </div>
+<div class="flex items-center justify-center pt-8 gap-2 flex-wrap">
+          <div class="stars text-white text-lg">
+            <span>★ </span>Trustpilot <span>★ ★ ★ ★ ★</span>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <img src="./assets/img/white line.png" alt="">
+            <p class="text-white text-lg font-bold">Hervorragend</p>
+          </div>
+        </div>
   </div>
 </section>
 
@@ -1474,7 +2008,7 @@ from Hamburg.</h2>
 
 <!-- questioning popup js -->
 <script>
-  const openProjectModal = document.getElementById('openProjectModal');
+  const openProjectButtons = document.querySelectorAll('[data-open="projectModal"]');
   const closeProjectModal = document.getElementById('closeProjectModal');
   const projectModal = document.getElementById('projectModal');
   const projectSteps = document.querySelectorAll('.project-step');
@@ -1486,16 +2020,18 @@ from Hamburg.</h2>
     pageIndicator.textContent = `Seite ${index + 1} von ${projectSteps.length}`;
   };
 
-  // Open modal
-  openProjectModal.addEventListener('click', () => {
-    projectModal.classList.remove('hidden');
-    projectModal.classList.add('flex');
-    document.body.classList.add('no-scroll');
-    projectCurrentStep = 0;
-    showProjectStep(projectCurrentStep);
+  // ✅ Open modal on any button click
+  openProjectButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      projectModal.classList.remove('hidden');
+      projectModal.classList.add('flex');
+      document.body.classList.add('no-scroll');
+      projectCurrentStep = 0;
+      showProjectStep(projectCurrentStep);
+    });
   });
 
-  // Close modal
+  // ✅ Close modal
   closeProjectModal.addEventListener('click', () => {
     projectModal.classList.add('hidden');
     projectModal.classList.remove('flex');
@@ -1503,7 +2039,17 @@ from Hamburg.</h2>
     projectCurrentStep = 0;
   });
 
-  // Handle image click to go to next step
+  // ✅ Click outside modal to close
+  projectModal.addEventListener('click', (e) => {
+    if (e.target === projectModal) {
+      projectModal.classList.add('hidden');
+      projectModal.classList.remove('flex');
+      document.body.classList.remove('no-scroll');
+      projectCurrentStep = 0;
+    }
+  });
+
+  // ✅ Handle step images click
   document.querySelectorAll('.project-step img').forEach(img => {
     img.addEventListener('click', () => {
       if (projectCurrentStep < projectSteps.length - 1) {
@@ -1513,7 +2059,7 @@ from Hamburg.</h2>
     });
   });
 
-  // Handle form submit on last page
+  // ✅ Handle final form submit
   document.getElementById('projectForm').addEventListener('submit', (e) => {
     e.preventDefault();
     alert('✅ Formular erfolgreich abgeschickt!');
@@ -1523,6 +2069,7 @@ from Hamburg.</h2>
     projectCurrentStep = 0;
   });
 </script>
+
 
 
 <!--contact Script -->
@@ -1802,7 +2349,7 @@ updateSlider2();
 
 
 <!-- video play button js  -->
-<script>
+<!-- <script>
   const video = document.getElementById('customVideo');
   const playButton = document.getElementById('playButton');
   const playIcon = document.getElementById('playIcon');
@@ -1825,7 +2372,7 @@ updateSlider2();
     pauseIcon.classList.add('hidden');
     playIcon.classList.remove('hidden');
   });
-</script>
+</script> -->
 
   <!--Ist Slider  JS -->
  <script>
