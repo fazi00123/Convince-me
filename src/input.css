@@ -142,13 +142,13 @@ body{
   
 /* home page and job page slider marquee  */
 @keyframes marquee {
-  0% { transform: translateX(10%); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 /* 👇 Hover pe rukne ke liye */
