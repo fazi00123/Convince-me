@@ -389,8 +389,6 @@ body{
 
 
    /* befor after effect bird css  home page*/
-
-
 .slider-container {
   margin: 0 auto;
   margin-top: 5rem;
@@ -533,105 +531,8 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
 }
+   /* befor after effect bird css home page end*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-    .container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 3 / 2;
-      overflow: hidden;
-    }
-
-    .img-wrapper {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .img-wrapper:nth-child(2) {
-      clip-path: inset(0 0 0 50%);
-    }
-
-    #line {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background-color: #414141;
-      z-index: 10;
-    }
-
-  
-.before-after-slider {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: -1.125rem;
-  width: calc(100% + 2.25rem);
-  height: 100%;
-  z-index: 20;
-  cursor: grab;
-}
-
-.before-after-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
-  border: 3px solid white;
-  background-color: #D2B94E;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M286.15-293.85 100-479.62l185.77-185.76 42.15 41.76-113 113.62h530.16l-113-113.62 42.15-41.76L860-479.62 674.23-293.85l-42.54-41.77 113.39-114H214.54l113.38 114-41.77 41.77Z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-}
-
-.before-after-slider::-moz-range-thumb {
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
-  border: 3px solid white;
-  background-color: #D2B94E;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M286.15-293.85 100-479.62l185.77-185.76 42.15 41.76-113 113.62h530.16l-113-113.62 42.15-41.76L860-479.62 674.23-293.85l-42.54-41.77 113.39-114H214.54l113.38 114-41.77 41.77Z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-}
-
-.before-after-slider:active::-webkit-slider-thumb {
-  cursor: grabbing;
-}
-
-.before-after-slider:active::-moz-range-thumb {
-  cursor: grabbing;
-} */
 
 
 
