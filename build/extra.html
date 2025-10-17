@@ -5,649 +5,284 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Scrollable Modal</title>
 <link rel="stylesheet" href="./assets/css/style.css">
-  <style>
-    body.no-scroll {
-      overflow: hidden;
-    }
 
-    /* Smooth mobile scrolling */
-    #projectModal {
-      -webkit-overflow-scrolling: touch;
-    }
-  </style>
 </head>
 <body class="">
 
-<!-- Trigger Button -->
-<button id="openProjectModal"
-  class="bg-[#D2B94E] text-[#0F0F0F] px-8 py-3 rounded-md font-semibold hover:bg-[#c0a840] transition">
-  Open Multi-Step Form
-</button>
 
-<!-- Modal Overlay -->
-<div id="projectModal"
-  class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 overflow-y-auto p-4">
-  
-  <!-- Modal Box -->
-  <div
-    class="relative bg-[#0F0F0F] border border-[#D2B94E] rounded-2xl shadow-xl w-full max-w-5xl my-auto p-6 sm:p-8 overflow-y-auto max-h-[90vh]">
-    
-    <!-- Close Button -->
-    <button id="closeProjectModal"
-      class="absolute top-4 right-4 text-[#D2B94E] text-2xl font-bold">&times;</button>
 
-    <!-- Page Counter -->
-    <div id="pageIndicator" class="text-[#D2B94E] text-lg font-semibold text-center mb-4">
-      <h2></h2>
-      Seite 1 von 4
+
+<div class="slider-container h-[450px] md:h-[700px] 2xl:h-[1080px]">
+  <div class="before-image">
+    <img src="./assets/img/1.png" alt="Before Image">
+    <div class="before-text">Before</div>
+  </div>
+  <div class="after-image">
+    <img src="./assets/img/2.png" alt="After Image">
+    <div class="after-text">After</div>
+  </div>
+  <div class="slider-handle" id="sliderHandle"></div>
+  <div class="slider-line">
+    <div class="pulse-container">
+      <svg role="presentation" focusable="false" fill="none" width="50" height="50" viewBox="0 0 50 50">
+        <g>
+          <rect width="50" height="50" rx="25" fill="#ffffff"></rect>
+          <path d="m19.25 19-6 6 6 6m11.5 0 6-6-6-6" stroke="#000000" stroke-width=".75" stroke-linecap="square"></path>
+        </g>
+      </svg>
     </div>
 
-    <!-- Steps -->
-    <div id="projectStepsContainer" class="space-y-10 lg:py-10 py-5">
-      
-      <!-- Page 1 -->
-      <div class="project-step lg:px-40 md:px-20">
-        <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">Du bist...?</h2>
-        <div class="grid md:grid-cols-2 gap-5 pt-6">
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img1.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Geschäftsführer</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img1.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Mitarbeiter</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Page 2 -->
-      <div class="project-step hidden">
-        <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">Wie viele Mitarbeiter sind in Deinem Betrieb?</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img3.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">1 bis 4</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img4.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">5 bis 10</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img5.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">11 bis 30</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img6.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Über 30</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Page 3 -->
-      <div class="project-step hidden">
-        <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">Wie viele Fachkräfte möchtest Du in den nächsten 30 Tagen einstellen?</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img7.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">1 Fachkraft</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img8.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">2 bis 3</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img9.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">4 bis 5</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img10.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">6 oder mehr</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Page 4 -->
-      <div class="project-step hidden">
-        <h2 class="text-2xl sm:text-3xl xl:text-5xl font-bold text-[#D2B94E] text-center mb-6">Wie schnell möchtest Du neue Fachkräfte einstellen?</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 pt-6">
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img11.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Sofort</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img12.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">2 bis 4 Wochen</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img13.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">1 bis 2 Monate</p>
-          </div>
-          <div class="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <img src="./assets/img/img14.avif" alt="">
-            <p class="text-white text-xl bg-[#D2B94E] py-4 text-center">Weiß noch nicht</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
-<script>
-  const openProjectModal = document.getElementById('openProjectModal');
-  const closeProjectModal = document.getElementById('closeProjectModal');
-  const projectModal = document.getElementById('projectModal');
-  const projectSteps = document.querySelectorAll('.project-step');
-  const pageIndicator = document.getElementById('pageIndicator');
-  let projectCurrentStep = 0;
 
-  const showProjectStep = (index) => {
-    projectSteps.forEach((s, i) => s.classList.toggle('hidden', i !== index));
-    pageIndicator.textContent = `Seite ${index + 1} von ${projectSteps.length}`;
-  };
-
-  // Open modal
-  openProjectModal.addEventListener('click', () => {
-    projectModal.classList.remove('hidden');
-    projectModal.classList.add('flex');
-    document.body.classList.add('no-scroll');
-    projectCurrentStep = 0;
-    showProjectStep(projectCurrentStep);
-  });
-
-  // Close modal
-  closeProjectModal.addEventListener('click', () => {
-    projectModal.classList.add('hidden');
-    projectModal.classList.remove('flex');
-    document.body.classList.remove('no-scroll');
-    projectCurrentStep = 0;
-  });
-
-  // Handle image click to go to next step
-  document.querySelectorAll('.project-step img').forEach(img => {
-    img.addEventListener('click', () => {
-      if (projectCurrentStep < projectSteps.length - 1) {
-        projectCurrentStep++;
-        showProjectStep(projectCurrentStep);
-      } else {
-        alert('✅ Form Submitted!');
-        projectModal.classList.add('hidden');
-        projectModal.classList.remove('flex');
-        document.body.classList.remove('no-scroll');
-        projectCurrentStep = 0;
-      }
-    });
-  });
-</script>
-
-
-
-<section class="2xl:mx-60 xl:mx-48 lg:mx-20 mx-5 mt-20 xl:mt-36 bg-gradient-to-l from-[#D2B94E] to-[#6C5F28] rounded-3xl overflow-hidden relative">
-  <div class="flex md:flex-row flex-col">
-    <!-- LEFT CONTENT -->
-    <div class="md:w-3/4 w-full xl:py-12 py-8 xl:pl-12 md:pl-8 relative z-10">
-      <div class="px-5 md:px-0 text-center md:text-start">
-        <h3 class="text-white xl:text-xl text-lg font-normal uppercase tracking-widest">
-          Worauf wartest Du noch?
-        </h3>
-        <h2 class="2xl:text-6xl lg:text-4xl text-3xl 2xl:leading-[75px] lg:leading-[50px] leading-10 font-semibold text-white pt-6">
-          Jetzt in 60 Sekunden erfahren, wie <br class="md:block hidden"> 
-          wir Fachkräfte in 30 Tagen für Dich <br class="md:block hidden">
-          einstellen mit 100% Erfolgsgarantie. <br class="md:block hidden">
-        </h2>
-      </div>
-
-      <div class="md:w-2/3 w-full">
-        <div class="text-center pt-10">
-          <button class="items-center xl:text-xl text-base text-start font-semibold px-8 py-4 text-[#0F0F0F] rounded-sm border border-[#D2B94E] bg-[#D2B94E] transition">
-            Recruiting-Analyse starten &nbsp; &nbsp; →
-          </button>
-        </div>
-        <p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5 text-center">
-          Kostenlos & unverbindlich · 60 Sek. &nbsp;  
-          <i class="fa-solid fa-check text-green-600"></i>
-        </p>
-
-        <div class="flex items-center justify-center pt-8 gap-2 flex-wrap">
-          <div class="stars text-white text-lg">
-            <span>★ </span>Trustpilot <span>★ ★ ★ ★ ★</span>
-          </div>
-          <div class="flex items-center gap-2 flex-wrap">
-            <img src="./assets/img/white line.png" alt="">
-            <p class="text-white text-lg font-bold">Hervorragend</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE (PERFECT MARQUEE) -->
-    <div class="md:w-3/12 w-full flex justify-center relative overflow-hidden h-[500px] bg-transparent">
-      <!-- Scroll Up -->
-      <div class="marquee-up">
-        <img src="./assets/img/industries1.png" alt="">
-        <img src="./assets/img/industries2.png" alt="">
-        <img src="./assets/img/industries3.png" alt="">
-        <img src="./assets/img/industries1.png" alt="">
-        <img src="./assets/img/industries2.png" alt="">
-        <img src="./assets/img/industries3.png" alt="">
-      </div>
-
-      <!-- Scroll Down -->
-      <div class="marquee-down">
-        <img src="./assets/img/industries1.png" alt="">
-        <img src="./assets/img/industries2.png" alt="">
-        <img src="./assets/img/industries3.png" alt="">
-        <img src="./assets/img/industries1.png" alt="">
-        <img src="./assets/img/industries2.png" alt="">
-        <img src="./assets/img/industries3.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
 
 <style>
-/* 🌟 Vertical marquee animation (clean and gapless) */
 
-.marquee-up, .marquee-down {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 48%;
-  height: 200%;
-  top: 0;
+
+.slider-container {
+  margin: 0 auto;
+  margin-top: 5rem;
+  position: relative;
+  /* width: 100%;
+  max-width: 800px;
+  height: 400px; */
+  border-radius: 0.7rem;
   overflow: hidden;
 }
 
-.marquee-up {
+.before-image,
+.after-image {
+  position: absolute;
+  top: 0;
   left: 0;
-  animation: moveUp 15s linear infinite;
-}
-
-.marquee-down {
-  right: 0;
-  animation: moveDown 15s linear infinite;
-}
-
-/* ✅ Ensure smooth continuous movement */
-.marquee-up img,
-.marquee-down img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* 🔼 Scroll Up Animation */
-@keyframes moveUp {
+/* Styling the Before/After text */
+.before-text,
+.after-text {
+  position: absolute;
+  font-family: system-ui;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a3a;
+  z-index: 4;
+  padding: 10px 20px;
+  background-color: #ffffff9e;
+  border-radius: 0.3rem;
+  letter-spacing: 2px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Before text */
+.before-text {
+  left: 20px; /* Position text to the left */
+  top: 20px;
+  z-index: 5;
+}
+
+/* After text */
+.after-text {
+  right: 20px; /* Position text to the right */
+  top: 20px;
+  z-index: 3;
+}
+
+/* Hide the After text initially */
+.after-image .after-text {
+  visibility: visible;
+  z-index: 3;
+}
+
+.after-image {
+  clip-path: inset(0 50% 0 0);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0px;
+  height: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1;
+}
+.pulse-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pulse-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px; /* Larger than the SVG */
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Color of the pulse */
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
   0% {
-    transform: translateY(0);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
   }
   100% {
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0;
   }
 }
 
-/* 🔽 Scroll Down Animation */
-@keyframes moveDown {
-  0% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.slider-line svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  cursor: pointer;
 }
+/* Prevent text/image selection while dragging */
+.slider-container,
+.before-image img,
+.after-image img {
+  user-select: none; /* Disable selection on most browsers */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.slider-handle,
+.slider-line {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 </style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="2xl:px-24 lg:px-10 px-5 pt-20 xl:pt-36">
-  <div>
-    <h2
-      class="text-white font-semibold xl:text-6xl lg:text-5xl md:text-[40px] text-3xl"
-    >
-      Über 400 Partner im DACH-Raum.
-    </h2>
-  </div>
-
-  <div
-    class="flex lg:flex-row flex-col xl:gap-10 gap-5 xl:pt-20 pt-10"
-  >
-    <!-- LEFT GRID -->
-    <div
-      id="partner-logos"
-      class="lg:w-3/5 w-full grid md:grid-cols-3 grid-cols-2"
-    >
-      <!-- Partner 1 -->
-      <div
-        class="partner group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer active-partner"
-        data-title="TÜV Süd"
-        data-sub="Zertifiziertes Qualitätsmanagement"
-        data-desc="Die TÜV Süd Partnerschaft steht für höchste Qualitätsstandards und verlässliche Prozesse in allen Unternehmensbereichen."
-      >
-        <img
-          src="./assets/img/hellofreshgrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/hellofries.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 2 -->
-      <div
-        class="partner group flex flex-col justify-center px-20 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Edeka"
-        data-sub="Premium Einzelhandelspartner"
-        data-desc="Edeka zählt zu den größten Einzelhändlern Deutschlands und arbeitet mit uns an nachhaltigen Vertriebslösungen."
-      >
-        <img
-          src="./assets/img/edekagry.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/edeka.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 3 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Subway"
-        data-sub="Internationale Gastronomie"
-        data-desc="Mit Subway fördern wir innovative Gastronomie-Konzepte, die frische Produkte und Effizienz vereinen."
-      >
-        <img
-          src="./assets/img/subwaygrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/subway.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 4 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Bosch"
-        data-sub="Technologie & Innovation"
-        data-desc="Bosch steht für technische Exzellenz – gemeinsam gestalten wir smarte und nachhaltige Lösungen."
-      >
-        <img
-          src="./assets/img/boschgrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/boschred.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 5 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Tipico"
-        data-sub="Sportwetten Partner"
-        data-desc="Mit Tipico fördern wir innovative Online-Plattformen im Bereich Entertainment und Sport."
-      >
-        <img
-          src="./assets/img/tipicogrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/tipicored.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 6 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-8 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Lotto"
-        data-sub="Staatliche Zusammenarbeit"
-        data-desc="Lotto Deutschland arbeitet mit uns an Projekten zur Digitalisierung öffentlicher Dienstleistungen."
-      >
-        <img
-          src="./assets/img/lottogrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/lotto.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 7 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-10 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Sarpi"
-        data-sub="Industrielle Reinigung"
-        data-desc="Sarpi setzt auf nachhaltige Entsorgung und ist unser Partner für Umweltlösungen in der Industrie."
-      >
-        <img
-          src="./assets/img/sarpigrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/sarpi.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 8 -->
-      <div
-        class="partner group flex items-center justify-center border py-10 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Vermeter"
-        data-sub="Energieeffizienzlösungen"
-        data-desc="Vermeter ist Spezialist für Energiemanagement-Systeme und nachhaltige Gebäudeautomation."
-      >
-        <img
-          src="./assets/img/vermetergry.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/vertmet.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 9 -->
-      <div
-        class="partner group flex items-center justify-center border py-10 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Marangoni"
-        data-sub="Reifentechnologie"
-        data-desc="Marangoni entwickelt High-Tech-Reifenlösungen und unterstützt nachhaltige Mobilität in Europa."
-      >
-        <img
-          src="./assets/img/marangonigrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/marangoniblue.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 10 -->
-      <div
-        class="partner group flex items-center justify-center border py-2 px-4 border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Dorfner"
-        data-sub="Facility Management"
-        data-desc="Dorfner steht für Gebäudereinigung und Facility Services mit Fokus auf Qualität und Nachhaltigkeit."
-      >
-        <img
-          src="./assets/img/dorfernergrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/dorfner.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 11 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="McDonald's"
-        data-sub="Gastronomie"
-        data-desc="McDonald's und Convince me entwickeln gemeinsam Marketingstrategien für lokale Märkte."
-      >
-        <img
-          src="./assets/img/mecdonalgrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/mecdonal.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-
-      <!-- Partner 12 -->
-      <div
-        class="partner group flex flex-col justify-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
-        data-title="Dussmann"
-        data-sub="Servicepartner"
-        data-desc="Dussmann Service bietet Catering- und Gebäudedienstleistungen mit Fokus auf Qualität und Fairness."
-      >
-        <img
-          src="./assets/img/dussmangrey.png"
-          class="block group-hover:hidden"
-          alt=""
-        />
-        <img
-          src="./assets/img/dussman.png"
-          class="hidden group-hover:block"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <!-- RIGHT INFO BOX -->
-    <div
-      class="lg:w-2/5 w-full flex flex-col justify-between bg-[#181818] xl:py-12 xl:px-12 py-6 px-6 rounded-3xl relative"
-    >
-      <div id="partner-info">
-        <h3
-          id="partner-title"
-          class="2xl:text-3xl xl:text-2xl text-lg text-white pt-4 font-semibold"
-        >
-          TÜV Süd
-        </h3>
-        <p
-          id="partner-sub"
-          class="text-[#D0D0D0] xl:text-base text-sm pt-2"
-        >
-          Zertifiziertes Qualitätsmanagement
-        </p>
-        <p
-          id="partner-desc"
-          class="2xl:text-xl text-base 2xl:leading-10 leading-7 text-[#D0D0D0] pt-6"
-        >
-          Die TÜV Süd Partnerschaft steht für höchste Qualitätsstandards und
-          verlässliche Prozesse in allen Unternehmensbereichen.
-        </p>
-      </div>
-
-      <!-- Arrows -->
-      <div class="flex gap-6 mt-10">
-        <button
-          id="prev-btn"
-          class=" text-white font-bold"
-        >
-          ←
-        </button>
-        <button
-          id="next-btn"
-          class=" text-white font-bold"
-        >
-          →
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- JS Functionality -->
 <script>
-  const partners = document.querySelectorAll('.partner');
-  const title = document.getElementById('partner-title');
-  const sub = document.getElementById('partner-sub');
-  const desc = document.getElementById('partner-desc');
-  const nextBtn = document.getElementById('next-btn');
-  const prevBtn = document.getElementById('prev-btn');
+  const sliderHandle = document.querySelector("#sliderHandle");
+const sliderLine = document.querySelector(".slider-line");
+const beforeImage = document.querySelector(".before-image");
+const afterImage = document.querySelector(".after-image");
+const sliderContainer = document.querySelector(".slider-container");
 
-  let activeIndex = 0;
+let isDragging = false;
 
-  function updateContent(index) {
-    partners.forEach((p) => p.classList.remove('active-partner'));
-    const partner = partners[index];
-    partner.classList.add('active-partner');
-    title.textContent = partner.dataset.title;
-    sub.textContent = partner.dataset.sub;
-    desc.textContent = partner.dataset.desc;
+// Function to initialize the slider at the center position
+const initializeSlider = () => {
+  const containerWidth = sliderContainer.offsetWidth;
+
+  // Set slider handle and line at center with a transition for initialization
+  sliderHandle.style.transition = "left 0.3s ease";
+  sliderLine.style.transition = "left 0.3s ease";
+
+  sliderHandle.style.left = "50%";
+  sliderLine.style.left = "50%";
+
+  // Set both images' clip-path to 50% (center)
+  beforeImage.style.clipPath = `inset(0 50% 0 0)`;
+  afterImage.style.clipPath = `inset(0 0 0 50%)`;
+};
+
+// Function to move the slider based on user interaction
+const moveSlider = (clientX) => {
+  const containerRect = sliderContainer.getBoundingClientRect();
+  let offsetX = clientX - containerRect.left;
+
+  // Limit the slider movement within the full container width (0% to 100%)
+  if (offsetX < 0) offsetX = 0; // Prevent overflow on the left
+  if (offsetX > containerRect.width) offsetX = containerRect.width; // Prevent overflow on the right
+
+  const percentage = Math.round((offsetX / containerRect.width) * 100);
+
+  // Update the slider handle position and image clipping
+  sliderHandle.style.left = `${percentage}%`;
+  sliderLine.style.left = `${percentage}%`;
+
+  // Adjust the clip-path for both images
+  beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+  afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+};
+
+// Add event listeners for both the handle and the line (including the SVG)
+const startDragging = () => {
+  isDragging = true;
+
+  // Remove transitions while dragging for instant feedback
+  sliderHandle.style.transition = "none";
+  sliderLine.style.transition = "none";
+};
+
+const stopDragging = () => {
+  isDragging = false;
+
+  // Reapply transitions after dragging ends
+  sliderHandle.style.transition = "left 0.3s ease";
+  sliderLine.style.transition = "left 0.3s ease";
+};
+
+sliderHandle.addEventListener("mousedown", startDragging);
+sliderLine.addEventListener("mousedown", startDragging); // Make SVG and line draggable
+
+window.addEventListener("mousemove", (event) => {
+  if (isDragging) {
+    moveSlider(event.clientX);
   }
+});
 
-  nextBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex + 1) % partners.length;
-    updateContent(activeIndex);
-  });
+window.addEventListener("mouseup", stopDragging);
 
-  prevBtn.addEventListener('click', () => {
-    activeIndex = (activeIndex - 1 + partners.length) % partners.length;
-    updateContent(activeIndex);
-  });
+// For touch events on mobile
+sliderHandle.addEventListener("touchstart", startDragging);
+sliderLine.addEventListener("touchstart", startDragging); // Make SVG and line draggable
 
-  partners.forEach((p, i) => {
-    p.addEventListener('click', () => {
-      activeIndex = i;
-      updateContent(activeIndex);
-    });
-  });
+window.addEventListener("touchmove", (event) => {
+  if (isDragging) {
+    moveSlider(event.touches[0].clientX);
+  }
+});
+
+window.addEventListener("touchend", stopDragging);
+
+// Initialize the slider on page load
+window.addEventListener("load", initializeSlider);
+
 </script>
 
-<!-- Active Style -->
-<style>
-  .active-partner {
-    background-color: #d2b94e !important;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-  }
-</style>
+
+
+
+
+
+
+
 
 
 </body>

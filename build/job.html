@@ -103,17 +103,26 @@
 <p class="2xl:text-[22px] lg:text-base text-sm 2xl:leading-10 lg:leading-7 leading-6 text-white pt-5">Kostenlos & unverbindlich · 60 Sek. &nbsp;  <i class="fa-solid fa-check text-green-600"></i></p>
 </div>
 
-<div class="lg:w-3/5 w-full">
+<div class="lg:w-3/5 w-full relative  rounded-xl border-[4px] border-[#41414166] 2xl:h-[400px] xl:h-[370px] lg:h-[250px] object-cover">
   <!-- Video -->
- <video id="customVideo"
-       class="border-[4px] border-[#41414166] rounded-xl xl:px-20 px-10 w-full 2xl:h-[400px] xl:h-[370px] lg:h-[250px] object-cover"
-       loop
-       autoplay
-       muted
-       preload="metadata">
-  <source src="./assets/img/jobpages video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <video
+    id="customVideo"
+    class=" xl:px-20 px-10 w-full 2xl:h-[397px] xl:h-[362px] lg:h-[247px] object-cover"
+    loop
+    autoplay
+    muted
+    preload="metadata"
+  >
+    <source src="./assets/img/jobpages video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 flex items-center justify-center xl:px-20 px-10 w-full 2xl:h-[397px] xl:h-[362px] lg:h-[247px] object-cover">
+    <div class="w-full h-full bg-[#D2B94E] opacity-10 z-10"></div>
+  </div>
+</div>
+
 
   <!-- Custom Play Button -->
   <!-- <button id="playButton"
@@ -127,7 +136,7 @@
       </svg>
     </div>
   </button> -->
-</div>
+
 
     </div>
 
@@ -964,7 +973,7 @@ in 30 Tagen mit Garantie</p>
     >
       <!-- Partner 1 -->
       <div
-        class="partner group flex flex-col justify-center items-center px-12 md:py-4 py-2 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer active-partner"
+        class="partner group flex flex-col justify-center items-center 2xl:px-14 px-12 md:py-4 py-2 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer active-partner"
         data-title="HelloFresh"
         data-sub="Positionen: Produktionsleiter & Maschinenführer"
         data-desc="
@@ -986,7 +995,7 @@ Ergebnis: Beide Positionen wurden innerhalb von 30 Tagen besetzt, zusätzlich en
 
       <!-- Partner 2 -->
       <div
-        class="partner group flex flex-col justify-center items-center px-12 md:py-4 py-2 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
+        class="partner group flex flex-col justify-center items-center 2xl:px-14 px-12 md:py-4 py-2 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
         data-title="EDEKA"
         data-sub="Positionen: Marktleiter, Verkäufer & Kassierer"
         data-desc="Herausforderung: Mehrere Standorte mit akuten Engpässen und hoher Fluktuation.
@@ -1007,7 +1016,7 @@ Ergebnis: 3 Standorte konnten innerhalb von 6 Wochen vollständig besetzt werden
 
       <!-- Partner 3 -->
       <div
-        class="partner group flex flex-col justify-center px-12 md:py-8 py-10 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
+        class="partner group flex flex-col justify-center 2xl:px-14 px-12 md:py-8 py-10 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
         data-title="Subway"
         data-sub="Positionen: Filialleiter & Teammitarbeiter"
         data-desc="Herausforderung: Schwierige Bewerberlage in Nebenzeiten und hoher Wettbewerb in der Gastrobranche.
@@ -1176,7 +1185,7 @@ Ergebnis: 47 Bewerbungen in 30 Tagen, 9 direkte Einstellungen."
 
       <!-- Partner 11 -->
       <div
-        class="partner group flex flex-col justify-center items-center px-12 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
+        class="partner group flex flex-col justify-center items-center px-12 py-4 2xl:py-9 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
         data-title="McDonald’s"
         data-sub="Positionen: Restaurantleiter & Servicepersonal"
         data-desc="Herausforderung: Hoher Bedarf an motivierten Mitarbeitern in Schichtsystemen.
@@ -1185,12 +1194,12 @@ Ergebnis: 5 Filialen in 6 Wochen vollständig besetzt, 160 qualifizierte Bewerbu
       >
         <img
           src="./assets/img/mecdonalgrey.png"
-          class="block group-hover:hidden 2xl:w-1/2 w-3/4"
+          class="block group-hover:hidden 2xl:w-1/3 w-3/4"
           alt=""
         />
         <img
           src="./assets/img/mecdonal.png"
-          class="hidden group-hover:block 2xl:w-1/2 w-3/4"
+          class="hidden group-hover:block 2xl:w-1/3 w-3/4"
           alt=""
         />
       </div>
@@ -1218,7 +1227,7 @@ Ergebnis: 4 Fachkräfte in 45 Tagen eingestellt, Bewerbungsquote verdreifacht."
 
        <!-- Partner 13 -->
       <div
-        class="partner group flex flex-col justify-center px-12 md:py-2 py-4 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
+        class="partner group flex flex-col justify-center items-center px-12 md:py-2 py-4 2xl:py-6 border border-[#4141414D] rounded-sm hover:bg-[#D2B94E] transition-all duration-500 cursor-pointer"
         data-title="Tchibo"
         data-sub="Positionen: Verkäufer & Logistikmitarbeiter"
         data-desc="Herausforderung: Saisonale Personalspitzen und starker Wettbewerbsdruck im Handel.
@@ -1227,12 +1236,12 @@ Ergebnis: 3 Standorte in 50 Tagen besetzt, 85 qualifizierte Bewerbungen."
       >
         <img
           src="./assets/img/tchibe.png"
-          class="block group-hover:hidden 2xl:w-3/4"
+          class="block group-hover:hidden 2xl:w-1/2"
           alt=""
         />
         <img
           src="./assets/img/techbirwhite.png"
-          class="hidden group-hover:block 2xl:w-3/4"
+          class="hidden group-hover:block 2xl:w-1/2"
           alt=""
         />
       </div>
