@@ -15,7 +15,6 @@ body{
 }
 
 /* navbar css  */
- 
   #navbar {
     background-color: transparent;
     transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
@@ -141,10 +140,6 @@ body{
 
   
 /* home page and job page slider marquee  */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
 .animate-marquee {
   display: flex;
   width: max-content;
@@ -155,7 +150,14 @@ body{
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 /* home page and job page slider marquee  end*/
+
+
+
 
 
 /* ===first page img Floating Glow Animation === */
