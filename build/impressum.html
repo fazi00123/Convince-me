@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#0F0F0F]">
+    <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
+    <div class="flex justify-between items-center 2xl:px-24 lg:px-10 px-5 2xl:py-10 py-6">
+      <!-- Logo -->
+      <a href="./index.html">
+        <img src="./assets/img/logo.png" alt="Logo" class="w-48">
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="relative w-10 h-5 flex flex-col justify-between focus:outline-none z-[60]">
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+        <span class="w-full h-[3px] bg-white transition-all duration-500 origin-center"></span>
+      </button>
+    </div>
+
+    <!-- FULLSCREEN MENU -->
+    <div
+      id="fullscreen-menu"
+      class="fixed inset-0 backdrop-blur-3xl scale-95 opacity-0 pointer-events-none transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-white"
+    >
+      <ul class="lg:space-y-8 space-y-6 2xl:text-4xl lg:text-3xl text-xl font-light text-center transform transition-all duration-700 pt-24">
+        <li><a href="./index.html" class="hover:text-[#D2B94E] transition">Home</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="relative group w-full flex flex-col items-center">
+          <button id="services-btn" class="flex items-center justify-center space-x-2 hover:text-[#D2B94E]">
+            <span>Services</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <ul
+            id="services-dropdown"
+            class="absolute bg-[#0F0F0F] top-full w-64 left-1/2 -translate-x-1/2 flex-col space-y-3 text-lg transition-all duration-300 ease-in-out transform origin-top opacity-0 scale-y-0 py-3 px-3 rounded-lg"
+          >
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">Web Design & Development</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">UI/UX Design</a></li>
+             <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">CMS design</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">Mobile App Design and Development</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">SEO Optimization</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">E-Commerce Development</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">Brand Identity Creation</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">Strategy for Business Development</a></li>
+            <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] ">Social Media Management & Post Creation</a></li>
+          </ul>
+        </li>
+
+        <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] transition">Works</a></li>
+        <li><a href="./comingsoon.html" class="hover:text-[#D2B94E] transition">Network</a></li>
+        <li><a href="./job.html" class="hover:text-[#D2B94E] transition">Jobs</a></li>
+        
+      </ul>
+
+      <div class="mt-12 flex flex-col space-y-4">
+        <button class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg bg-[#D2B94E] text-[#0F0F0F] rounded-sm font-medium hover:bg-[#c0a840] transition">
+          Dashboard Login
+        </button>
+        <button id="openModal"
+          class="px-8 py-3 2xl:text-2xl lg:text-xl text-lg border border-[#D2B94E] hover:bg-[#D2B94E] hover:text-[#0F0F0F] transition rounded-sm"
+        >
+          Contact Us
+        </button>
+      </div>
+    </div>
+
+    <hr class="border border-[#41414166]">
+  </nav>
+
+
+<section class="xl:px-36 md:px-20 px-5 2xl:pb-32 lg:pb-24 pb-16 2xl:pt-72 pt-48">
+    <h2 class="xl:text-6xl md:text-5xl text-4xl text-[#FFFFFF] font-bold">Angaben gemäß § 5 TMG:</h2>
+    <div>
+        <h3 class="xl:text-3xl md:text-2xl text-xl text-[#FFFFFF] font-bold pt-10">convince me GmbH</h3>
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Mönckebergstraße 11 <br>
+20095 Hamburg</p>
+    </div>
+
+    <div>
+        <h3 class="xl:text-3xl md:text-2xl text-xl text-[#FFFFFF] font-bold pt-10">Kontakt</h3>
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Telefon:  (040) 64791088</p>
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6">E-Mail:  <a href="" class="underline text-[#D2B94E]"> info@darkslategray-gorilla-749679.hostingersite.com</a></p>
+    </div>
+
+     <div>
+        
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4"><span class="font-bold">Geschäftsführer: </span> Vukoje Tenjovic</p>
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Aufsichtsbehörde: Amtsgericht Hamburg <br>
+HRB 158 518</p>
+<p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Quellenangaben für die verwendeten Bilder und Grafiken: Unsplash, Pexels, Pixabay, iStock, freepik</p>
+<p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4"><span class="font-bold">Konzept, Kreation und Umsetzung: </span> proudly made by ourselves,  <span class="font-bold italic">convince me GmbH.</span></p>
+<p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4"><span class="font-bold">Haftungsausschluss (Disclaimer) </span></p>
+    </div>
+
+    <div>
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Haftung für Inhalte</p>
+
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Haftung für Links</p>
+
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+         <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Urheberrecht</p>
+
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+        <p class="text-[#E6E6E6] 2xl:text-2xl lg:text-lg text-base 2xl:leading-10 lg:leading-8 leading-6 pt-4">Quelle: <a href="" class="underline text-[#D2B94E]">http://www.e-recht24.de</a></p>
+    </div>
+</section>
+<hr class="border border-[#41414166]">
+
+
+
+   <!-- Footer -->
+  <footer class="text-white px-6 lg:px-12 xl:px-20 2xl:px-28 py-12 xl:py-20">
+
+    <!-- mobile div only  -->
+    <div class="pb-10 block md:hidden">
+    <div class="flex justify-center pb-6">
+      <img src="./assets/img/footer.png" alt="">
+    </div>
+     <p class="text-white/70 2xl:text-lg text-sm leading-relaxed text-center">
+         Ein Kollektiv engagierter Köpfe, das Unternehmen <br> dabei unterstützt, digital zu wachsen.
+        </p>
+        </div>
+
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7  gap-8 text-center md:text-start">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-2 hidden md:block">
+        <div class="">
+        <img src="./assets/img/footer.png" class="md:block hidden" alt="">
+        </div>
+        <p class="text-white/70 md:mt-4 2xl:text-lg text-sm leading-relaxed md:block hidden">
+         Ein Kollektiv engagierter Köpfe, das Unternehmen<br class="xl:block hidden"> dabei unterstützt, digital zu wachsen.
+        </p>
+
+        <div class="lg:block hidden">
+         <div class="flex md:justify-start justify-center gap-2 pt-6 ">
+          <a href="https://www.kununu.com/de/convince-me1">
+      <img src="./assets/img/company1.png" alt="">
+      </a>
+      <a href="">
+      <img src="./assets/img/company2.png" alt="">
+      </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Quick Links</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm ">
+          <li class="hover:underline"><a href="./index.html"  >Home</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Our Works</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Network</a></li>
+          <li class="hover:underline"><a href="./job.html">Jobs</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Support</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm">
+          <!-- <li><a href="#">Blog</a></li> -->
+          <li class="hover:underline"><a href="./contact.html">Contact Us</a></li>
+          <!-- <li><a href="#">Online Chat</a></li> -->
+          <li class="hover:underline"><a href="#">Whatsapp</a></li>
+          <li class="hover:underline"><a href="#">Telegram</a></li>
+          <!-- <li class="hover:underline"><a href="#">Help Center</a></li> -->
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Services</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm">
+          <li class="hover:underline"><a href="./comingsoon.html">Job</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Web Design & Development</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">SEO Optimization</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">E-Commerce Development</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Brand Identity Creation</a></li>
+           <li class="hover:underline"><a href="./comingsoon.html">Strategy for Business Development</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Social Media Management & Post Creation</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">CMS design</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">Mobile App Design and Development</a></li>
+          <li class="hover:underline"><a href="./comingsoon.html">UI/UX Design</a></li>
+        </ul>
+      </div>
+
+         <!-- Resources -->
+      <div>
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Privacy</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm">
+          <li class="hover:underline"><a href="./privacypoliciy.html">Privacy Policies</a></li>
+          <li class="hover:underline"><a href="./termandcondition.html">Terms And Condition</a></li>
+         
+        </ul>
+
+        <!-- for mobile only   -->
+        <div class="md:hidden block pt-6">
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Company</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm">
+          <li class="hover:underline"><a href="./impressum.html">Impressum</a></li>
+          <li class="hover:underline"><a href="./Datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="flex justify-center">
+        <img src="./assets/img/attachment.png" class="mt-6" alt="">
+        </div>
+      </div>
+
+
+      </div>
+
+
+        <!-- Resources -->
+      <div class="md:block hidden">
+        <h3 class="font-semibold mb-4 2xl:text-xl text-lg">Company</h3>
+        <ul class="space-y-2 text-white/70 2xl:text-base text-sm">
+        <li class="hover:underline"><a href="./impressum.html">Impressum</a></li>
+          <li class="hover:underline"><a href="./Datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="md:block hidden">
+        <img src="./assets/img/attachment.png" class="mt-6 " alt="">
+        </div>
+      </div>
+
+    </div>
+  <div class="flex md:justify-start justify-center gap-2 pt-6 lg:hidden block">
+          <a href="https://www.kununu.com/de/convince-me1">
+      <img src="./assets/img/company1.png" alt="">
+      </a>
+      <a href="">
+      <img src="./assets/img/company2.png" alt="">
+      </a>
+        </div>
+       
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#414141] mt-10 flex justify-between items-center">
+       <!-- Copyright -->
+        <div>© 2025, convince me.</div>
+
+      <div class="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 space-y-3 md:space-y-0">
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+            <i class="fab fa-instagram "></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full hover:bg-[#D2B94E]">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- contact popup form  -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/70 z-50 hidden overflow-y-auto">
+  
+  <!-- Center Content with Spacing -->
+  <div class="min-h-screen flex items-center justify-center py-6 px-4">
+    
+    <!-- Modal Card -->
+    <div class="bg-[#1a1a1a] rounded-2xl shadow-xl w-full max-w-5xl 2xl:max-w-7xl
+                flex flex-col md:flex-row relative animate-fadeIn">
+      
+      <!-- Close Button -->
+      <button id="closeModal" 
+              class="absolute top-2 right-4 text-[#A4A7AE] text-xl">
+        ✕
+      </button>
+
+      <!-- Left: Form -->
+      <div class="w-full md:w-1/2 px-6 md:px-0 md:pl-8 sm:py-8 py-6 flex flex-col justify-center text-white">
+        <h2 class="2xl:text-3xl text-2xl font-semibold mb-3">Let's connect constellations</h2>
+        <p class="2xl:text-lg text-sm text-white mb-6">
+          Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+        </p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Vorname" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+            <input type="text" placeholder="Nachname" 
+                   class="w-full sm:w-1/2 p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          </div>
+          <input type="email" placeholder="E-Mail" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <input type="tel" placeholder="Telefonnummer" 
+                 class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none" />
+          <textarea placeholder="Nachricht" rows="4" 
+                    class="w-full p-3 rounded-md bg-white/5 border border-white/20 placeholder:text-white/60 text-sm focus:border-[#D2B94E] focus:outline-none"></textarea>
+
+          <button type="Senden" 
+                  class="w-full bg-[#D2B94E] text-[#040404] font-medium py-3 rounded-md flex items-center justify-center gap-2 transition">
+            Senden 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Astronaut Image -->
+      <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-10">
+        <img src="./assets/img/contactimg.png" 
+             alt="Astronaut" 
+             class="w-full max-h-[600px] object-contain rounded-lg" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--contact us Script -->
+<script>
+  const openModalButtons = document.querySelectorAll("#openModal"); // Saare "Contact Us" buttons select karo
+  const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("contactModal");
+
+  // Har ek Contact Us button pe listener lagao
+  openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  // Close button
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Background click par close
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+<!-- Navbar js  -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const fullscreenMenu = document.getElementById('fullscreen-menu');
+  const servicesBtn = document.getElementById('services-btn');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const svgArrow = servicesBtn.querySelector('svg');
+  let isOpen = false;
+  let scrollPosition = 0; // store current scroll position
+
+  // Fullscreen menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    const [line1, line2, line3] = menuBtn.children;
+
+    if (isOpen) {
+      // Store current scroll position and lock scroll visually
+      scrollPosition = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflow = 'hidden';
+      fullscreenMenu.style.overflowY = 'auto';
+
+      // Animate hamburger -> X
+      line1.style.transform = 'rotate(45deg) translateY(10px)';
+      line2.style.opacity = '0';
+      line3.style.transform = 'rotate(-45deg) translateY(-10px)';
+
+      fullscreenMenu.classList.remove('pointer-events-none');
+      fullscreenMenu.classList.add('opacity-100', 'scale-100');
+      fullscreenMenu.classList.remove('opacity-0', 'scale-95');
+      
+      // Force scroll to top (menu starts from top)
+      window.scrollTo(0, 0);
+    } else {
+      // Animate X -> hamburger
+      line1.style.transform = 'rotate(0) translateY(0)';
+      line2.style.opacity = '1';
+      line3.style.transform = 'rotate(0) translateY(0)';
+
+      fullscreenMenu.classList.add('opacity-0', 'scale-95');
+      fullscreenMenu.classList.remove('opacity-100', 'scale-100');
+      setTimeout(() => fullscreenMenu.classList.add('pointer-events-none'), 500);
+
+      // Restore scroll position
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.overflow = '';
+      fullscreenMenu.style.overflowY = 'hidden';
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+
+  // Detect mobile
+  const isMobile = () => window.innerWidth < 1024;
+
+  // Toggle dropdown on click (mobile)
+  servicesBtn.addEventListener('click', (e) => {
+    if (isMobile()) {
+      e.stopPropagation();
+      toggleDropdown();
+    }
+  });
+
+  // Hover dropdown (desktop)
+  servicesBtn.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesBtn.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+  servicesDropdown.addEventListener('mouseenter', () => {
+    if (!isMobile()) openDropdown();
+  });
+  servicesDropdown.addEventListener('mouseleave', () => {
+    if (!isMobile()) closeDropdown();
+  });
+
+  // Dropdown logic
+  function toggleDropdown() {
+    const isDropdownOpen = !servicesDropdown.classList.contains('hidden');
+    if (isDropdownOpen) closeDropdown();
+    else openDropdown();
+  }
+
+  function openDropdown() {
+    servicesDropdown.classList.remove('hidden');
+    setTimeout(() => {
+      servicesDropdown.classList.add('opacity-100', 'scale-y-100');
+      servicesDropdown.classList.remove('opacity-0', 'scale-y-0');
+    }, 10);
+    svgArrow.style.transform = 'rotate(180deg)';
+  }
+
+  function closeDropdown() {
+    servicesDropdown.classList.add('opacity-0', 'scale-y-0');
+    servicesDropdown.classList.remove('scale-y-100');
+    setTimeout(() => servicesDropdown.classList.add('hidden'), 300);
+    svgArrow.style.transform = 'rotate(0deg)';
+  }
+
+  // Close dropdown when clicking outside (mobile)
+  document.addEventListener('click', (e) => {
+    if (isMobile()) {
+      if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    }
+  });
+
+  // Update behavior on resize
+  window.addEventListener('resize', () => {
+    closeDropdown();
+  });
+</script>
+
+<!-- navbar bg js  -->
+  <script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) { 
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
+</body>
+</html>
